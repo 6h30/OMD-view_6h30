@@ -7,7 +7,7 @@ export default function NameFrame() {
     <div className="absolute flex h-[900px] w-[200px] flex-col items-center overflow-visible border border-black bg-white p-4">
   <!-- Thẻ chứa hình ảnh -->
   <div className="visible relative mb-4 h-[154px] w-[170px] overflow-visible border border-black">
-    <img src="" alt="Placeholder image" className="w-full overflow-visible border-4 border-blue-50" />
+    <Image src="" alt="Placeholder image" className="w-full overflow-visible border-4 border-blue-50" />
   </div>
 
   <!-- Thẻ chứa thông tin kiến trúc sư và nhà phát triển -->
