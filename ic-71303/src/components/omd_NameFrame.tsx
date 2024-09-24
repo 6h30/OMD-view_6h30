@@ -4,43 +4,42 @@ import Image from "next/image";
 
 export default function NameFrame() {
   return (
-    <div className="absolute items-center bg-white flex flex-col p-4 border border-black overflow-visible w-[200px] h-[900px]">
-      <div className="relative mb-4 visible overflow-visible w-[170px] h-[154px] border-black">
-        <Image src="" alt="Placeholder image" className="overflow-visible border-blue-50 w-full
-        border-4"/>
+    <div className="absolute flex h-[900px] w-[200px] flex-col items-center overflow-visible border border-black bg-white p-4">
+  <!-- Thẻ chứa hình ảnh -->
+  <div className="visible relative mb-4 h-[154px] w-[170px] overflow-visible border border-black">
+    <img src="" alt="Placeholder image" className="w-full overflow-visible border-4 border-blue-50" />
+  </div>
+
+  <!-- Thẻ chứa thông tin kiến trúc sư và nhà phát triển -->
+  <div className="visible relative mb-4 flex h-[488px] w-[170px] items-center justify-center overflow-hidden border border-black fill-white">
+    <div className="visible relative flex h-full w-full -rotate-90 flex-col items-center justify-center overflow-visible gap-4">
+      <!-- Thông tin kiến trúc sư -->
+      <div className="visible flex w-[370px] flex-col items-center justify-center overflow-visible pb-3 border-b-2 border-black">
+        <p className="whitespace-nowrap text-[16px] text-gray-600">OMD ARCHITECT</p>
+        <p className="whitespace-nowrap text-center text-xs text-gray-600">47/12B VO THI NH0, PHUONG TAN THUAN DONG, QUAN 7, TP HCM</p>
       </div>
 
-      <div className="flex flex-row items-center justify-center relative w-[170px] h-[488px] overflow-hidden visible fill-white border-black flex-wrap">
-
-        <div className="w-full h-full flex flex-row items-center justify-center overflow-visible gap-3 px-4 py-4">
-
-          <div className="flex flex-col items-center justify-center overflow-visible visible gap-3 px-3 py-3 -rotate-90">
-            <p className="text-[16px] text-gray-600">OMD ARCHITECT</p>
-            <p className="text-xs text-gray-600">47/12B VO THI NH0, PHUONG TAN THUAN DONG, QUAN 7, TP HCM</p>
-          </div>
-
-          <div className="flex items-center justify-center gap-3 overflow-hidden visible -rotate-90">
-            <p className="text-xs tracking-[0.18] leading-normal text-black font-bold w-fit h-fit">designed and developed by DcViet</p>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div className="relative w-full h-[200] overflow-hidden visible fill-white border-black">
-
-        <div className="w-full h-[200px] mb-4 border border-black visible flex flex-col overflow-visible items-center justify-center">
-          <div className="flex items-center justify-center flex-wrap visible overflow-hidden border-2 border-black gap-3">
-            <p className="text-xs text-gray-600 w-full h-[46%]">BY DCVIET</p>
-          </div>
-          
-          <div className="flex items-center justify-center flex-wrap visible overflow-hidden border-2 border-black gap-3">
-            <p className="text-xl text-gray-600 w-full h-[46%]">A001</p>
-          </div>
-        
-      </div>
+      <!-- Thông tin người phát triển -->
+      <div className="visible flex w-[170px] items-center justify-center overflow-visible px-1 py-1">
+        <p className="whitespace-nowrap text-center text-xs font-bold leading-normal tracking-[0.18] text-black">designed and developed by DcViet</p>
       </div>
     </div>
+  </div>
+
+  <!-- Thẻ footer -->
+  <div className="visible relative flex h-[200px] w-full flex-col items-center justify-center overflow-visible border border-black">
+    
+    <div className="visible flex w-[100px] flex-col items-center justify-center overflow-visible py-5 border-t-2 border-black">
+      <p className="text-[16px] text-gray-600">BY DCVIET</p>
+    </div>
+
+    <div className="visible flex w-[100px] flex-col items-center justify-center overflow-visible py-5 border-t-2 border-black">
+      <p className="text-[20px] font-bold text-gray-600">A001</p>
+    </div>
+
+  </div>
+</div>
+
   );
 }
 
