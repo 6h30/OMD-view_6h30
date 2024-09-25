@@ -4,148 +4,224 @@ import Image from "next/image";
 
 export default function ViewBlogs() {
   return (
+<div className="visible h-[1700px] w-[1000px] overflow-hidden border border-black fill-black p-[20px]">
+  <div className="absolute bottom-[930px] left-[680px] right-[180px] top-[500px]">
+    <div className="flex h-[150px] w-[150px] items-center justify-center border">
+      <p>logo</p>
+    </div>
+  </div>
 
-    <div class="visible h-[1700px] w-[1000px] overflow-hidden border border-black fill-black p-[20px]">
-    <div class="absolute bottom-[930px] left-[680px] right-[180px] top-[500px]">
-      <div class="flex h-[150px] w-[150px] items-center justify-center border">
-        <p>logo</p>
+  <div className="relative flex h-[1660] w-[960px] flex-row items-start justify-start gap-[10px]">
+    <div className="relative flex h-[1660px] w-[25%] flex-col gap-[20px] border border-green-500 py-[20px]">
+      <div className="relative flex h-[260px] w-full flex-col items-center justify-center gap-[10px]">
+        <div className="h-[75%] w-[80%] border border-black p-[30px]">
+          <Image src="" alt="" />
+        </div>
+        <div className="flex h-[30%] w-[80%] flex-col items-center justify-center border border-black">
+          <div>
+            <p>Bài viết nổi bật</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative flex h-[1400px] w-full flex-col items-center justify-center gap-[10px]">
+        <div className="flex h-[24%] w-[80%] flex-col items-start justify-center border border-black p-[10px]">
+          <div className="h-[60%] w-full border">
+            <Image src="" alt="" />
+          </div>
+
+          <div className="h-[30%] w-full border">
+            <p>title</p>
+          </div>
+
+          <div className="h-[10%] w-full border">
+            <p>tag</p>
+          </div>
+        </div>
+        <div className="flex h-[24%] w-[80%] flex-col items-start justify-center border border-black p-[10px]">
+          <div className="h-[60%] w-full border">
+            <Image src="" alt="" />
+          </div>
+
+          <div className="h-[30%] w-full border">
+            <p>title</p>
+          </div>
+
+          <div className="h-[10%] w-full border">
+            <p>tag</p>
+          </div>
+        </div>
+        <div className="flex h-[24%] w-[80%] flex-col items-start justify-center border border-black p-[10px]">
+          <div className="h-[60%] w-full border">
+            <Image src="" alt="" />
+          </div>
+
+          <div className="h-[30%] w-full border">
+            <p>title</p>
+          </div>
+
+          <div className="h-[10%] w-full border">
+            <p>tag</p>
+          </div>
+        </div>
+        <div className="flex h-[24%] w-[80%] flex-col items-start justify-center border border-black p-[10px]">
+          <div className="h-[60%] w-full border">
+            <Image src="" alt="" />
+          </div>
+
+          <div className="h-[30%] w-full border">
+            <p>title</p>
+          </div>
+
+          <div className="h-[10%] w-full border">
+            <p>tag</p>
+          </div>
+        </div>
+        <div className="flex h-[4%] w-[80%] flex-col items-start justify-center border border-black p-[10px]">
+          <div className="h-full w-full border">
+            <p><< pagaination 1 >></p>
+          </div>
+        </div>
       </div>
     </div>
-  
-    <div class="relative flex h-[1660] w-[960px] flex-row items-start justify-start gap-[10px]">
-      <div class="relative flex h-[1660px] w-[25%] flex-col gap-[30px] border border-green-500 py-[20px]">
-        <div class="relative flex flex-col items-center justify-center gap-[25px]">
-          <div class="h-[190px] w-[80%] border border-black p-[30px]">
-            <img src="" alt="" />
+
+    <div className="relative flex h-[1660px] w-[75%] flex-col gap-[10px] border border-blue-500 px-[20px] py-[20px]">
+      <div className="relative flex h-[60px] w-full flex-row items-center justify-center border border-black pl-[10px]">
+        <div className="relative flex w-[200px] flex-col items-center gap-[10px]">
+          <p>OMG's Blog</p>
+        </div>
+        <div className="relative flex w-[318px] flex-row items-start gap-[10px] border-l border-black pl-[10px]">
+          <p>Mạng xã hội:</p>
+          <span>F</span>
+          <span>T</span><span>L</span><span>G</span>
+        </div>
+        <div className="relative flex w-[169px] flex-row items-start justify-center gap-[10px] border-l border-black pl-[10px]">
+          <p>Time</p>
+        </div>
+      </div>
+
+      <div className="relative flex h-[200px] w-full flex-col items-start justify-start border border-red-500 p-[0px]">
+        <div className="relative flex h-[35px] w-full flex-row items-center justify-between gap-[20px]">
+          <div className="relative flex h-[25px] w-[190px] items-center justify-start border border-black pl-[10px]">
+            <p>Giải pháp thiết kế</p>
           </div>
-          <div class="h-fit w-[150px] border border-black text-center">
-            <p>PROJECT NAME</p>
+          <div className="relative flex h-[25px] w-[190px] flex-col items-center justify-start border border-black">
+            <p>horizontal line</p>
           </div>
-          <div class="h-fit w-[150px] border border-black text-center">
-            <p>OMD</p>
+          <div className="relative flex h-[25px] w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
+            <p>12</p>
+            <span>bài viết</span>
           </div>
         </div>
-  
-        <div class="relative flex flex-row items-center justify-center gap-[20px]">
-          <p>vertical line</p>
-          <div>
-            <p>timeline</p>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
+
+        <div className="relative flex h-[35px] w-full flex-row items-center justify-between gap-[20px]">
+          <div className="relative flex h-[25px] w-[190px] items-center justify-start border border-black pl-[10px]">
+            <p>Công trình công cộng</p>
+          </div>
+          <div className="relative flex h-[25px] w-[190px] flex-col items-center justify-start border border-black">
+            <p>horizontal line</p>
+          </div>
+          <div className="relative flex h-[25px] w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
+            <p>07</p>
+            <span>bài viết</span>
+          </div>
+        </div>
+
+        <div className="relative flex h-[35px] w-full flex-row items-center justify-between gap-[20px]">
+          <div className="relative flex h-[25px] w-[190px] items-center justify-start border border-black pl-[10px]">
+            <p>Nhà ở</p>
+          </div>
+          <div className="relative flex h-[25px] w-[190px] flex-col items-center justify-start border border-black">
+            <p>horizontal line</p>
+          </div>
+          <div className="relative flex h-[25px] w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
+            <p>10</p>
+            <span>bài viết</span>
+          </div>
+        </div>
+
+        <div className="relative flex h-[35px] w-full flex-row items-center justify-between gap-[20px]">
+          <div className="relative flex h-[25px] w-[190px] items-center justify-start border border-black pl-[10px]">
+            <p>Nội thất</p>
+          </div>
+          <div className="relative flex h-[25px] w-[190px] flex-col items-center justify-start border border-black">
+            <p>horizontal line</p>
+          </div>
+          <div className="relative flex h-[25px] w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
+            <p>10</p>
+            <span>bài viết</span>
+          </div>
+        </div>
+
+        <div className="relative flex h-[35px] w-full flex-row items-center justify-between gap-[20px]">
+          <div className="relative flex h-[25px] w-[190px] items-center justify-start border border-black pl-[10px]">
+            <p>Tin tức</p>
+          </div>
+          <div className="relative flex h-[25px] w-[190px] flex-col items-center justify-start border border-black">
+            <p>horizontal line</p>
+          </div>
+          <div className="relative flex h-[25px] w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
+            <p>10</p>
+            <span>bài viết</span>
           </div>
         </div>
       </div>
-  
-      <div class="relative h-[1660px] w-[75%] gap-[10px] border border-blue-500 px-[20px] py-[20px]">
-        <div class="relative flex h-[60px] w-full flex-row items-center justify-center border border-black pl-[10px]">
-          <div class="relative flex w-[200px] flex-col items-center gap-[10px]">
-            <p>OMG's Blog</p>
-          </div>
-          <div class="relative flex w-[318px] flex-row items-start gap-[10px] border-l border-black pl-[10px]">
-            <p>Mạng xã hội:</p>
-            <span>F</span>
-            <span>T</span><span>L</span><span>G</span>
-          </div>
-          <div class="relative flex w-[169px] flex-row items-start justify-center gap-[10px] border-l border-black pl-[10px]">
-            <p>Time</p>
-          </div>
-        </div>
-  
-        <div class="relative flex h-[205px] w-full flex-col items-start justify-start border border-black p-[10px]">
-          <div class="relative flex h-[35px] w-[full] flex-row items-center justify-between gap-[20px]">
-            <div class="relative flex h-[25px] w-[190px] items-center justify-start border border-black pl-[10px]">
-              <p>Giải pháp thiết kế</p>
+
+      <div className="relative flex h-[1400px] w-full flex-row items-end gap-[10px] border border-red-500">
+        <div className="relative flex h-full w-[70%] flex-col items-start gap-[20px] border border-purple-500 p-[10px]">
+          <div className="relative flex h-[33%] w-full flex-col items-start gap-[10px] border border-orange-300">
+            <div className="relative flex h-[15%] w-full flex-col items-start border">
+              <p>Mật ngọt Library - Thư viện cho trẻ em vùng núi</p>
             </div>
-            <div class="relative flex h-[25px] w-[190px] flex-col items-center justify-start border border-black">
-              <p>horizontal line</p>
+            <div className="relative flex h-[60%] w-full flex-col items-start border">
+              <p>image</p>
             </div>
-            <div class="relative flex h-[25px] w-[190px] flex-col items-center justify-start border border-black">
-              <p>12 bài viết</p>
+            <div className="relative flex h-[25%] w-full flex-col items-start border">
+              <p>Với bối cảnh cơ sở vật chất tại điểm Đá Trắng còn nghèo nàn, chỉ có 5 phòng học kiên cố, văn hoá đọc ở trẻ em miền núi nơi đây vẫn còn “đói sách”. Vì thế, ngôi trường này cần …</p>
             </div>
           </div>
-          <div class="relative flex h-[35px] w-[full] flex-row items-center justify-between gap-[20px]">
-            <div class="relative flex h-[25px] w-[190px] items-center justify-start border border-black pl-[10px]">
-              <p>Giải pháp thiết kế</p>
+
+          <div className="relative flex h-[33%] w-full flex-col items-start gap-[10px] border border-orange-300">
+            <div className="relative flex h-[15%] w-full flex-col items-start border">
+              <p>Mật ngọt Library - Thư viện cho trẻ em vùng núi</p>
             </div>
-            <div class="relative flex h-[25px] w-[190px] flex-col items-center justify-start border border-black">
-              <p>horizontal line</p>
+            <div className="relative flex h-[60%] w-full flex-col items-start border">
+              <p>image</p>
             </div>
-            <div class="relative flex h-[25px] w-[190px] flex-col items-center justify-start border border-black">
-              <p>12 bài viết</p>
+            <div className="relative flex h-[25%] w-full flex-col items-start border">
+              <p>Với bối cảnh cơ sở vật chất tại điểm Đá Trắng còn nghèo nàn, chỉ có 5 phòng học kiên cố, văn hoá đọc ở trẻ em miền núi nơi đây vẫn còn “đói sách”. Vì thế, ngôi trường này cần …</p>
             </div>
           </div>
-        </div>
-  
-        <div class="relative flex h-[660px] w-full flex-row items-end gap-[30px] pb-[20px] pt-[20px]">
-          <div class="relative flex h-[100%] w-[75%] flex-col items-center justify-center border border-black">
-            <p class="text-center text-[46px] leading-[1.3em] tracking-[0.18em]">image</p>
+
+          <div className="relative flex h-[33%] w-full flex-col items-start gap-[10px] border border-orange-300">
+            <div className="relative flex h-[15%] w-full flex-col items-start border">
+              <p>Mật ngọt Library - Thư viện cho trẻ em vùng núi</p>
+            </div>
+            <div className="relative flex h-[60%] w-full flex-col items-start border">
+              <p>image</p>
+            </div>
+            <div className="relative flex h-[25%] w-full flex-col items-start border">
+              <p>Với bối cảnh cơ sở vật chất tại điểm Đá Trắng còn nghèo nàn, chỉ có 5 phòng học kiên cố, văn hoá đọc ở trẻ em miền núi nơi đây vẫn còn “đói sách”. Vì thế, ngôi trường này cần …</p>
+            </div>
           </div>
-  
-          <div class="relative flex h-[150px] w-[25%] flex-col items-center justify-center border border-black">
-            <p class="text-center text-[46px] leading-[1.3em] tracking-[0.18em]">1</p>
+
+          <div className="relative h-[3%] w-full gap-[10px] border border-orange-300">
+            <div className="relative flex h-full w-full flex-col items-end border">
+              <p>1 2 3 << pagination >></p>
+            </div>
           </div>
         </div>
-  
-        <div class="relative flex h-[940px] w-full flex-col items-start justify-start gap-[20px]">
-          <div class="relative flex h-[150px] w-full flex-row items-center justify-between gap-[10px] px-[20px]">
-            <div class="relative flex flex-col items-start justify-start gap-[10px]">
-              <div>
-                <p class="text-center text-[63px] leading-[53px] tracking-[5px]">OMD</p>
-              </div>
-              <div>
-                <p>kiến tạo dự án</p>
-              </div>
-            </div>
-  
-            <div class="relative flex flex-col items-end justify-end gap-[10px]">
-              <div>
-                <p>được đồng hành cùng chị D trong hành trình</p>
-              </div>
-              <div>
-                <p class="text-center text-[63px] leading-[53px] tracking-[5px]">LAPH cafe</p>
-              </div>
-            </div>
-          </div>
-  
-          <div class="relative flex h-[50px] w-full flex-row items-center justify-between py-[10px]">
-            <div class="relative flex h-[25px] w-[25%] flex-col items-center justify-center border border-black px-[10px]">
-              <p>Nhiệm vụ thiết kế</p>
-            </div>
-  
-            <div class="relative flex h-[25px] w-[65%] flex-col items-start justify-center border border-black px-[10px]">
-              <p>vertical line</p>
-            </div>
-          </div>
-  
-          <div class="relative flex h-[150px] w-full flex-row items-center justify-between py-[10px]">
-            <p>“Café-Cóc” – trong tiếng Việt, thuật ngữ này chỉ quán cà phê bình dân với chỗ ngồi thấp, có thể dễ dàng gấp lại và bố trí khi cần thiết. Đó là nơi mọi người có thể ghé qua một cách nhanh chóng và thuận tiện, gọi đồ uống, nhâm nhi một mình hoặc với bạn bè, sau đó tiếp tục công việc trong ngày của mình.</p>
-          </div>
-  
-          <div class="relative flex h-[50px] w-full flex-row items-center justify-between py-[10px]">
-            <div class="relative flex h-[25px] w-[65%] flex-col items-start justify-center border border-black px-[10px]">
-              <p>vertical line</p>
-            </div>
-            <div class="relative flex h-[25px] w-[25%] flex-col items-center justify-center border border-black px-[10px]">
-              <p>Bộ sưu tập</p>
-            </div>
-          </div>
-  
-          <div class="relative flex h-[420px] w-full flex-col items-center justify-center gap-[10px] border-t border-black">
-            <div class="relative flex h-[90%] w-[100%] flex-col items-center justify-center border border-black">
-              <div class="relative flex h-[80%] w-[90%] flex-col items-center justify-center border border-black">
-                <img src="" alt="" />
-                <p>image</p>
-              </div>
-            </div>
-          </div>
+
+        <div className="relative flex h-full w-[30%] flex-col items-start gap-[10px] border p-[10px]">
+          <div className="relative h-[40%] w-full border border-emerald-400"></div>
+          <div className="relative h-[40%] w-full border border-emerald-400"></div>
+          <div className="relative h-[20%] w-full border border-emerald-400"></div>
         </div>
       </div>
     </div>
   </div>
-  
+</div>
+
 
   );
 }
