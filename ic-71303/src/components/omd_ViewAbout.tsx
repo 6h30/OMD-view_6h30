@@ -2,7 +2,7 @@
 // import Image from "next/image";
 // import styles from './omd_NameFrame.module.css';
 
-export default function ViewProject() {
+export default function ViewAbout() {
   return (
 
 <div className="flex h-[550px] w-[550px] flex-col items-start justify-center gap-[50px]">
