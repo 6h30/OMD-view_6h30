@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ViewBlogs() {
   return (
-<div className="visible h-[1700px] w-[1000px] overflow-hidden border border-black fill-black p-[20px]">
+<div className="visible h-[100vh] w-[100%] overflow-hidden border border-black fill-black p-[20px]">
   <div className="absolute bottom-[930px] left-[680px] right-[180px] top-[500px]">
     <div className="flex h-[150px] w-[150px] items-center justify-center border">
       <p>logo</p>
@@ -79,7 +79,7 @@ export default function ViewBlogs() {
         </div>
         <div className="flex h-[4%] w-[80%] flex-col items-start justify-center border border-black p-[10px]">
           <div className="h-full w-full border">
-            <p><< pagaination 1 >></p>
+            <p> pagaination 1 </p>
           </div>
         </div>
       </div>
@@ -88,7 +88,7 @@ export default function ViewBlogs() {
     <div className="relative flex h-[1660px] w-[75%] flex-col gap-[10px] border border-blue-500 px-[20px] py-[20px]">
       <div className="relative flex h-[60px] w-full flex-row items-center justify-center border border-black pl-[10px]">
         <div className="relative flex w-[200px] flex-col items-center gap-[10px]">
-          <p>OMG's Blog</p>
+          <p>OMG`&apos`s Blog</p>
         </div>
         <div className="relative flex w-[318px] flex-row items-start gap-[10px] border-l border-black pl-[10px]">
           <p>Mạng xã hội:</p>
@@ -207,7 +207,7 @@ export default function ViewBlogs() {
 
           <div className="relative h-[3%] w-full gap-[10px] border border-orange-300">
             <div className="relative flex h-full w-full flex-col items-end border">
-              <p>1 2 3 << pagination >></p>
+              <p>1 2 3 pagination </p>
             </div>
           </div>
         </div>
