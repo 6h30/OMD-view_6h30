@@ -1,8 +1,7 @@
-
 <div class="flex h-[550px] w-[550px] flex-col items-start justify-center gap-[50px]">
   <div class="flex h-[80%] w-full flex-col items-center justify-start gap-[20px] border border-red-500">
-    <div>
-      <p class="text-[63px]">OMD</p>
+    <div class="border">
+      <p class="text-center text-[63px] leading-[50px]">OMD</p>
     </div>
     <div class="border text-center">
       <p>Tại OMD, mỗi công trình là một hành trình. Chúng tôi không chỉ thiết kế, mà đồng hành cùng khách hàng trong việc tạo ra những không gian sống phản ánh giá trị và cá tính riêng biệt. Mỗi dự án là một câu chuyện đậm chất nghệ thuật, nơi sự khác biệt và tinh tế được tôn vinh.</p>
@@ -25,5 +24,4 @@
       </svg>
     </div>
   </div>
-
 </div>
