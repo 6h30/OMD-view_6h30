@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ViewBlogs() {
   return (
-<div className="visible h-[100vh] w-[100%] overflow-hidden border border-black fill-black p-[20px]">
+<div className="font-koho visible h-[1700px] w-[100%] overflow-hidden p-[20px]">
   <div className="absolute bottom-[930px] left-[680px] right-[180px] top-[500px]">
     <div className="flex h-[150px] w-[150px] items-center justify-center border">
       <p>logo</p>

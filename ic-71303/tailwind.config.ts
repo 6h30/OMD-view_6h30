@@ -12,6 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        display: 'Italiana, serif', 
+      }
     },
     screens: {
       'sm': '430px',

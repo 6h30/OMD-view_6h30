@@ -20,8 +20,35 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.font-italiana {
+  font-family: var(--font-dcviet-italiana);
+}
+
+.font-koho {
+  font-family: var(--font-dcviet-koho);
+}
+
+.font-koho-bold {
+  font-family: var(--font-dcviet-koho-bold);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  .clip-path-trapezoid {
+    clip-path: polygon(0% 0%, 100% 8%, 100% 92%, 0% 100%);
+  }
+  .clip-path-rec {
+    clip-path: polygon(0% 15%, 100% 15%, 100% 80%, 0% 80%);
+  }
+
+  .clip-path-rec-2 {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .clip-path-trapezoid-flip {
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 88%);
+  }
 }
+
