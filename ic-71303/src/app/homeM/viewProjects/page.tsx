@@ -1,7 +1,7 @@
 // import Image from "next/image";
-import ViewProject from "@/components/omd_ViewProject";
+import ViewProjects from "@/components/omd_ViewProjects";
 
-export default function Main() {
+export default function OmdProjects() {
     return (
         <div className="font-koho">
             <div className="lg:absolute md:absolute sm: absolute lg:bottom-[930px] lg:left-[680px] lg:right-[180px] lg:top-[480px] md:left-[470px] md:top-[580px] sm:left-[280px] sm:right-[310px] sm:bottom-[70px] sm:top-[380px]">
@@ -9,7 +9,7 @@ export default function Main() {
                     <p>logo</p>
                 </div>
             </div>
-            <ViewProject />
+            <ViewProjects />
         </div>
     );
 }

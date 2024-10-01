@@ -2,9 +2,9 @@
 import Image from "next/image";
 // import styles from './omd_NameFrame.module.css';
 
-export default function ViewProject() {
+export default function ViewProjects() {
   return (
-    <div className="overflow-hidden bg-white p-[20px] text-black sm:h-[1460px] sm:w-[768px] sm:text-[12px] md:h-[1780px] md:w-[768px] md:text-[14px] lg:h-[1700px] lg:w-[1024px] lg:text-[16px]">
+    <div className="overflow-hidden bg-white p-[20px] text-black sm:h-[1460px] sm:w-[768px] sm:text-[12px] md:h-[1780px] md:w-[768px] md:text-[14px] lg:h-[1700px] lg:w-full lg:text-[16px]">
       <div className="relative flex items-start justify-start gap-[10px] sm:h-[1400px] sm:w-[428px] sm:flex-col md:h-[1500px] md:w-[728px] md:flex-col lg:h-[1660px] lg:w-[960px] lg:flex-row">
        
         <div className="relative flex gap-[30px] border sm:h-[100px] sm:w-full sm:flex-col sm:border-red-500 md:h-[350px] md:w-full md:flex-col md:border-yellow-700 lg:h-full lg:w-[25%] lg:flex-col lg:border-green-500 lg:py-[20px]">

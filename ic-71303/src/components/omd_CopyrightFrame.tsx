@@ -4,12 +4,12 @@
 export default function CopyrightFrame() {
     return (
       
-  <div className="flex h-[34px] w-full flex-row items-start justify-between whitespace-nowrap">
+  <div className="font-koho flex h-[34px] w-full flex-row items-start justify-between whitespace-nowrap">
     <div className="flex h-[32px] w-[132px] flex-row items-center justify-start pl-[5px]">
-      <a href="#">Copy right </a>
+      <a href="#">© 2024 OMD Studio</a>
     </div>
     <div className="flex h-[32px] w-[132px] flex-row items-center justify-end pr-[5px]">
-      <a href="#">@DcViet</a>
+      <a href="#">hello@omdstudio.art</a>
     </div>
  
   </div>
