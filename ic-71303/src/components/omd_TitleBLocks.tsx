@@ -1,11 +1,11 @@
-// src/components/omd_NameFrame.tsx
+// src/components/omd_TitleBLocks.tsx
 import Image from "next/image";
 // import styles from './omd_NameFrame.module.css';
 
-export default function NameFrame() {
+export default function TitleBlocks() {
   return (
-    <div className="absolute font-koho flex h-[960px] w-[200px] flex-col items-center  border border-black bg-white p-4">
-      <div className="  mb-4 h-[15%] w-full border border-black">
+    <div className="font-koho flex h-[960px] w-[200px] flex-col items-center  border border-black bg-white p-4">
+      <div className="mb-4 h-[15%] w-full border border-black">
         <Image src="" alt="Placeholder image" className="w-full  border-4 border-blue-50" />
       </div>
 
