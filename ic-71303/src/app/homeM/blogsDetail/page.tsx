@@ -1,7 +1,7 @@
-"use client";
+'use client';
 // import Image from "next/image";
-import DetailBlogs from "@/components/omd_DetailBlog";
-import { useRef } from "react";
+import DetailBlogs from '@/components/omd_DetailBlog';
+import { useRef } from 'react';
 
 export default function Main() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -14,7 +14,7 @@ export default function Main() {
   };
   return (
     <div
-      className="overflow-x-auto h-[950px] w-[1000px] text-black bg-white"
+      className="h-[950px] w-[1000px] overflow-x-auto bg-white text-black"
       onWheel={handleScroll}
       ref={scrollRef}
     >

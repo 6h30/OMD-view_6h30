@@ -1,39 +1,38 @@
 // app/home/layout.tsx
-import { ReactNode } from "react";
-import CopyrightFrame from "@/components/omd_CopyrightFrame";
-import NameFrame from "@/components/omd_TitleBLocks";
+import { ReactNode } from 'react';
+import CopyrightFrame from '@/components/omd_CopyrightFrame';
+import NameFrame from '@/components/omd_TitleBLocks';
 // import Image from "next/image";
-import Nav from "@/components/omd_Nav";
+import Nav from '@/components/omd_Nav';
 interface OmdLayoutProps {
   children: ReactNode;
 }
 
 export default function OmdLayout({ children }: OmdLayoutProps) {
   return (
-    <div className="h-[960px] w-auto">
-      <div className="flex flex-row gap-[20px] items-center justify-center h-full w-auto text-black bg-white">
-        <div className="flex flex-col items-center justify-center h-full w-auto">
-          <div className="flex h-[90%] justify-center w-full">
-            <div className="flex w-full flex-col gap-[10px] items-center justify-start py-[10px]">
+    <div className="w-inherit h-[960px]">
+      <div className="flex h-full w-auto flex-row items-center justify-center gap-[20px] bg-white text-black">
+        <div className="flex h-full w-full flex-col items-center justify-center">
+          <div className="flex h-[90%] w-full justify-center">
+            <div className="flex w-full flex-col items-center justify-start gap-[10px] py-[10px]">
               <div>
                 <Nav />
               </div>
 
-              <div className="scroll-smooth flex items-start border justify-center overflow-y-auto w-full h-full">
+              <div className="flex h-full w-full items-start justify-center overflow-y-auto scroll-smooth border">
                 {children}
               </div>
             </div>
           </div>
-          <div className="w-full h-[5%] border"></div>
-          <div className="w-full border h-[5%]">
+          <div className="h-[5%] w-full border"></div>
+          <div className="h-[5%] w-full border">
             <CopyrightFrame />
           </div>
         </div>
 
-        <div className="flex h-full w-auto">
+        <div className="flex h-full">
           <NameFrame />
         </div>
-
       </div>
     </div>
   );

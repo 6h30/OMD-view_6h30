@@ -4,25 +4,28 @@
 
 export default function ViewAbout() {
   return (
-    <div className="font-koho flex pt-[120px] h-full w-[550px] flex-col items-center justify-center gap-[100px]">
+    <div className="font-koho flex h-full w-[550px] flex-col items-center justify-center gap-[100px] pt-[120px]">
       <div className="flex h-[80%] w-full flex-col items-center justify-center gap-[20px]">
         <div>
-          <p className="font-italiana text-center text-[93px] leading-[90px]">OMD</p>
+          <p className="font-italiana text-center text-[93px] leading-[90px]">
+            OMD
+          </p>
         </div>
         <div className="text-center">
           <p>
             Tại OMD, mỗi công trình là một hành trình. Chúng tôi không chỉ thiết
             kế, mà đồng hành cùng khách hàng trong việc tạo ra những không gian
             sống phản ánh giá trị và cá tính riêng biệt. Mỗi dự án là một câu
-            chuyện đậm chất nghệ thuật, ý nghĩa, nơi cuộc sống và cái đẹp hòa quyện.
+            chuyện đậm chất nghệ thuật, ý nghĩa, nơi cuộc sống và cái đẹp hòa
+            quyện.
           </p>
         </div>
         <div className="text-center">
           <p>
-            Chúng tôi làm việc với sự cầu toàn và sự tận tâm, sự khởi đầu tốt sẽ từ
-            niềm đam mê và thấu hiểu sâu sắc. Không chỉ là sự hợp tác, mà là sự
-            kết nối chân thành, cùng nhau tạo ra những công trình mang dấu ấn cá
-            nhân.
+            Chúng tôi làm việc với sự cầu toàn và sự tận tâm, sự khởi đầu tốt sẽ
+            từ niềm đam mê và thấu hiểu sâu sắc. Không chỉ là sự hợp tác, mà là
+            sự kết nối chân thành, cùng nhau tạo ra những công trình mang dấu ấn
+            cá nhân.
           </p>
         </div>
         <div className="text-center">

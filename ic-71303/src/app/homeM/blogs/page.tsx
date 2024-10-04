@@ -1,10 +1,10 @@
 // import Image from "next/image";
 
-import ViewBlogs from "@/components/omd_ViewBlogs";
+import ViewBlogs from '@/components/omd_ViewBlogs';
 
 export default function Blogs() {
   return (
-    <div>
+    <div className="font-koho w-[1024px]">
       <ViewBlogs />
     </div>
   );

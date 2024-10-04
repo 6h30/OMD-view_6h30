@@ -13,15 +13,15 @@ export default function ViewIntro() {
       </p>
 
       <div className="flex h-[347px] w-[710px] flex-col items-center justify-center gap-[40px] whitespace-nowrap p-[40px]">
-        <p className="relative  whitespace-normal text-center text-[18px] leading-[1.4em] tracking-[0.04em]">
+        <p className="relative whitespace-normal text-center text-[18px] leading-[1.4em] tracking-[0.04em]">
           Chúng tôi khởi đầu mỗi dự án bằng việc lắng nghe, thấu hiểu nhu cầu và
           mong muốn của bạn. Với OMD Architect, kiến trúc thực sự đẹp là khi
           không gian trong đó có thể nuôi dưỡng tâm hồn, mang lại sự thư thái và
           khơi dậy cảm hứng.
         </p>
 
-        <div className=" flex flex-col items-center justify-center ">
-          <button className="text-center text-[18px] leading-[1.4em] tracking-[0.04em] border">
+        <div className="flex flex-col items-center justify-center">
+          <button className="border text-center text-[18px] leading-[1.4em] tracking-[0.04em]">
             Kết nối với chúng tôi
           </button>
         </div>
