@@ -4,6 +4,7 @@ import CopyrightFrame from '@/components/omd_CopyrightFrame';
 import NameFrame from '@/components/omd_TitleBLocks';
 // import Image from "next/image";
 import Nav from '@/components/omd_Nav';
+import InfoFrame from '@/components/omd_InfoFrame';
 interface OmdLayoutProps {
   children: ReactNode;
 }
@@ -24,7 +25,9 @@ export default function OmdLayout({ children }: OmdLayoutProps) {
               </div>
             </div>
           </div>
-          <div className="h-[5%] w-full border"></div>
+          <div className="h-[5%] w-full border">
+            <InfoFrame />
+          </div>
           <div className="h-[5%] w-full border">
             <CopyrightFrame />
           </div>

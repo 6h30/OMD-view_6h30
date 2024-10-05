@@ -14,6 +14,7 @@ const config: Config = {
       },
       fontFamily: {
         display: 'Italiana, serif',
+        koho1: 'Koho, sans-serif',
       },
     },
     screens: {

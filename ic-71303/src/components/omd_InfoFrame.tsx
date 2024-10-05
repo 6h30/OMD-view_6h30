@@ -1,36 +1,51 @@
-// import Image from "next/image";
-import Link from 'next/link';
+// // import Image from "next/image";
+// import Link from 'next/link';
 
 export default function InfoFrame() {
   return (
-    <div className="flex h-[34px] w-[832px] flex-row items-start justify-center gap-[48px] whitespace-nowrap">
-      <div className="flex h-[32px] w-[132px] flex-row items-center justify-center gap-[10px] rounded-[5px] border border-black">
-        <Link href="/homeM/viewServices">Dịch vụ</Link>
+    <div className="font-koho flex h-full w-full flex-row items-center justify-center gap-[10px]">
+      <div className="flex w-[40%] items-center justify-start border border-black">
+        <svg
+          className="h-7 w-7 hover:fill-gray-300"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="1"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          />
+        </svg>
+        <input className="border" type="text" />
       </div>
-      <div className="flex h-[32px] w-[132px] flex-row items-center justify-center gap-[10px] rounded-[5px] border border-black">
-        <Link href="/homeM/viewProjects">Dự án</Link>
-      </div>
-      <div className="flex h-[32px] w-[132px] flex-row items-center justify-center gap-[10px] rounded-[5px] border border-black">
-        <Link href="/homeM/viewAbout">Về OMD</Link>
-      </div>
-      <div className="flex h-[32px] w-[132px] flex-row items-center justify-center gap-[10px] rounded-[5px] border border-black">
-        <Link href="/homeM/viewContact">Liên hệ</Link>
-      </div>
-      <div className="flex h-[32px] w-[132px] flex-row items-center justify-center gap-[10px] rounded-[5px] border border-black">
-        <span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            className="h-7 w-7"
-          >
-            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
-          </svg>
-        </span>
+      <div className="flex w-[75%] flex-row justify-start items-center border border-black">
+        <div className="cursor-pointer flex flex-row w-[20%] items-center justify-start border">
+          <span className="flex w-[30%]">
+            <svg
+              className="h-7 w-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              {' '}
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />{' '}
+              <polyline points="10 17 15 12 10 7" />{' '}
+              <line x1="15" y1="12" x2="3" y2="12" />
+            </svg>
+          </span>
+          <p className="flex">login</p>
+        </div>
+        <div className="cursor-not-allowed flex w-[20%] items-center justify-center border">
+          <p>signup</p>
+        </div>
+        <div className="flex w-[20%] items-center justify-center border">
+          <p>01</p>
+        </div>
       </div>
     </div>
   );
