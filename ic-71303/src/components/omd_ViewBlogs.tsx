@@ -200,7 +200,7 @@ export default function ViewBlogs() {
           </div>
         </div>
 
-        <div className="relative mt-[280px] flex h-[1480px] w-[1px] bg-slate-400">
+        <div className="relative mt-[280px] flex h-[1640px] w-[1px] bg-slate-400">
           <br />
         </div>
 
@@ -290,7 +290,7 @@ export default function ViewBlogs() {
                 </span>
               </div>
 
-              <div className="relative flex justify-center w-[30%] gap-[10px] pl-[0px]">
+              <div className="relative flex w-[30%] justify-center gap-[10px] pl-[0px]">
                 <p className="text-center">{time}</p>
               </div>
             </div>
@@ -373,7 +373,7 @@ export default function ViewBlogs() {
             </div>
           </div>
 
-          <div className="relative flex h-[1400px] w-full flex-row items-end gap-[10px] pr-[20px]">
+          <div className="relative flex h-[1600px] w-full flex-row items-end gap-[10px] pr-[20px]">
             <div className="flex h-full w-[70%] flex-col items-start gap-[20px] px-[10px]">
               <div className="relative flex h-[33%] w-full cursor-pointer flex-col items-start gap-[10px]">
                 <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
@@ -444,18 +444,83 @@ export default function ViewBlogs() {
                   </p>
                 </div>
               </div>
-
-              <div className="gap-[10px relative h-[3%] w-full">
-                <div className="relative flex h-full w-full flex-col items-end">
-                  <p>1 2 3 pagination </p>
-                </div>
-              </div>
             </div>
 
             <div className="flex h-full w-[30%] flex-col items-start gap-[10px]">
               <div className="relative h-[40%] w-full border border-emerald-400"></div>
               <div className="relative h-[40%] w-full border border-emerald-400"></div>
               <div className="relative h-[20%] w-full border border-emerald-400"></div>
+            </div>
+          </div>
+
+          <div className="flex h-auto w-full flex-row items-center gap-[10px] pr-[20px]">
+            <div className="relative flex h-[1px] w-[50%] flex-col items-center bg-slate-400">
+              <br />
+            </div>
+            <div className="flex h-[50%] w-[50%] flex-col items-end border pr-[10px]">
+              <div className="flex items-center gap-x-1">
+                <button
+                  type="button"
+                  className="inline-flex min-h-[28px] min-w-[28px] items-center justify-center gap-x-1.5 rounded-sm p-1 hover:bg-slate-100"
+                >
+                  <svg
+                    className="size-3.5 shrink-0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m15 18-6-6 6-6"></path>
+                  </svg>
+                  <span>Trước</span>
+                </button>
+
+                <div className="flex items-center gap-x-1">
+                  <button
+                    type="button"
+                    className="flex min-h-[28px] min-w-[28px] items-center justify-center rounded-sm border hover:bg-slate-100"
+                  >
+                    1
+                  </button>
+                  <button
+                    type="button"
+                    className="flex min-h-[28px] min-w-[28px] items-center justify-center rounded-sm"
+                  >
+                    2
+                  </button>
+                  <button
+                    type="button"
+                    className="flex min-h-[28px] min-w-[28px] items-center justify-center rounded-sm"
+                  >
+                    3
+                  </button>
+                </div>
+                <button
+                  type="button"
+                  className="inline-flex min-h-[28px] min-w-[28px] items-center justify-center gap-x-1.5 hover:bg-slate-100"
+                >
+                  <span>Sau</span>
+                  <svg
+                    className="size-3.5 shrink-0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m9 18 6-6-6-6"></path>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>

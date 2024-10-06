@@ -54,7 +54,7 @@ export default function InfoFrame() {
 
   return (
     <div className="font-koho flex h-full w-full flex-row items-center justify-center gap-[10px]">
-      <div className="flex w-[40%] items-center justify-center gap-[10px] px-[12px] border-r-2">
+      <div className="flex w-[40%] items-center justify-center gap-[10px] border-r-2 px-[12px]">
         <svg
           className="h-7 w-7 hover:fill-gray-300"
           fill="none"
@@ -75,8 +75,8 @@ export default function InfoFrame() {
           name="search"
         />
       </div>
-      <div className="flex w-[60%] flex-row items-center justify-between ">
-        <div className="flex w-[20%] cursor-pointer flex-row items-center justify-start">
+      <div className="flex w-[60%] flex-row items-center justify-between">
+        <div className="group/item flex w-[20%] cursor-pointer flex-row items-center justify-start">
           <span className="flex w-[30%]">
             <svg
               className="h-7 w-7"
@@ -92,10 +92,32 @@ export default function InfoFrame() {
               <line x1="15" y1="12" x2="3" y2="12" />
             </svg>
           </span>
-          <p className="flex">login</p>
+          <div className="group/edit flex invisible group-hover/item:visible">
+            <p>Đăng nhập</p>
+          </div>
+          
         </div>
-        <div className="flex w-[20%] cursor-not-allowed items-center justify-center">
-          <p>signup</p>
+        <div className="group/item flex w-[20%] cursor-not-allowed items-center justify-end">
+          <span className="flex w-[30%]">
+            <svg
+              className="h-7 w-7"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="1"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" />
+              <line x1="3" y1="21" x2="21" y2="21" />
+              <path d="M4 21v-15a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v15" />
+              <path d="M9 21v-8a3 3 0 0 1 6 0v8" />
+            </svg>
+          </span>
+          <div className="group/edit flex invisible group-hover/item:visible">
+          <p>Đăng kí</p></div>
         </div>
         <div
           className="flex w-[20%] cursor-pointer items-center justify-end p-4 transition-all duration-300"

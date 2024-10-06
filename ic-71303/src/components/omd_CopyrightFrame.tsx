@@ -3,7 +3,7 @@
 
 export default function CopyrightFrame() {
   return (
-    <div className="font-koho flex h-[34px] w-full flex-row items-start justify-between whitespace-nowrap">
+    <div className="font-koho flex h-[34px] w-full flex-row items-center justify-between whitespace-nowrap">
       <div className="flex h-[32px] w-[132px] flex-row items-center justify-start pl-[5px]">
         <a href="#">© 2024 OMD Studio</a>
       </div>
