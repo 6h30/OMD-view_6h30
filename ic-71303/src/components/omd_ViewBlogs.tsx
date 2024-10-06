@@ -79,9 +79,9 @@ export default function ViewBlogs() {
                   <circle cx="100" cy="100" r="80" fill="none" />
                   <g>
                     <use href="#circlePath" fill="none" />
-                    <text className="text-lg tracking-[0.23em]">
+                    <text className="text-lg tracking-[0.22em]">
                       <textPath href="#circlePath">
-                        DESIGN YOUR HOUSE BY OMD ARCHITECT
+                        DESIGN YOUR HOUSE WITH OMD ARCHITECT
                       </textPath>
                     </text>
                   </g>
@@ -207,11 +207,11 @@ export default function ViewBlogs() {
         <div className="relative flex h-auto w-[75%] flex-col gap-[10px] py-[20px]">
           <div className="flex pr-[20px]">
             <div className="relative flex h-[60px] w-full flex-row items-center justify-center border border-black pr-[20px]">
-              <div className="relative flex w-[30%] flex-col items-center gap-[10px]">
+              <div className="relative flex w-[200px] flex-col items-center gap-[10px]">
                 <p>OMD Blog</p>
               </div>
 
-              <div className="relative flex w-[60%] flex-row items-start gap-[10px] border-l border-black pl-[10px]">
+              <div className="relative flex w-[60%] flex-row items-center justify-center gap-[10px] border-x border-black pl-[0px]">
                 <p>Mạng xã hội:</p>
                 <span>
                   <svg
@@ -290,7 +290,7 @@ export default function ViewBlogs() {
                 </span>
               </div>
 
-              <div className="relative flex w-[20%] gap-[10px] border-l border-black pl-[10px]">
+              <div className="relative flex justify-center w-[30%] gap-[10px] pl-[0px]">
                 <p className="text-center">{time}</p>
               </div>
             </div>
