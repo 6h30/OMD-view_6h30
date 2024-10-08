@@ -3,8 +3,8 @@
 // import styles from './omd_ViewBlogs.module.css';
 export default function DetailBlogs() {
   return (
-    <div className="flex h-[920px] w-[2020px] items-center justify-center border">
-      <div className="flex h-[800px] w-full flex-row justify-center">
+    <div className="flex h-[800px] w-[2020px] items-center justify-center border">
+      <div className="flex h-full w-full flex-row justify-center">
         <div className="flex h-full w-[5%] flex-col items-center justify-center">
           <div className="flex h-[95%] w-[80%] flex-col justify-between border border-black">
             <div className="flex justify-center border">

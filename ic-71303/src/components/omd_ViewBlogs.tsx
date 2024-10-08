@@ -2,6 +2,7 @@
 // src/components/omd_ViewBlog.tsx
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 // import styles from './omd_ViewBlogs.module.css';
 
 export default function ViewBlogs() {
@@ -117,7 +118,8 @@ export default function ViewBlogs() {
                   </p>
                 </div>
 
-                <div className="w-full border text-[12px]">
+                <div className="flex w-full flex-row text-[12px]">
+                  <span>#</span>
                   <p>Giải pháp thiết kế</p>
                 </div>
               </div>
@@ -140,7 +142,8 @@ export default function ViewBlogs() {
                   <p>NOM HOUSE - Tổ ấm bình yên mang đậm dấu ấn cá nhân.</p>
                 </div>
 
-                <div className="w-full border text-[12px]">
+                <div className="flex w-full flex-row text-[12px]">
+                  <span>#</span>
                   <p>Nhà ở</p>
                 </div>
               </div>
@@ -163,7 +166,8 @@ export default function ViewBlogs() {
                   <p>PTH: Lựa chọn không gian sống tinh giản, gọn gàng.</p>
                 </div>
 
-                <div className="w-full border text-[12px]">
+                <div className="flex w-full flex-row text-[12px]">
+                  <span>#</span>
                   <p>Nhà ở</p>
                 </div>
               </div>
@@ -186,7 +190,8 @@ export default function ViewBlogs() {
                   <p>Mật ngọt Library - Thư viện cho trẻ em vùng núi</p>
                 </div>
 
-                <div className="w-full border text-[12px]">
+                <div className="flex w-full flex-row text-[12px]">
+                  <span>#</span>
                   <p>Công trình công cộng</p>
                 </div>
               </div>
@@ -375,28 +380,32 @@ export default function ViewBlogs() {
 
           <div className="relative flex h-[1600px] w-full flex-row items-end gap-[10px] pr-[20px]">
             <div className="flex h-full w-[70%] flex-col items-start gap-[20px] px-[10px]">
-              <div className="relative flex h-[33%] w-full cursor-pointer flex-col items-start gap-[10px]">
-                <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
-                  <p>Mật ngọt Library - Thư viện cho trẻ em vùng núi</p>
-                </div>
-                <div className="relative flex h-[60%] w-full flex-col items-start overflow-hidden border">
-                  <Image
-                    width={200}
-                    height={200}
-                    src="/image4.jpg"
-                    alt="omg image"
-                    layout="responsive"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
+              
+              <Link href="/homeM/blogsDetail" className="relative flex h-[33%] w-full cursor-pointer flex-col items-start gap-[10px]">
+                  <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
+                    <p>Giếng trời – Hơi thở thiên nhiên trong mỗi công trình</p>
+                  </div>
+                  <div className="relative flex h-[60%] w-full flex-col items-start overflow-hidden border">
+                    <Image
+                      width={200}
+                      height={200}
+                      src="/image5.jpg"
+                      alt="omg image"
+                      layout="responsive"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                
                 <div className="relative flex h-[25%] w-full flex-col items-start border-b border-b-black">
                   <p>
-                    Với bối cảnh cơ sở vật chất tại điểm Đá Trắng còn nghèo nàn,
-                    chỉ có 5 phòng học kiên cố, văn hoá đọc ở trẻ em miền núi
-                    nơi đây vẫn còn “đói sách”. Vì thế, ngôi trường này cần …
+                    Không đơn thuần là một hình thức của cảnh quan sân vườn,
+                    việc đưa thiên nhiên vào bên trong công trình đã trở thành
+                    một xu hướng trong thiết kế kiến trúc hiện đại. Các nhà
+                    thiết kế luôn tìm cách kết hợp giữa công trình và mảng xanh
+                    một cách tự nhiên ...
                   </p>
-                </div>
-              </div>
+                </div>             
+              </Link>
 
               <div className="relative flex h-[33%] w-full flex-col items-start gap-[10px]">
                 <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
@@ -447,9 +456,9 @@ export default function ViewBlogs() {
             </div>
 
             <div className="flex h-full w-[30%] flex-col items-start gap-[10px]">
-              <div className="relative h-[40%] w-full border border-emerald-400"></div>
-              <div className="relative h-[40%] w-full border border-emerald-400"></div>
-              <div className="relative h-[20%] w-full border border-emerald-400"></div>
+              <div className="relative h-[40%] w-full border border-gray-300">ads</div>
+              <div className="relative h-[40%] w-full border border-gray-300">ads</div>
+              <div className="relative h-[20%] w-full border border-gray-300">ads</div>
             </div>
           </div>
 

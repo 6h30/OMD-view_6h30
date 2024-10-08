@@ -1,6 +1,7 @@
-// // import Image from "next/image";
-// import Link from 'next/link';
+// import Image from "next/image";
+
 'use client';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 const SvgDark: React.FC = () => (
@@ -78,24 +79,27 @@ export default function InfoFrame() {
       <div className="flex w-[60%] flex-row items-center justify-between">
         <div className="group/item flex w-[20%] cursor-pointer flex-row items-center justify-start">
           <span className="flex w-[30%]">
-            <svg
-              className="h-7 w-7"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
-              <polyline points="10 17 15 12 10 7" />
-              <line x1="15" y1="12" x2="3" y2="12" />
-            </svg>
+            <Link href="/homeM/login">
+              <svg
+                className="h-7 w-7"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                <polyline points="10 17 15 12 10 7" />
+                <line x1="15" y1="12" x2="3" y2="12" />
+              </svg>
+            </Link>
           </span>
-          <div className="group/edit flex invisible group-hover/item:visible">
-            <p>Đăng nhập</p>
-          </div>
-          
+          <Link href="/homeM/login">
+            <div className="group/edit invisible flex group-hover/item:visible">
+              <p>Đăng nhập</p>
+            </div>
+          </Link>
         </div>
         <div className="group/item flex w-[20%] cursor-not-allowed items-center justify-end">
           <span className="flex w-[30%]">
@@ -116,8 +120,9 @@ export default function InfoFrame() {
               <path d="M9 21v-8a3 3 0 0 1 6 0v8" />
             </svg>
           </span>
-          <div className="group/edit flex invisible group-hover/item:visible">
-          <p>Đăng kí</p></div>
+          <div className="group/edit invisible flex group-hover/item:visible">
+            <p>Đăng kí</p>
+          </div>
         </div>
         <div
           className="flex w-[20%] cursor-pointer items-center justify-end p-4 transition-all duration-300"
