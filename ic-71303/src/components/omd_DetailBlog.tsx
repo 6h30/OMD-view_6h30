@@ -1,9 +1,9 @@
 // src/components/omd_ViewBlog.tsx
-// import Image from "next/image";
+import Image from 'next/image';
 // import styles from './omd_ViewBlogs.module.css';
 export default function DetailBlogs() {
   return (
-    <div className="flex h-[800px] w-[2020px] items-center justify-center border">
+    <div className="flex h-[800px] w-[2620px] items-center justify-center border">
       <div className="flex h-full w-full flex-row justify-center">
         <div className="flex h-full w-[5%] flex-col items-center justify-center">
           <div className="flex h-[95%] w-[80%] flex-col justify-between border border-black">
@@ -24,7 +24,7 @@ export default function DetailBlogs() {
           </div>
         </div>
 
-        <div className="flex h-full w-[90%] flex-row justify-start border border-orange-500 py-[50px]">
+        <div className="flex h-full w-[1800px] flex-row justify-start border border-orange-500 py-[50px]">
           <div className="flex h-full w-[20%] flex-col justify-start">
             <div className="relative flex h-full w-full">
               <div className="absolute left-[12px] top-[20px] z-[1] h-[90%] w-[90%] border border-green-500">
@@ -153,6 +153,471 @@ export default function DetailBlogs() {
               <div className="clip-path-rec-2 absolute inset-x-[0px] inset-y-[-2px] bg-black"></div>
               <div className="clip-path-rec-2 absolute inset-x-[0px] inset-y-[-0px] bg-white"></div>
               <div className="absolute bottom-[31px] left-[0%] right-[0px] z-[2] h-[2px] origin-left rotate-[0deg] transform bg-black"></div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex h-full w-[350px] flex-col border border-sky-500">
+          <div className="flex justify-center border">
+            <p>Bình luận</p>
+          </div>
+          <div className="flex w-full flex-col overflow-hidden">
+            <div className="mt-3 h-auto overflow-y-scroll">
+              <div className="mb-3 flex flex-col gap-[10px] border-b pb-3">
+                <div className="flex flex-row items-center gap-3">
+                  <div className="group relative">
+                    <Image
+                      className="h-12 w-12 rounded-full border duration-200 group-hover:scale-105"
+                      src="/"
+                      width={200}
+                      height={200}
+                      alt="avatar"
+                    />
+                    <div className="absolute -right-1 bottom-1 rounded-full bg-white">
+                      <div>
+                        <svg
+                          className="h-5 w-5 text-sky-500"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" />
+                          <circle cx="12" cy="12" r="9" />
+                          <line x1="9" y1="9" x2="9.01" y2="9" />
+                          <line x1="15" y1="9" x2="15.01" y2="9" />
+                          <path d="M8 13a4 4 0 1 0 8 0m0 0H8" />
+                        </svg>
+                        <span className="sr-only">stick emoji</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex w-full flex-row justify-between">
+                    <p>dcviet</p>
+                    <span>
+                      <svg
+                        className="h-6 w-6 text-gray-500"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="1" />
+                        <circle cx="19" cy="12" r="1" />
+                        <circle cx="5" cy="12" r="1" />
+                      </svg>
+                      <span className="sr-only">more opt</span>
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex h-auto w-full flex-col gap-3 text-sm">
+                  <p className="w-full overflow-visible">
+                  “Tsuboniwa” của Nhật Bản mới là điểm nhấn thực sự, với sự kết nối hoàn hảo giữa thiên nhiên và kiến trúc. Mỗi chi tiết nhỏ đều có ý nghĩa!
+                  </p>
+                  <div className="flex flex-row items-center justify-start gap-[10px] text-sm">
+                    <div className="flex flex-row items-center">
+                      <span>
+                        <svg
+                          className="h-6 w-6 text-gray-500"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                          />
+                        </svg>
+                        <span className="sr-only">love emoji</span>
+                      </span>
+
+                      <div className="flex">12</div>
+                    </div>
+                    <div>Phản hồi</div>
+                    <div className="text-gray-500">6 giờ trước</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mb-3 flex flex-col gap-[10px] border-b pb-3">
+                <div className="flex flex-row items-center gap-3">
+                  <div className="group relative">
+                    <Image
+                      className="h-12 w-12 rounded-full border duration-200 group-hover:scale-105"
+                      src="/"
+                      width={200}
+                      height={200}
+                      alt="avatar"
+                    />
+                    <div className="absolute -right-1 bottom-1 rounded-full bg-white">
+                      <div>
+                        <svg
+                          className="h-5 w-5 text-sky-500"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" />
+                          <circle cx="12" cy="12" r="9" />
+                          <line x1="9" y1="9" x2="9.01" y2="9" />
+                          <line x1="15" y1="9" x2="15.01" y2="9" />
+                          <path d="M8 13a4 4 0 1 0 8 0m0 0H8" />
+                        </svg>
+                        <span className="sr-only">stick emoji</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex w-full flex-row justify-between">
+                    <p>dcviet</p>
+                    <span>
+                      <svg
+                        className="h-6 w-6 text-gray-500"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="1" />
+                        <circle cx="19" cy="12" r="1" />
+                        <circle cx="5" cy="12" r="1" />
+                      </svg>
+                      <span className="sr-only">more opt</span>
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex h-auto w-full flex-col gap-3 text-sm">
+                  <p className="w-full overflow-visible">
+                  Mình không hiểu sao bạn lại nghĩ giếng trời ở Nhật Bản lại hay hơn Trung Quốc! Ở Trung Quốc, “sân trời” rộng lớn mang lại không gian sống động, chứ không phải cái sự đơn điệu của “Tsuboniwa”
+                  </p>
+                  <div className="flex flex-row items-center justify-start gap-[10px] text-sm">
+                    <div className="flex flex-row items-center">
+                      <span>
+                        <svg
+                          className="h-6 w-6 text-gray-500"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                          />
+                        </svg>
+                        <span className="sr-only">love emoji</span>
+                      </span>
+
+                      <div className="flex">12</div>
+                    </div>
+                    <div>Phản hồi</div>
+                    <div className="text-gray-500">6 giờ trước</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mb-3 flex flex-col gap-[10px] border-b pb-3">
+                <div className="flex flex-row items-center gap-3">
+                  <div className="group relative">
+                    <Image
+                      className="h-12 w-12 rounded-full border duration-200 group-hover:scale-105"
+                      src="/"
+                      width={200}
+                      height={200}
+                      alt="avatar"
+                    />
+                    <div className="absolute -right-1 bottom-1 rounded-full bg-white">
+                      <div>
+                        <svg
+                          className="h-5 w-5 text-sky-500"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" />
+                          <circle cx="12" cy="12" r="9" />
+                          <line x1="9" y1="9" x2="9.01" y2="9" />
+                          <line x1="15" y1="9" x2="15.01" y2="9" />
+                          <path d="M8 13a4 4 0 1 0 8 0m0 0H8" />
+                        </svg>
+                        <span className="sr-only">stick emoji</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex w-full flex-row justify-between">
+                    <p>dcviet</p>
+                    <span>
+                      <svg
+                        className="h-6 w-6 text-gray-500"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="1" />
+                        <circle cx="19" cy="12" r="1" />
+                        <circle cx="5" cy="12" r="1" />
+                      </svg>
+                      <span className="sr-only">more opt</span>
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex h-auto w-full flex-col gap-3 text-sm">
+                  <p className="w-full overflow-visible">
+                  Đơn điệu? Thực ra, cái bạn gọi là “sống động” lại có thể khiến không gian quá ồn ào và hỗn loạn. Nhật Bản chú trọng đến sự tĩnh lặng, những khu vườn Zen giúp người ta thư giãn và tìm về bản thân, chứ không phải chỉ là chỗ để phơi đồ!
+                  </p>
+                  <div className="flex flex-row items-center justify-start gap-[10px] text-sm">
+                    <div className="flex flex-row items-center">
+                      <span>
+                        <svg
+                          className="h-6 w-6 text-gray-500"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                          />
+                        </svg>
+                        <span className="sr-only">love emoji</span>
+                      </span>
+
+                      <div className="flex">12</div>
+                    </div>
+                    <div>Phản hồi</div>
+                    <div className="text-gray-500">6 giờ trước</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mb-3 flex flex-col gap-[10px] border-b pb-3">
+                <div className='flex flex-col'>
+                  <div className="flex flex-row items-center gap-3">
+                    <div className="group relative">
+                      <Image
+                        className="h-12 w-12 rounded-full border duration-200 group-hover:scale-105"
+                        src="/"
+                        width={200}
+                        height={200}
+                        alt="avatar"
+                      />
+                      <div className="absolute -right-1 bottom-1 rounded-full bg-white">
+                        <div>
+                          <svg
+                            className="h-5 w-5 text-sky-500"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" />
+                            <circle cx="12" cy="12" r="9" />
+                            <line x1="9" y1="9" x2="9.01" y2="9" />
+                            <line x1="15" y1="9" x2="15.01" y2="9" />
+                            <path d="M8 13a4 4 0 1 0 8 0m0 0H8" />
+                          </svg>
+                          <span className="sr-only">stick emoji</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex w-full flex-row justify-between">
+                      <p>dcviet</p>
+                      <span>
+                        <svg
+                          className="h-6 w-6 text-gray-500"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle cx="12" cy="12" r="1" />
+                          <circle cx="19" cy="12" r="1" />
+                          <circle cx="5" cy="12" r="1" />
+                        </svg>
+                        <span className="sr-only">more opt</span>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="flex h-auto w-full flex-col gap-3 text-sm">
+                    <p className="w-full overflow-visible">
+                    Nhưng gia đình cần giao lưu, bạn không thấy à? “Sân trời” là nơi tụ họp, nơi có tiếng cười và hoạt động. Còn giếng trời Nhật Bản thì chỉ như một góc chết, không ai muốn ngồi đó lâu đâu.
+                    </p>
+                    <div className="flex flex-row items-center justify-start gap-[10px] text-sm">
+                      <div className="flex flex-row items-center">
+                        <span>
+                          <svg
+                            className="h-6 w-6 text-gray-500"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                            />
+                          </svg>
+                          <span className="sr-only">love emoji</span>
+                        </span>
+
+                        <div className="flex">12</div>
+                      </div>
+                      <div>Phản hồi</div>
+                      <div className="text-gray-500">6 giờ trước</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className='flex pl-5 flex-col'>
+                  <div className="flex flex-row items-center gap-3">
+                    <div className="group relative">
+                      <Image
+                        className="h-12 w-12 rounded-full border duration-200 group-hover:scale-105"
+                        src="/"
+                        width={200}
+                        height={200}
+                        alt="avatar"
+                      />
+                      <div className="absolute -right-1 bottom-1 rounded-full bg-white">
+                        <div>
+                          <svg
+                            className="h-5 w-5 text-green-500"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" />
+                            <circle cx="12" cy="12" r="9" />
+                            <line x1="9" y1="9" x2="9.01" y2="9" />
+                            <line x1="15" y1="9" x2="15.01" y2="9" />
+                            <path d="M8 13a4 4 0 1 0 8 0m0 0H8" />
+                          </svg>
+                          <span className="sr-only">stick emoji</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex w-full flex-row justify-between">
+                      <p>dcviet</p>
+                      <span>
+                        <svg
+                          className="h-6 w-6 text-gray-500"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle cx="12" cy="12" r="1" />
+                          <circle cx="19" cy="12" r="1" />
+                          <circle cx="5" cy="12" r="1" />
+                        </svg>
+                        <span className="sr-only">more opt</span>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="flex h-auto w-full flex-col gap-3 text-sm">
+                    <p className="w-full overflow-visible">
+                    Nói như bạn thì thực sự thiếu sót! Không gian yên tĩnh ở Nhật giúp con người cảm nhận vẻ đẹp của thiên nhiên, chứ không phải chỉ là để cho vui. Mỗi viên đá, mỗi cành cây đều có ý nghĩa sâu sắc.
+                    </p>
+                    <div className="flex flex-row items-center justify-start gap-[10px] text-sm">
+                      <div className="flex flex-row items-center">
+                        <span>
+                          <svg
+                            className="h-6 w-6 text-gray-500"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                            />
+                          </svg>
+                          <span className="sr-only">love emoji</span>
+                        </span>
+
+                        <div className="flex">12</div>
+                      </div>
+                      <div>Phản hồi</div>
+                      <div className="text-gray-500">6 giờ trước</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex w-full pt-3">
+              <div className="flex w-full items-center rounded-sm border py-2">
+                <textarea
+                  id="chat"
+                  rows={2}
+                  className="ml-3 block w-full rounded-sm border border-gray-300 bg-white p-2.5 text-sm text-gray-900"
+                  placeholder="Bình luận ..."
+                ></textarea>
+                <button
+                  type="submit"
+                  className="cursor-pointer justify-start rounded-sm p-2 text-blue-600 hover:bg-gray-200"
+                >
+                  <svg
+                    className="h-6 w-6 text-gray-500"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="22" y1="2" x2="11" y2="13" />
+                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                  </svg>
+                  <span className="sr-only">Send message</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>

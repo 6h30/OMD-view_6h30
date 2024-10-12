@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function TitleBlocks() {
   return (
-    <div className="font-koho flex h-[960px] w-[200px] flex-col items-center border border-l-black bg-white p-4">
+    <div className="font-koho flex h-[960px] w-[200px] flex-col items-center border-l border-l-black bg-white p-4">
       <div className="mb-4 h-[15%] w-full border border-black">
         <Image
           src=""

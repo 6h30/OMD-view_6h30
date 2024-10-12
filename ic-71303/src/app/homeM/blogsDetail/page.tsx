@@ -13,12 +13,14 @@ export default function Main() {
     }
   };
   return (
-    <div
-      className="h-[950px] w-[1000px] overflow-x-auto bg-white text-black"
-      onWheel={handleScroll}
-      ref={scrollRef}
-    >
-      <DetailBlogs />
+    <div className="flex h-full w-full items-start justify-center overflow-hidden scroll-smooth border">
+      <div
+        className="h-[950px] w-[1000px] overflow-x-auto bg-white text-black"
+        onWheel={handleScroll}
+        ref={scrollRef}
+      >
+        <DetailBlogs />
+      </div>
     </div>
   );
 }
