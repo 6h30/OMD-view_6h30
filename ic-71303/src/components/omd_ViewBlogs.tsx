@@ -378,14 +378,17 @@ export default function ViewBlogs() {
             </div>
           </div>
 
-          <div className="relative flex h-[1600px] w-full flex-row items-end gap-[10px] pr-[20px]">
+          <div className="relative flex h-[1600px] w-full flex-row items-end gap-[10px] pr-[20px] overflow-scroll">
             <div className="flex h-full w-[70%] flex-col items-start gap-[20px] px-[10px]">
-              
-              <Link href="/homeM/blogsDetail" className="relative flex h-[33%] w-full cursor-pointer flex-col items-start gap-[10px]">
-                  <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
+
+              <div className="relative flex h-[33%] w-full cursor-pointer flex-col items-start gap-[10px]">
+                <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
+                  <Link href="/homeM/blogsDetail">
                     <p>Giếng trời – Hơi thở thiên nhiên trong mỗi công trình</p>
-                  </div>
-                  <div className="relative flex h-[60%] w-full flex-col items-start overflow-hidden border">
+                  </Link>
+                </div>
+                <div className="relative flex h-[60%] w-full flex-col items-start overflow-hidden border">
+                  <Link href="/homeM/blogsDetail">
                     <Image
                       width={200}
                       height={200}
@@ -394,8 +397,9 @@ export default function ViewBlogs() {
                       layout="responsive"
                       className="h-full w-full object-cover"
                     />
-                  </div>
-                
+                  </Link>
+                </div>
+
                 <div className="relative flex h-[25%] w-full flex-col items-start border-b border-b-black">
                   <p>
                     Không đơn thuần là một hình thức của cảnh quan sân vườn,
@@ -404,8 +408,38 @@ export default function ViewBlogs() {
                     thiết kế luôn tìm cách kết hợp giữa công trình và mảng xanh
                     một cách tự nhiên ...
                   </p>
-                </div>             
-              </Link>
+                </div>
+              </div>
+
+              <div className="relative flex h-[33%] w-full cursor-pointer flex-col items-start gap-[10px]">
+                <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
+                  <Link href="/homeM/blogsDetail">
+                    <p>Giếng trời – Hơi thở thiên nhiên trong mỗi công trình</p>
+                  </Link>
+                </div>
+                <div className="relative flex h-[60%] w-full flex-col items-start overflow-hidden border">
+                  <Link href="/homeM/blogsDetail">
+                    <Image
+                      width={200}
+                      height={200}
+                      src="/image5.jpg"
+                      alt="omg image"
+                      layout="responsive"
+                      className="h-full w-full object-cover"
+                    />
+                  </Link>
+                </div>
+
+                <div className="relative flex h-[25%] w-full flex-col items-start border-b border-b-black">
+                  <p>
+                    Không đơn thuần là một hình thức của cảnh quan sân vườn,
+                    việc đưa thiên nhiên vào bên trong công trình đã trở thành
+                    một xu hướng trong thiết kế kiến trúc hiện đại. Các nhà
+                    thiết kế luôn tìm cách kết hợp giữa công trình và mảng xanh
+                    một cách tự nhiên ...
+                  </p>
+                </div>
+              </div>
 
               <div className="relative flex h-[33%] w-full flex-col items-start gap-[10px]">
                 <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
@@ -456,9 +490,15 @@ export default function ViewBlogs() {
             </div>
 
             <div className="flex h-full w-[30%] flex-col items-start gap-[10px]">
-              <div className="relative h-[40%] w-full border border-gray-300">ads</div>
-              <div className="relative h-[40%] w-full border border-gray-300">ads</div>
-              <div className="relative h-[20%] w-full border border-gray-300">ads</div>
+              <div className="relative h-[40%] w-full border border-gray-300">
+                ads
+              </div>
+              <div className="relative h-[40%] w-full border border-gray-300">
+                ads
+              </div>
+              <div className="relative h-[20%] w-full border border-gray-300">
+                ads
+              </div>
             </div>
           </div>
 
@@ -470,7 +510,7 @@ export default function ViewBlogs() {
               <div className="flex items-center gap-x-1">
                 <button
                   type="button"
-                  className="inline-flex min-h-[28px] min-w-[28px] items-center justify-center gap-x-1.5 rounded-sm p-1 hover:bg-slate-100"
+                  className="inline-flex min-h-[28px] min-w-[28px] items-center justify-center gap-x-1.5 rounded-sm  focus:bg-slate-100 hover:bg-slate-50"
                 >
                   <svg
                     className="size-3.5 shrink-0"
@@ -492,26 +532,26 @@ export default function ViewBlogs() {
                 <div className="flex items-center gap-x-1">
                   <button
                     type="button"
-                    className="flex min-h-[28px] min-w-[28px] items-center justify-center rounded-sm border hover:bg-slate-100"
+                    className="flex min-h-[28px] min-w-[28px] items-center justify-center rounded-sm border focus:bg-slate-100"
                   >
                     1
                   </button>
                   <button
                     type="button"
-                    className="flex min-h-[28px] min-w-[28px] items-center justify-center rounded-sm"
+                    className="flex min-h-[28px] min-w-[28px] items-center justify-center rounded-sm hover:border focus:bg-slate-100"
                   >
                     2
                   </button>
                   <button
                     type="button"
-                    className="flex min-h-[28px] min-w-[28px] items-center justify-center rounded-sm"
+                    className="flex min-h-[28px] min-w-[28px] items-center justify-center rounded-sm hover:border focus:bg-slate-100"
                   >
                     3
                   </button>
                 </div>
                 <button
                   type="button"
-                  className="inline-flex min-h-[28px] min-w-[28px] items-center justify-center gap-x-1.5 hover:bg-slate-100"
+                  className="inline-flex min-h-[28px] min-w-[28px] items-center justify-center gap-x-1.5 focus:bg-slate-100 hover:bg-slate-50"
                 >
                   <span>Sau</span>
                   <svg

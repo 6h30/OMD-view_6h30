@@ -14,24 +14,34 @@ export default function LoginForm() {
     if (!value) {
       event.currentTarget.setCustomValidity('Email là bắt buộc');
     } else if (!value.includes('@')) {
-      event.currentTarget.setCustomValidity(`Email phải chứa @, "${value}" thiếu @`);
+      event.currentTarget.setCustomValidity(
+        `Email phải chứa @, "${value}" thiếu @`
+      );
     } else {
       event.currentTarget.setCustomValidity('');
     }
   };
-  
+
   const isValidDomain = (domain: string) => {
     return domain === 'gmail.com' || domain === 'omdstudio.art';
   };
 
- const handleEmailInput = (event: React.FormEvent<HTMLInputElement>) => {
+  const handleEmailInput = (event: React.FormEvent<HTMLInputElement>) => {
     const value = event.currentTarget.value;
     if (value.endsWith('@') || value.split('@').length === 1) {
-      event.currentTarget.setCustomValidity('Vui lòng nhập tên miền sau ký tự @');
+      event.currentTarget.setCustomValidity(
+        'Vui lòng nhập tên miền sau ký tự @'
+      );
     } else if (value.includes('@')) {
-      const domainPart = value.split('@')[1]; 
-      if (!domainPart || !/\..+/.test(domainPart) || !isValidDomain(domainPart)) {
-        event.currentTarget.setCustomValidity('Email hợp lệ với đuôi @gmail.com hoặc @omdstudio.art');
+      const domainPart = value.split('@')[1];
+      if (
+        !domainPart ||
+        !/\..+/.test(domainPart) ||
+        !isValidDomain(domainPart)
+      ) {
+        event.currentTarget.setCustomValidity(
+          'Email hợp lệ với đuôi @gmail.com hoặc @omdstudio.art'
+        );
       } else {
         event.currentTarget.setCustomValidity('');
       }
@@ -39,17 +49,26 @@ export default function LoginForm() {
       event.currentTarget.setCustomValidity('');
     }
   };
-  
-  const handlePasswordInvalid = (event: React.InvalidEvent<HTMLInputElement>) => {
-    event.currentTarget.setCustomValidity('Mật khẩu là bắt buộc'); 
+
+  const handlePasswordInvalid = (
+    event: React.InvalidEvent<HTMLInputElement>
+  ) => {
+    event.currentTarget.setCustomValidity('Mật khẩu là bắt buộc');
   };
-  
+
   const handlePasswordInput = (event: React.FormEvent<HTMLInputElement>) => {
-    event.currentTarget.setCustomValidity(''); 
+    event.currentTarget.setCustomValidity('');
   };
-  
+
   return (
-    <div className="flex h-[500px] w-[500px] flex-col border">
+    <div
+      className="flex h-[500px] w-[500px] flex-col border"
+      style={{
+        backgroundColor: '#ffffff',
+        backgroundImage:
+          "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23cacaca' fill-opacity='0.4'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E\")",
+      }}
+    >
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-lg">
           <h1 className="text-center text-2xl font-bold sm:text-3xl">
@@ -72,7 +91,7 @@ export default function LoginForm() {
               <div className="relative flex rounded-sm border">
                 <input
                   type="email"
-                  className="w-full rounded-sm border-gray-200 p-4 pe-12 focus:outline-none focus:ring-1 focus:ring-gray-500"
+                  className="w-full rounded-sm border-gray-200 p-4 pe-12 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:border-gray-500"
                   placeholder="Nhập email"
                   required
                   onInvalid={handleEmailInvalid}
@@ -105,7 +124,7 @@ export default function LoginForm() {
               <div className="relative flex rounded-sm border">
                 <input
                   type={isPasswordVisible ? 'text' : 'password'}
-                  className="w-full rounded-sm border-gray-200 p-4 pe-12 focus:outline-none focus:ring-1 focus:ring-gray-500"
+                  className="w-full rounded-sm border-gray-200 p-4 pe-12 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:border-gray-500"
                   placeholder="Nhập mật khẩu"
                   required
                   onInvalid={handlePasswordInvalid}
@@ -149,7 +168,7 @@ export default function LoginForm() {
 
             <button
               type="submit"
-              className="block w-full rounded-sm border px-5 py-3 text-slate-600 hover:border-gray-500 hover:text-black"
+              className="block w-full rounded-sm border px-5 py-3 bg-white text-slate-600 hover:border-gray-500 hover:text-black"
             >
               Đăng nhập
             </button>

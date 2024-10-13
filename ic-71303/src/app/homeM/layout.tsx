@@ -11,7 +11,7 @@ interface OmdLayoutProps {
 
 export default function OmdLayout({ children }: OmdLayoutProps) {
   return (
-    <div className="w-inherit h-[962px] border border-black">
+    <div className="w-inherit h-[962px] w-auto border border-black">
       <div className="flex h-full w-auto flex-row items-center justify-center gap-[20px] bg-white text-black">
         <div className="flex h-full w-full flex-col items-center justify-center gap-[2px]">
           

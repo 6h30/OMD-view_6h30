@@ -7,8 +7,10 @@ export default function TitleBlocks() {
     <div className="font-koho flex h-[960px] w-[200px] flex-col items-center border-l border-l-black bg-white p-4">
       <div className="mb-4 h-[15%] w-full border border-black">
         <Image
-          src=""
-          alt="Placeholder image"
+          src="/"
+          width={100}
+          height={50}
+          alt="logo studio"
           className="w-full border-4 border-blue-50"
         />
       </div>
