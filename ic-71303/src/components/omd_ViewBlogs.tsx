@@ -53,10 +53,9 @@ export default function ViewBlogs() {
         }
     }
 `;
-
   return (
     <div className="flex justify-center py-[20px]">
-      <div className="relative flex h-[1660] w-[960px] flex-row items-start justify-center gap-[10px] border">
+      <div className="relative flex min-h-[2120px] w-[960px] flex-row items-start justify-center gap-[10px] border border-red-500">
         <div className="relative flex h-auto w-[24%] flex-col items-center justify-center gap-[20px] py-[20px]">
           <div className="flex h-[240px] w-full flex-col items-center justify-center gap-[10px] pl-[20px] pr-[10px]">
             <div className="h-[168px] w-[173px] items-center justify-center rounded-[100%]">
@@ -197,6 +196,30 @@ export default function ViewBlogs() {
               </div>
             </div>
 
+            <div className="flex h-[24%] w-full cursor-pointer flex-col">
+              <div className="flex flex-col items-start justify-center gap-[10px] border-b border-black pb-[10px]">
+                <div className="relative h-[50%] w-full border">
+                  <Image
+                    width={200}
+                    height={200}
+                    src="/image6.jpg"
+                    alt="omg image"
+                    layout="fixed"
+                    className="object-cover"
+                  />
+                </div>
+
+                <div className="font-koho-bold w-full text-[14px] leading-[18px]">
+                  <p>Mi Mây house - Biến nhà ở trở thành nơi nghỉ dưỡng lý tưởng</p>
+                </div>
+
+                <div className="flex w-full flex-row text-[12px]">
+                  <span>#</span>
+                  <p>Nhà ở</p>
+                </div>
+              </div>
+            </div>
+
             <div className="flex h-[4%] w-[80%] flex-col items-start justify-center border p-[10px]">
               <div className="h-full w-full">
                 <p> pagaination 1 </p>
@@ -205,7 +228,7 @@ export default function ViewBlogs() {
           </div>
         </div>
 
-        <div className="relative mt-[280px] flex h-[1640px] w-[1px] bg-slate-400">
+        <div className="relative mt-[280px] flex h-[2120px] w-[1px] bg-gray-400">
           <br />
         </div>
 
@@ -308,7 +331,7 @@ export default function ViewBlogs() {
                 <p>Giải pháp thiết kế</p>
               </div>
 
-              <div className="relative flex h-[1px] w-[40%] flex-col items-center justify-start bg-slate-400">
+              <div className="relative flex h-[1px] w-[40%] flex-col items-center justify-start bg-gray-400">
                 <br />
               </div>
               <div className="relative flex h-[25px] w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
@@ -323,7 +346,7 @@ export default function ViewBlogs() {
                 <p>Công trình công cộng</p>
               </div>
 
-              <div className="relative flex h-[1px] w-[40%] flex-col items-center justify-start bg-slate-400">
+              <div className="relative flex h-[1px] w-[40%] flex-col items-center justify-start bg-gray-400">
                 <br />
               </div>
               <div className="relative flex h-[25px] w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
@@ -338,7 +361,7 @@ export default function ViewBlogs() {
                 <p>Nhà ở</p>
               </div>
 
-              <div className="relative flex h-[1px] w-[40%] flex-col items-center justify-start bg-slate-400">
+              <div className="relative flex h-[1px] w-[40%] flex-col items-center justify-start bg-gray-400">
                 <br />
               </div>
               <div className="relative flex h-[25px] w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
@@ -353,7 +376,7 @@ export default function ViewBlogs() {
                 <p>Nội thất</p>
               </div>
 
-              <div className="relative flex h-[1px] w-[40%] flex-col items-center justify-start bg-slate-400">
+              <div className="relative flex h-[1px] w-[40%] flex-col items-center justify-start bg-gray-400">
                 <br />
               </div>
               <div className="relative flex h-[25px] w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
@@ -368,7 +391,7 @@ export default function ViewBlogs() {
                 <p>Tin tức</p>
               </div>
 
-              <div className="relative flex h-[1px] w-[40%] flex-col items-center justify-start bg-slate-400">
+              <div className="relative flex h-[1px] w-[40%] flex-col items-center justify-start bg-gray-400">
                 <br />
               </div>
               <div className="relative flex h-[25px] w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
@@ -378,9 +401,8 @@ export default function ViewBlogs() {
             </div>
           </div>
 
-          <div className="relative flex h-[1600px] w-full flex-row items-end gap-[10px] pr-[20px] overflow-scroll">
-            <div className="flex h-full w-[70%] flex-col items-start gap-[20px] px-[10px]">
-
+          <div className="relative flex h-[2120px] w-full flex-row items-end gap-[10px] pr-[20px]">
+            <div className="flex h-full w-[75%] flex-col items-start gap-[20px] px-[10px]">
               <div className="relative flex h-[33%] w-full cursor-pointer flex-col items-start gap-[10px]">
                 <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
                   <Link href="/homeM/blogsDetail">
@@ -414,7 +436,7 @@ export default function ViewBlogs() {
               <div className="relative flex h-[33%] w-full cursor-pointer flex-col items-start gap-[10px]">
                 <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
                   <Link href="/homeM/blogsDetail">
-                    <p>Giếng trời – Hơi thở thiên nhiên trong mỗi công trình</p>
+                    <p>Chung cư nhỏ sở hữu ban công đặc biệt ngập tràn ánh nắng và cây xanh - TAH</p>
                   </Link>
                 </div>
                 <div className="relative flex h-[60%] w-full flex-col items-start overflow-hidden border">
@@ -422,7 +444,7 @@ export default function ViewBlogs() {
                     <Image
                       width={200}
                       height={200}
-                      src="/image5.jpg"
+                      src="/image7.jpg"
                       alt="omg image"
                       layout="responsive"
                       className="h-full w-full object-cover"
@@ -432,11 +454,7 @@ export default function ViewBlogs() {
 
                 <div className="relative flex h-[25%] w-full flex-col items-start border-b border-b-black">
                   <p>
-                    Không đơn thuần là một hình thức của cảnh quan sân vườn,
-                    việc đưa thiên nhiên vào bên trong công trình đã trở thành
-                    một xu hướng trong thiết kế kiến trúc hiện đại. Các nhà
-                    thiết kế luôn tìm cách kết hợp giữa công trình và mảng xanh
-                    một cách tự nhiên ...
+                  TAH - Căn chung cư 62m2 sở hữu ban công ngập tràn cây xanh và ánh sáng, tạo nên không gian ấm áp, dễ chịu và bình yên, là chốn trở về lý tưởng cho gia chủ sau một ngày làm việc mệt mỏi bên ngoài.
                   </p>
                 </div>
               </div>
@@ -467,23 +485,22 @@ export default function ViewBlogs() {
 
               <div className="relative flex h-[33%] w-full flex-col items-start gap-[10px]">
                 <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
-                  <p>Mật ngọt Library - Thư viện cho trẻ em vùng núi</p>
+                  <p>Mi Mây house - Biến nhà ở trở thành nơi nghỉ dưỡng lý tưởng</p>
                 </div>
                 <div className="relative flex h-[60%] w-full flex-col items-start overflow-hidden border">
                   <Image
                     width={200}
                     height={200}
-                    src="/image4.jpg"
+                    src="/image6.jpg"
                     alt="omg image"
                     layout="responsive"
                     className="h-full w-full object-cover"
                   />
                 </div>
+
                 <div className="items-star relative flex h-[25%] w-full flex-col">
                   <p>
-                    Với bối cảnh cơ sở vật chất tại điểm Đá Trắng còn nghèo nàn,
-                    chỉ có 5 phòng học kiên cố, văn hoá đọc ở trẻ em miền núi
-                    nơi đây vẫn còn “đói sách”. Vì thế, ngôi trường này cần …
+                  Mi Mây House - Ngôi nhà tọa lạc tại trung tâm thành phố Buôn Ma Thuột với không gian tràn ngập những mảng xanh, đáp ứng đầy đủ nhu cầu nghỉ dưỡng gần gũi thiên nhiên của chủ nhà ...
                   </p>
                 </div>
               </div>
@@ -503,14 +520,14 @@ export default function ViewBlogs() {
           </div>
 
           <div className="flex h-auto w-full flex-row items-center gap-[10px] pr-[20px]">
-            <div className="relative flex h-[1px] w-[50%] flex-col items-center bg-slate-400">
+            <div className="relative flex h-[1px] w-[50%] flex-col items-center bg-gray-400">
               <br />
             </div>
             <div className="flex h-[50%] w-[50%] flex-col items-end border pr-[10px]">
               <div className="flex items-center gap-x-1">
                 <button
                   type="button"
-                  className="inline-flex min-h-[28px] min-w-[28px] items-center justify-center gap-x-1.5 rounded-sm  focus:bg-slate-100 hover:bg-slate-50"
+                  className="inline-flex min-h-[28px] min-w-[28px] items-center justify-center gap-x-1.5 rounded-sm focus:bg-gray-100"
                 >
                   <svg
                     className="size-3.5 shrink-0"
@@ -532,26 +549,26 @@ export default function ViewBlogs() {
                 <div className="flex items-center gap-x-1">
                   <button
                     type="button"
-                    className="flex min-h-[28px] min-w-[28px] items-center justify-center rounded-sm border focus:bg-slate-100"
+                    className="flex min-h-[28px] min-w-[28px] items-center justify-center rounded-sm border focus:bg-gray-100"
                   >
                     1
                   </button>
                   <button
                     type="button"
-                    className="flex min-h-[28px] min-w-[28px] items-center justify-center rounded-sm hover:border focus:bg-slate-100"
+                    className="flex min-h-[28px] min-w-[28px] items-center justify-center rounded-sm hover:border focus:bg-gray-100"
                   >
                     2
                   </button>
                   <button
                     type="button"
-                    className="flex min-h-[28px] min-w-[28px] items-center justify-center rounded-sm hover:border focus:bg-slate-100"
+                    className="flex min-h-[28px] min-w-[28px] items-center justify-center rounded-sm hover:border focus:bg-gray-100"
                   >
                     3
                   </button>
                 </div>
                 <button
                   type="button"
-                  className="inline-flex min-h-[28px] min-w-[28px] items-center justify-center gap-x-1.5 focus:bg-slate-100 hover:bg-slate-50"
+                  className="inline-flex min-h-[28px] min-w-[28px] items-center justify-center gap-x-1.5 focus:bg-gray-100"
                 >
                   <span>Sau</span>
                   <svg
@@ -572,8 +589,46 @@ export default function ViewBlogs() {
               </div>
             </div>
           </div>
+          <div className="flex h-[30px] items-center justify-center pr-[20px]">
+            <div className="overflow-hidden whitespace-nowrap">
+              <div
+                className="inline-block"
+                style={{
+                  animation: 'marquee 30s linear infinite',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {renderMarqueeItem(
+                  "OMD Architect 5 năm 1 hoài bão 'gieo những hạt mầm xanh'"
+                )}
+                {renderMarqueeItem(
+                  'OMD Mini-talk: Định kiến giới tồn tại như thế nào trong ngành Kiến trúc - thiết kế'
+                )}
+                {renderMarqueeItem(
+                  'Lăng kính phản chiếu triết lý sáng tạo của OMD'
+                )}
+              </div>
+            </div>
+
+            <style jsx>{`
+              @keyframes marquee {
+                0% {
+                  transform: translateX(100%);
+                }
+                100% {
+                  transform: translateX(-100%);
+                }
+              }
+            `}</style>
+          </div>
         </div>
       </div>
     </div>
   );
 }
+const renderMarqueeItem = (text: string): JSX.Element => (
+  <span className="px-4">
+    <span className="rounded-full bg-gray-700 mr-2"></span>
+    {text}
+  </span>
+);

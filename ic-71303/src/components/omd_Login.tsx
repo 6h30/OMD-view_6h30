@@ -62,11 +62,11 @@ export default function LoginForm() {
 
   return (
     <div
-      className="flex h-[500px] w-[500px] flex-col border"
+      className="flex h-[500px] w-[500px] flex-col border border-black"
       style={{
         backgroundColor: '#ffffff',
         backgroundImage:
-          "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23cacaca' fill-opacity='0.4'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E\")",
+          "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23cacaca' fill-opacity='0.1'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E\")",
       }}
     >
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
@@ -88,10 +88,10 @@ export default function LoginForm() {
                 Email
               </p>
 
-              <div className="relative flex rounded-sm border">
+              <div className="relative flex rounded-sm border-1">
                 <input
                   type="email"
-                  className="w-full rounded-sm border-gray-200 p-4 pe-12 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:border-gray-500"
+                  className="w-full rounded-sm border-gray-200 p-4 pe-12 focus:outline-none focus:ring-0 focus:ring-gray-500 focus:border-gray-500"
                   placeholder="Nhập email"
                   required
                   onInvalid={handleEmailInvalid}
@@ -121,10 +121,10 @@ export default function LoginForm() {
               <p className="absolute left-4 top-3 z-10 origin-top-left -translate-y-5 scale-75 transform border bg-white px-2 text-gray-400">
                 Mật khẩu
               </p>
-              <div className="relative flex rounded-sm border">
+              <div className="relative flex rounded-sm border-1">
                 <input
                   type={isPasswordVisible ? 'text' : 'password'}
-                  className="w-full rounded-sm border-gray-200 p-4 pe-12 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:border-gray-500"
+                  className="w-full rounded-sm border-gray-200 p-4 pe-12 focus:outline-none focus:ring-0 focus:ring-gray-500 focus:border-gray-500"
                   placeholder="Nhập mật khẩu"
                   required
                   onInvalid={handlePasswordInvalid}
@@ -168,7 +168,7 @@ export default function LoginForm() {
 
             <button
               type="submit"
-              className="block w-full rounded-sm border px-5 py-3 bg-white text-slate-600 hover:border-gray-500 hover:text-black"
+              className="block w-full rounded-sm border px-5 py-3 bg-white text-slate-600 hover:border-black focus:bg-gray-200 hover:text-black"
             >
               Đăng nhập
             </button>

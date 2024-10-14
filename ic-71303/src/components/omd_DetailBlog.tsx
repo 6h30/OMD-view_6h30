@@ -26,7 +26,7 @@ export default function DetailBlogs() {
           </div>
         </div>
 
-        <div className="grid h-full w-[3520px] grid-cols-[5fr_2fr_7fr_2fr_20fr] flex-row justify-start border border-orange-500 py-[50px]">
+        <div className="grid h-full w-[3520px] grid-cols-[5fr_2fr_7fr_2fr_20fr] flex-row justify-start border py-[50px]">
           <div className="flex h-full flex-col justify-start">
             <div className="relative flex h-full w-full">
               <div className="absolute left-[12px] top-[20px] z-[1] h-[90%] w-[90%]">
@@ -87,27 +87,27 @@ export default function DetailBlogs() {
                   </div>
                 </div>
               </div>
-              <div className="clip-path-rec-2 absolute inset-x-[0px] inset-y-[0px] bg-black"></div>
+              <div className="clip-path-rec-2 absolute inset-x-[0px] inset-y-[0px] bg-gray-200"></div>
               <div className="clip-path-rec-2 absolute inset-x-[0px] inset-y-[2px] bg-white"></div>
-              <div className="absolute bottom-[30px] left-[0%] right-[0px] z-[2] h-[3px] origin-left rotate-[0deg] transform bg-black"></div>
+              <div className="absolute bottom-[30px] left-[0%] right-[0px] z-[2] h-[2px] origin-left rotate-[0deg] transform bg-gray-200"></div>
             </div>
           </div>
 
           <div className="flex h-full flex-col justify-start">
             <div className="relative flex h-full w-full">
-              <div className="clip-path-trapezoid absolute inset-0 bg-black"></div>
+              <div className="clip-path-trapezoid absolute inset-0 bg-gray-200"></div>
 
               <div className="clip-path-trapezoid absolute inset-[3px] bg-white"></div>
 
-              <div className="absolute bottom-[30px] left-[0%] right-[-8px] h-[2px] origin-left rotate-[-17deg] transform bg-black"></div>
+              <div className="absolute bottom-[30px] left-[0%] right-[-6px] h-[2px] origin-left rotate-[-17deg] transform bg-gray-200"></div>
             </div>
           </div>
 
           <div className="flex h-full flex-col justify-start">
             <div className="relative flex h-full w-full">
-              <div className="clip-path-rec absolute inset-x-[0px] inset-y-[-4px] bg-black"></div>
-              <div className="absolute bottom-[160px] left-[0%] right-[0px] z-[2] h-[3px] origin-left rotate-[0deg] transform bg-black"></div>
-              <div className="absolute left-[15px] top-[130px] z-[1] h-[380px] w-[565px] overflow-hidden rounded-sm border">
+              <div className="clip-path-rec absolute inset-x-[0px] inset-y-[-4px] bg-gray-200"></div>
+              <div className="absolute bottom-[160px] left-[0%] right-[0px] z-[2] h-[2px] origin-left rotate-[0deg] transform bg-gray-200"></div>
+              <div className="absolute left-[15px] top-[130px] z-[1] h-[380px] w-[558px] overflow-hidden rounded-sm border">
                 <CarouselComponent />
               </div>
 
@@ -117,10 +117,10 @@ export default function DetailBlogs() {
 
           <div className="flex h-full flex-col justify-start">
             <div className="relative flex h-full w-full" >
-              <div className="clip-path-trapezoid-flip absolute inset-[0px] bg-black"></div>
+              <div className="clip-path-trapezoid-flip absolute inset-[0px] bg-gray-200"></div>
               <div className="clip-path-trapezoid-flip absolute inset-[3px] bg-white"></div>
                   
-              <div className="absolute bottom-[30px] left-[-17px] right-[0%] h-[2px] origin-right rotate-[25deg] transform bg-black"></div>
+              <div className="absolute bottom-[30px] left-[-15px] right-[0%] h-[2px] origin-right rotate-[25deg] transform bg-gray-200"></div>
             </div>
           </div>
 
@@ -131,7 +131,7 @@ export default function DetailBlogs() {
                   className="font-koho text-md grid h-full w-full grid-cols-[25%_25%_25%_25%] flex-row p-[20px]"
                   
                 >
-                  <div className="flex w-[90%] border-r">
+                  <div className="flex w-[90%]">
                     <div className="flex h-full flex-col justify-between">
                       <div className="flex">
                         <iframe
@@ -336,9 +336,9 @@ export default function DetailBlogs() {
                 </div>
               </div>
 
-              <div className="clip-path-rec-2 absolute inset-x-[0px] inset-y-[0px] bg-black"></div>
-              <div className="clip-path-rec-2 absolute inset-x-[0px] inset-y-[3px] bg-white"></div>
-              <div className="absolute bottom-[30px] left-[0%] right-[0px] z-[2] h-[3px] origin-left rotate-[0deg] transform bg-black"></div>
+              <div className="clip-path-rec-2 absolute inset-x-[0px] inset-y-[0px] bg-gray-200"></div>
+              <div className="clip-path-rec-2 absolute inset-x-[0px] inset-y-[2px] bg-white"></div>
+              <div className="absolute bottom-[30px] left-[0%] right-[0px] z-[2] h-[2px] origin-left rotate-[0deg] transform bg-gray-200"></div>
             </div>
           </div>
         </div>
