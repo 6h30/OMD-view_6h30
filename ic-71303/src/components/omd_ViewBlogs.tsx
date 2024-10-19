@@ -220,9 +220,9 @@ export default function ViewBlogs() {
               </div>
             </div>
 
-            <div className="flex h-[4%] w-[80%] flex-col items-start justify-center border p-[10px]">
-              <div className="h-full w-full">
-                <p> pagaination 1 </p>
+            <div className="flex h-[4%] w-[80%] flex-col items-center justify-center border p-[10px]">
+              <div className="h-full w-full justify-center flex">
+                <p> xem thêm </p>
               </div>
             </div>
           </div>

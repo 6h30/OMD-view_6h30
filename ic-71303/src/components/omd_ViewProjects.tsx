@@ -3,13 +3,57 @@ import Image from 'next/image';
 // import styles from './omd_NameFrame.module.css';
 
 export default function ViewProjects() {
+  const rotateStyle: React.CSSProperties = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    animation: 'rotate 15s linear infinite',
+  };
+
+  const keyframes = `
+  @keyframes rotate {
+      from {
+          transform: rotate(0deg);
+      }
+      to {
+          transform: rotate(360deg);
+      }
+  }
+`;
   return (
     <div className="flex justify-center py-[20px]">
-      <div className="gap-[10px] sm:h-[1400px] sm:w-[428px] sm:flex-col md:h-[1500px] md:w-[728px] md:flex-col lg:flex lg:h-[1660px] lg:w-[960px] lg:flex-row lg:items-start lg:justify-start">
+      <div className="gap-[10px] sm:h-[1400px] sm:w-[428px] sm:flex-col md:h-[1500px] md:w-[728px] md:flex-col lg:flex lg:h-[1660px] lg:w-[960px] lg:flex-row lg:items-start lg:justify-start border border-red-500">
         <div className="relative flex gap-[30px] border sm:h-[100px] sm:w-full sm:flex-col md:h-[350px] md:w-full md:flex-col lg:h-full lg:w-[25%] lg:flex-col lg:py-[20px]">
           <div className="relative flex gap-[25px] sm:flex-row sm:items-center sm:justify-start md:flex-row md:items-center md:justify-start lg:flex-col lg:items-center lg:justify-center">
-            <div className="border p-[30px] md:h-[190px] md:w-[30%] lg:h-[190px] lg:w-[80%] lg:border-black">
-              <Image src="" alt="" />
+           <div className="h-[168px] w-[173px] items-center justify-center rounded-[100%]">
+              <style>{keyframes}</style>
+              <div id="circle" style={rotateStyle}>
+                <svg
+                  className="h-full w-full"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 200 200"
+                  xmlSpace="preserve"
+                >
+                  <defs>
+                    <path
+                      id="circlePath"
+                      d="M 100, 100 m -80, 0 a 80,80 0 0,1 160,0 a 80,80 0 0,1 -160,0 "
+                    />
+                  </defs>
+
+                  <circle cx="100" cy="100" r="80" fill="none" />
+                  <g>
+                    <use href="#circlePath" fill="none" />
+                    <text className="text-lg tracking-[0.22em]">
+                      <textPath href="#circlePath">
+                        DESIGN YOUR HOUSE WITH OMD ARCHITECT
+                      </textPath>
+                    </text>
+                  </g>
+                </svg>
+              </div>
             </div>
 
             <div className="h-fit w-[150px] border border-black text-center">
@@ -42,7 +86,7 @@ export default function ViewProjects() {
 
             <div className="relative flex w-[318px] flex-row items-start gap-[10px] border-l border-black pl-[10px]">
               <p>Kts:</p>
-              <span>Tran Duc Nam</span>
+              <span>Trương Đức Nam</span>
             </div>
 
             <div className="relative flex w-[169px] flex-row items-start justify-center gap-[10px] border-l border-black pl-[10px]">
@@ -53,9 +97,14 @@ export default function ViewProjects() {
 
           <div className="relative flex w-full flex-row items-end gap-[30px] pb-[20px] pt-[20px] sm:h-[350px] md:h-[450px] lg:h-[660px]">
             <div className="relative flex h-[100%] w-[75%] flex-col items-center justify-center border border-black">
-              <p className="text-center text-[46px] leading-[1.3em] tracking-[0.18em]">
-                image
-              </p>
+            <Image
+                    width={200}
+                    height={200}
+                    src="/image10.jpg"
+                    alt="omg image"
+                    layout="fixed"
+                    className="object-cover"
+                  />
             </div>
 
             <div className="relative flex w-[25%] flex-col items-center justify-center border border-black sm:h-[70px] md:h-[150px] lg:h-[150px]">
