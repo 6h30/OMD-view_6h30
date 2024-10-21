@@ -95,7 +95,7 @@ export default function ViewBlogs() {
               </div>
             </div>
           </div>
-
+     
           <div className="flex h-full w-full flex-col items-center justify-center gap-[10px] pl-[20px] pr-[10px] pt-[5px]">
             <div className="flex h-[24%] w-full cursor-pointer flex-col">
               <div className="flex flex-col items-start justify-center gap-[10px] border-b border-black pb-[10px]">
@@ -230,9 +230,10 @@ export default function ViewBlogs() {
 
         <div className="relative mt-[280px] flex h-[2120px] w-[1px] bg-gray-400">
           <br />
+          <svg className="absolute top-[400px] border animate-bounce w-6 h-6 ..."></svg>
         </div>
 
-        <div className="relative flex h-auto w-[75%] flex-col gap-[10px] py-[20px]">
+        <div className="relative flex h-auto w-[75%] flex-col gap-[10px] py-[20px]">       
           <div className="flex pr-[20px]">
             <div className="relative flex h-[60px] w-full flex-row items-center justify-center border border-black pr-[20px]">
               <div className="relative flex w-[200px] flex-col items-center gap-[10px]">
@@ -323,7 +324,7 @@ export default function ViewBlogs() {
               </div>
             </div>
           </div>
-
+          
           <div className="relative flex h-[180px] w-full flex-col items-start justify-start pr-[20px]">
             <div className="relative flex h-[35px] w-full flex-row items-center justify-between gap-[20px]">
               <div className="group relative flex h-[25px] w-[190px] items-center justify-start border border-black pl-[10px] transition-colors duration-300 hover:cursor-pointer">

@@ -4,6 +4,12 @@ import CarouselComponent from './omd_carouselBlog';
 
 // import styles from './omd_ViewBlogs.module.css';
 export default function DetailBlogs() {
+  const images = [
+    { src: '/image1.jpg', alt: 'Image 1' },
+    { src: '/image2.jpg', alt: 'Image 2' },
+    { src: '/image3.jpg', alt: 'Image 3' },
+  ];
+
   return (
     <div className="flex h-[800px] min-w-[3520px] items-center justify-center overflow-hidden border">
       <div className="flex- flex h-full w-full flex-row justify-start">
@@ -108,7 +114,7 @@ export default function DetailBlogs() {
               <div className="clip-path-rec absolute inset-x-[0px] inset-y-[-4px] bg-gray-200"></div>
               <div className="absolute bottom-[160px] left-[0%] right-[0px] z-[2] h-[2px] origin-left rotate-[0deg] transform bg-gray-200"></div>
               <div className="absolute left-[15px] top-[130px] z-[1] h-[380px] w-[558px] overflow-hidden rounded-sm border">
-                <CarouselComponent />
+                <CarouselComponent images={images} />;
               </div>
 
               <div className="clip-path-rec absolute inset-x-[0px] inset-y-[-0px] bg-white"></div>
