@@ -33,7 +33,7 @@ export default function ViewProjects() {
 
   return (
     <div className="flex justify-center py-[20px]">
-      <div className="gap-[10px] sm:h-[1400px] sm:w-[428px] sm:flex-col md:h-[1500px] md:w-[728px] md:flex-col lg:flex lg:min-h-[2048px] lg:w-[960px] lg:flex-row lg:items-start lg:justify-start border border-red-500">
+      <div className="gap-[10px] sm:h-[1400px] sm:w-[428px] sm:flex-col md:h-[1500px] md:w-[728px] md:flex-col lg:flex lg:min-h-[2048px] lg:w-[960px] lg:flex-row lg:items-start lg:justify-start ">
         <div className="relative flex gap-[30px] border sm:h-[100px] sm:w-full sm:flex-col md:h-[350px] md:w-full md:flex-col lg:h-full lg:w-[25%] lg:flex-col lg:py-[20px]">
           <div className="relative flex gap-[25px] sm:flex-row sm:items-center sm:justify-start md:flex-row md:items-center md:justify-start lg:flex-col lg:items-center lg:justify-center">
             <div className="h-[168px] w-[173px] items-center justify-center rounded-[100%]">
@@ -168,8 +168,9 @@ export default function ViewProjects() {
 
           </div>
 
-          <div className="relative flex w-full flex-col items-start justify-start gap-[20px] lg:h-[1240px] border border-green-500">
+          <div className="relative flex w-full flex-col items-start justify-start gap-[20px] lg:h-[1224px]">
             <div className="relative flex h-[150px] w-full flex-row items-center justify-between px-[20px]">
+             
               <div className="relative flex flex-col items-end justify-end gap-[20px]">
                 <div>
                   <p className="font-italiana text-center leading-[53px] tracking-[5px] sm:text-[33px] md:text-[53px] lg:text-[73px]">
@@ -196,7 +197,7 @@ export default function ViewProjects() {
             </div>
 
             <div className="relative flex h-[50px] w-full flex-row items-center justify-between py-[10px]">
-              <div className="relative flex h-[25px] w-[30%] flex-col items-center justify-center border border-black px-[10px]">
+              <div className="relative flex h-[25px] w-[30%] flex-col items-center justify-center border border-gray-500 px-[10px]">
                 <p>Nhiệm vụ thiết kế</p>
               </div>
 
@@ -220,101 +221,16 @@ export default function ViewProjects() {
                 <br />
               </div>
 
-              <div className="relative flex h-[25px] w-[30%] flex-col items-center justify-center border border-black px-[10px]">
+              <div className="relative flex h-[25px] w-[30%] flex-col items-center justify-center border border-gray-500 px-[10px]">
                 <p>Bộ sưu tập</p>
               </div>
             </div>
 
-            <div className="relative flex h-[920px] w-full flex-col items-center justify-center gap-[10px] border-t border-black">
-              <div className="relative flex h-[90%] w-full flex-col items-center justify-center border">
+            <div className="relative flex h-[820px] w-full flex-col items-center justify-center">
+              <div className="relative flex h-[720px] w-full flex-col items-center justify-start">
 
                 {/* <div className="relative flex h-[90%] w-[90%] flex-col items-center justify-center">
                   <CarouselComponent images={images} />
-                </div> */}
-
-                {/* <div className="w-[90%] grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="grid gap-4">
-                    <div>
-                      <Image
-                        alt=""
-                        width={500}
-                        height={500}
-                        src="/image1.jpg"
-                        layout='fixed'
-                        className="w-full h-auto rounded-sm object-cover"
-                      />
-                    </div>
-                    <div>
-                      <Image
-                        alt=""
-                        width={500}
-                        height={500}
-                        src="/image2.jpg"
-                        className="w-full h-auto rounded-sm object-cover"
-                      />
-                    </div>
-
-                  </div>
-                  <div className="grid gap-4">
-                    <div>
-                      <Image
-                        alt=""
-                        width={200}
-                        height={200}
-                        src="/image1.jpg"
-                        className="w-full h-auto rounded-sm object-cover"
-                      />
-                    </div>
-                    <div>
-                      <Image
-                        alt=""
-                        width={200}
-                        height={200}
-                        src="/image1.jpg"
-                        className="w-full h-auto rounded-sm object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div className="grid gap-4">
-                    <div>
-                      <Image
-                        alt=""
-                        width={200}
-                        height={200}
-                        src="/image1.jpg"
-                        className="w-full h-auto rounded-sm object-cover"
-                      />
-                    </div>
-                    <div>
-                      <Image
-                        alt=""
-                        width={200}
-                        height={200}
-                        src="/image1.jpg"
-                        className="w-full h-auto rounded-sm object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div className="grid gap-4">
-                    <div>
-                      <Image
-                        alt=""
-                        width={200}
-                        height={200}
-                        src="/image1.jpg"
-                        className="w-full h-auto rounded-sm object-cover"
-                      />
-                    </div>
-                    <div>
-                      <Image
-                        alt=""
-                        width={200}
-                        height={200}
-                        src="/image1.jpg"
-                        className="w-full h-auto rounded-sm object-cover"
-                      />
-                    </div>
-                  </div>
                 </div> */}
 
                 <ImageGrid />
