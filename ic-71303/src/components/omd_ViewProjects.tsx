@@ -1,7 +1,7 @@
 // src/components/omd_ViewProject.tsx
 'use client'
 import Image from 'next/image';
-import CarouselComponent from './omd_carouselBlog';
+// import CarouselComponent from './omd_carouselBlog';
 
 import ImageGrid from './omd_ImageView';
 // import styles from './omd_NameFrame.module.css';
@@ -24,11 +24,11 @@ export default function ViewProjects() {
       }
   }
 `;
-  const images = [
-    { src: '/image8.jpg', alt: 'Image 1' },
-    { src: '/image9.jpg', alt: 'Image 2' },
-    { src: '/image10.jpg', alt: 'Image 3' },
-  ];
+  // const images = [
+  //   { src: '/image8.jpg', alt: 'Image 1' },
+  //   { src: '/image9.jpg', alt: 'Image 2' },
+  //   { src: '/image10.jpg', alt: 'Image 3' },
+  // ];
 
 
   return (
