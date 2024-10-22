@@ -600,13 +600,13 @@ export default function ViewBlogs() {
                 }}
               >
                 {renderMarqueeItem(
-                  "OMD Architect 5 năm 1 hoài bão 'gieo những hạt mầm xanh'"
+                  "[28/09/2024] - OMD Architect 5 năm 1 hoài bão 'gieo những hạt mầm xanh'"
                 )}
                 {renderMarqueeItem(
-                  'OMD Mini-talk: Định kiến giới tồn tại như thế nào trong ngành Kiến trúc - thiết kế'
+                  '[02/10/2024] - OMD Mini-talk: Định kiến giới tồn tại như thế nào trong ngành Kiến trúc - thiết kế'
                 )}
                 {renderMarqueeItem(
-                  'Lăng kính phản chiếu triết lý sáng tạo của OMD'
+                  '[10/10/2024] - Lăng kính phản chiếu triết lý sáng tạo của OMD'
                 )}
               </div>
             </div>

@@ -43,7 +43,7 @@ export default function DetailBlogs() {
                         alt=""
                         width={200}
                         height={200}
-                        src="/image1.jpg"
+                        src="/avatar-1.jpg"
                         className="size-14 rounded-full object-cover"
                       />
 
@@ -188,55 +188,7 @@ export default function DetailBlogs() {
                         </p>
                       </article>
                       {/* <article className='flex'>
-                    <p>
-                      Bằng việc sử dụng ánh sáng tự nhiên từ trên cao, thậm chí
-                      tận dụng nguồn gió và nước mưa với các giếng trời linh
-                      động đóng mở, lựa chọn bố trí mảng xanh ở khu vực này là
-                      hoàn toàn hợp lý và tiết kiệm năng lượng. Cũng như các góc
-                      thiên nhiên khác, cây cối không chỉ cung cấp nguồn sinh
-                      khí tốt lành, giúp thư giãn và giải tỏa tinh thần mà còn
-                      triệt để giải quyết vấn đề thẩm mỹ cho giếng trời – một
-                      không gian kiến trúc về cơ bản là để trống.
-                    
-                    
-                      <br />
-                      Trong kiến trúc châu Á, đặc biệt là Trung Quốc và Nhật
-                      Bản, những khu vườn giếng trời đa phần là mở, hiếm khi có
-                      mái che và thường là mắc xích liên kết giữa nhiều không
-                      gian xung quanh. Giếng trời lúc này trở thành trung tâm
-                      chính giữa của cả công trình, xoay quanh là các khối nhà
-                      chính, có xuất phát từ triết lý Đông Á về sự cân bằng và
-                      hài hòa. Ở Trung Quốc, khi giếng trời có diện tích lớn,
-                      người ta sẽ gọi bằng “sân trời”, tại đây thường có giếng
-                      nước, trồng cây cối, để chậu kiểng, là nơi sinh hoạt giặt
-                      giũ, phơi phóng cũng như diễn ra các hoạt động gặp gỡ trò
-                      chuyện của gia đình. Giếng trời trong kiến trúc Nhật Bản –
-                      “Tsuboniwa” lại thuần về sự kết nối giữa con người và tự
-                      nhiên khi gần như mặc định là khu vực bố trí sân vườn. Đó
-                      có thể là khoảng không mang hơi thở truyền thống cùng đèn
-                      đá, cây xanh và bể nước, hay một khu vườn Zen đậm chất
-                      thiền cùng nghệ thuật sắp đặt đá sỏi và bon sai.
-                  
-                      Từ lâu vườn giếng trời trở thành một yếu tố cực kỳ phổ
-                      biến trong các thiết kế công trình công cộng hay nhà dân
-                      dụng tại châu Âu. Tạo một khu vườn bên dưới giếng trời
-                      thực sự đã là lựa chọn của hầu hết các kiến trúc sư.
-                      Thường gọi là “Skylight”, “Skygarden” hoặc “lightwell”,
-                      những khu vực giếng trời được phủ xanh mang đến sự giao
-                      thoa hoàn hảo giữa kiến trúc và thiên nhiên, đồng thời
-                      cũng là cách tiếp cận sáng tạo và bền vững trong việc tạo
-                      lập không gian sống.
-                 
-                      Từ lịch sử xa xưa đến thời kỳ hiện đại, ở phương Đông hay
-                      phương Tây, từ các công trình dân dụng đến các tòa nhà
-                      công cộng, những khu vườn giếng trời đã trở thành một phần
-                      đặc biệt phổ biến trong kiến trúc thế giới, là “dấu gạch
-                      nối nhỏ bé” nhưng rất mực quan trọng giữa con người – công
-                      trình và tự nhiên. Từ đó khẳng định một không gian sống
-                      giao hòa cùng cây xanh không chỉ là một xu hướng, mà còn
-                      là sự phát triển bền vững tất yếu của kiến trúc và cảnh
-                      quan thế giới.
-                    </p>
+                   
                   </article> */}
                       <div className="flex"></div>
                     </div>
@@ -286,55 +238,7 @@ export default function DetailBlogs() {
                         </p>
                       </article>
                       {/* <article className='flex'>
-                    <p>
-                      Bằng việc sử dụng ánh sáng tự nhiên từ trên cao, thậm chí
-                      tận dụng nguồn gió và nước mưa với các giếng trời linh
-                      động đóng mở, lựa chọn bố trí mảng xanh ở khu vực này là
-                      hoàn toàn hợp lý và tiết kiệm năng lượng. Cũng như các góc
-                      thiên nhiên khác, cây cối không chỉ cung cấp nguồn sinh
-                      khí tốt lành, giúp thư giãn và giải tỏa tinh thần mà còn
-                      triệt để giải quyết vấn đề thẩm mỹ cho giếng trời – một
-                      không gian kiến trúc về cơ bản là để trống.
                     
-                    
-                      <br />
-                      Trong kiến trúc châu Á, đặc biệt là Trung Quốc và Nhật
-                      Bản, những khu vườn giếng trời đa phần là mở, hiếm khi có
-                      mái che và thường là mắc xích liên kết giữa nhiều không
-                      gian xung quanh. Giếng trời lúc này trở thành trung tâm
-                      chính giữa của cả công trình, xoay quanh là các khối nhà
-                      chính, có xuất phát từ triết lý Đông Á về sự cân bằng và
-                      hài hòa. Ở Trung Quốc, khi giếng trời có diện tích lớn,
-                      người ta sẽ gọi bằng “sân trời”, tại đây thường có giếng
-                      nước, trồng cây cối, để chậu kiểng, là nơi sinh hoạt giặt
-                      giũ, phơi phóng cũng như diễn ra các hoạt động gặp gỡ trò
-                      chuyện của gia đình. Giếng trời trong kiến trúc Nhật Bản –
-                      “Tsuboniwa” lại thuần về sự kết nối giữa con người và tự
-                      nhiên khi gần như mặc định là khu vực bố trí sân vườn. Đó
-                      có thể là khoảng không mang hơi thở truyền thống cùng đèn
-                      đá, cây xanh và bể nước, hay một khu vườn Zen đậm chất
-                      thiền cùng nghệ thuật sắp đặt đá sỏi và bon sai.
-                  
-                      Từ lâu vườn giếng trời trở thành một yếu tố cực kỳ phổ
-                      biến trong các thiết kế công trình công cộng hay nhà dân
-                      dụng tại châu Âu. Tạo một khu vườn bên dưới giếng trời
-                      thực sự đã là lựa chọn của hầu hết các kiến trúc sư.
-                      Thường gọi là “Skylight”, “Skygarden” hoặc “lightwell”,
-                      những khu vực giếng trời được phủ xanh mang đến sự giao
-                      thoa hoàn hảo giữa kiến trúc và thiên nhiên, đồng thời
-                      cũng là cách tiếp cận sáng tạo và bền vững trong việc tạo
-                      lập không gian sống.
-                 
-                      Từ lịch sử xa xưa đến thời kỳ hiện đại, ở phương Đông hay
-                      phương Tây, từ các công trình dân dụng đến các tòa nhà
-                      công cộng, những khu vườn giếng trời đã trở thành một phần
-                      đặc biệt phổ biến trong kiến trúc thế giới, là “dấu gạch
-                      nối nhỏ bé” nhưng rất mực quan trọng giữa con người – công
-                      trình và tự nhiên. Từ đó khẳng định một không gian sống
-                      giao hòa cùng cây xanh không chỉ là một xu hướng, mà còn
-                      là sự phát triển bền vững tất yếu của kiến trúc và cảnh
-                      quan thế giới.
-                    </p>
                   </article> */}
                       <div className="flex"></div>
                     </div>
@@ -359,12 +263,13 @@ export default function DetailBlogs() {
                 <div className="flex flex-row items-center gap-3">
                   <div className="group relative">
                     <Image
-                      className="h-12 w-12 rounded-full border duration-200 group-hover:scale-105"
-                      src="/"
+                      className="size-18 object-cover rounded-full border border-red-500 duration-200 group-hover:scale-105"
+                      src="/avatar-1.jpg"
                       width={200}
                       height={200}
                       alt="avatar"
                     />
+                    
                     <div className="absolute -right-1 bottom-1 rounded-full bg-white">
                       <div>
                         <svg
@@ -446,10 +351,10 @@ export default function DetailBlogs() {
                 <div className="flex flex-row items-center gap-3">
                   <div className="group relative">
                     <Image
-                      className="h-12 w-12 rounded-full border duration-200 group-hover:scale-105"
-                      src="/"
-                      width={200}
-                      height={200}
+                      className="size-12 object-cover rounded-full border duration-200 group-hover:scale-105"
+                      src="/avatar-1.jpg"
+                  width={200}
+                  height={200}
                       alt="avatar"
                     />
                     <div className="absolute -right-1 bottom-1 rounded-full bg-white">
@@ -535,7 +440,7 @@ export default function DetailBlogs() {
                   <div className="group relative">
                     <Image
                       className="h-12 w-12 rounded-full border duration-200 group-hover:scale-105"
-                      src="/"
+                      src="/avatar-1.jpg"
                       width={200}
                       height={200}
                       alt="avatar"
@@ -624,7 +529,7 @@ export default function DetailBlogs() {
                     <div className="group relative">
                       <Image
                         className="h-12 w-12 rounded-full border duration-200 group-hover:scale-105"
-                        src="/"
+                        src="/avatar-1.jpg"
                         width={200}
                         height={200}
                         alt="avatar"
@@ -712,7 +617,7 @@ export default function DetailBlogs() {
                     <div className="group relative">
                       <Image
                         className="h-12 w-12 rounded-full border duration-200 group-hover:scale-105"
-                        src="/"
+                        src="/avatar-1.jpg"
                         width={200}
                         height={200}
                         alt="avatar"
