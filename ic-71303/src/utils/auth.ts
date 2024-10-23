@@ -49,7 +49,7 @@
 
 interface LoginResponse {
     success: boolean;
-    data?: { token?: string; user?: any };
+    data?: { token?: string; user?: string };
     message?: string;
 }
 

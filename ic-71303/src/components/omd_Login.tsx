@@ -5,10 +5,16 @@ import { useState } from 'react';
 import { login } from '../utils/auth';
 
 export default function LoginForm() {
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
+  // const [email, setEmail] = useState<string>('');
+  // const [password, setPassword] = useState<string>('');
+  // const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
+  // const [error, setError] = useState<string | null>(null);
+
+  const [email] = useState<string>('');
+  const [password ] = useState<string>('');
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
+
+
 
   const togglePasswordVisibility = () => {
     setIsPasswordVisible(!isPasswordVisible);
@@ -79,7 +85,7 @@ export default function LoginForm() {
         // Ví dụ: router.push('/dashboard'); (Nếu sử dụng Next.js Router)
     } else {
         // Đăng nhập không thành công
-        setError(result.message || 'Đăng nhập thất bại'); // Cập nhật thông báo lỗi
+    
     }
 };
 
@@ -131,7 +137,7 @@ export default function LoginForm() {
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeWidth="2"
                       d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
                     />
                   </svg>
@@ -162,7 +168,7 @@ export default function LoginForm() {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
+                      strokeWidth="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     >
@@ -179,7 +185,7 @@ export default function LoginForm() {
                       <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
                         d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"
                       />
                     </svg>
