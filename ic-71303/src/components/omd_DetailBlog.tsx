@@ -1,4 +1,4 @@
-// src/components/omd_ViewBlog.tsx
+// src/components/omd_DetailBlog.tsx
 import Image from 'next/image';
 import CarouselComponent from './omd_carouselBlog';
 
@@ -125,7 +125,7 @@ export default function DetailBlogs() {
             <div className="relative flex h-full w-full" >
               <div className="clip-path-trapezoid-flip absolute inset-[0px] bg-gray-200"></div>
               <div className="clip-path-trapezoid-flip absolute inset-[3px] bg-white"></div>
-                  
+
               <div className="absolute bottom-[30px] left-[-15px] right-[0%] h-[2px] origin-right rotate-[25deg] transform bg-gray-200"></div>
             </div>
           </div>
@@ -135,7 +135,7 @@ export default function DetailBlogs() {
               <div className="z-[1] h-full w-full pb-[25px]">
                 <div
                   className="font-koho text-md grid h-full w-full grid-cols-[25%_25%_25%_25%] flex-row p-[20px]"
-                  
+
                 >
                   <div className="flex w-[90%]">
                     <div className="flex h-full flex-col justify-between">
@@ -259,17 +259,19 @@ export default function DetailBlogs() {
           </div>
           <div className="flex w-full flex-col overflow-hidden font-koho">
             <div className="p-3 mt-3 h-auto overflow-y-scroll">
+
               <div className="mb-3 flex flex-col gap-[10px] border-b pb-3">
                 <div className="flex flex-row items-center gap-3">
                   <div className="group relative">
-                    <Image
-                      className="size-18 object-cover rounded-full border border-red-500 duration-200 group-hover:scale-105"
-                      src="/avatar-1.jpg"
-                      width={200}
-                      height={200}
-                      alt="avatar"
-                    />
-                    
+                    <div className='relative size-12 rounded-full border'>
+                      <Image
+                        className="object-cover rounded-full duration-200 group-hover:scale-105 overflow-hidden"
+                        src="/avatar-1.jpg"
+                        layout='fill'
+                        alt="avatar"
+                      />
+                    </div>
+
                     <div className="absolute -right-1 bottom-1 rounded-full bg-white">
                       <div>
                         <svg
@@ -350,13 +352,14 @@ export default function DetailBlogs() {
               <div className="mb-3 flex flex-col gap-[10px] border-b pb-3">
                 <div className="flex flex-row items-center gap-3">
                   <div className="group relative">
-                    <Image
-                      className="size-12 object-cover rounded-full border duration-200 group-hover:scale-105"
-                      src="/avatar-1.jpg"
-                  width={200}
-                  height={200}
-                      alt="avatar"
-                    />
+                    <div className='relative size-12 rounded-full border'>
+                      <Image
+                        className="object-cover rounded-full duration-200 group-hover:scale-105 overflow-hidden"
+                        src="/avatar-1.jpg"
+                        layout='fill'
+                        alt="avatar"
+                      />
+                    </div>
                     <div className="absolute -right-1 bottom-1 rounded-full bg-white">
                       <div>
                         <svg
@@ -438,13 +441,14 @@ export default function DetailBlogs() {
               <div className="mb-3 flex flex-col gap-[10px] border-b pb-3">
                 <div className="flex flex-row items-center gap-3">
                   <div className="group relative">
-                    <Image
-                      className="h-12 w-12 rounded-full border duration-200 group-hover:scale-105"
-                      src="/avatar-1.jpg"
-                      width={200}
-                      height={200}
-                      alt="avatar"
-                    />
+                    <div className='relative size-12 rounded-full border'>
+                      <Image
+                        className="object-cover rounded-full duration-200 group-hover:scale-105 overflow-hidden"
+                        src="/avatar-1.jpg"
+                        layout='fill'
+                        alt="avatar"
+                      />
+                    </div>
                     <div className="absolute -right-1 bottom-1 rounded-full bg-white">
                       <div>
                         <svg
@@ -527,13 +531,14 @@ export default function DetailBlogs() {
                 <div className="flex flex-col">
                   <div className="flex flex-row items-center gap-3">
                     <div className="group relative">
-                      <Image
-                        className="h-12 w-12 rounded-full border duration-200 group-hover:scale-105"
-                        src="/avatar-1.jpg"
-                        width={200}
-                        height={200}
-                        alt="avatar"
-                      />
+                      <div className='relative size-12 rounded-full border'>
+                        <Image
+                          className="object-cover rounded-full duration-200 group-hover:scale-105 overflow-hidden"
+                          src="/avatar-1.jpg"
+                          layout='fill'
+                          alt="avatar"
+                        />
+                      </div>
                       <div className="absolute -right-1 bottom-1 rounded-full bg-white">
                         <div>
                           <svg
@@ -615,13 +620,14 @@ export default function DetailBlogs() {
                 <div className="flex flex-col pl-5">
                   <div className="flex flex-row items-center gap-3">
                     <div className="group relative">
-                      <Image
-                        className="h-12 w-12 rounded-full border duration-200 group-hover:scale-105"
-                        src="/avatar-1.jpg"
-                        width={200}
-                        height={200}
-                        alt="avatar"
-                      />
+                      <div className='relative size-12 rounded-full border'>
+                        <Image
+                          className="object-cover rounded-full duration-200 group-hover:scale-105 overflow-hidden"
+                          src="/avatar-1.jpg"
+                          layout='fill'
+                          alt="avatar"
+                        />
+                      </div>
                       <div className="absolute -right-1 bottom-1 rounded-full bg-white">
                         <div>
                           <svg

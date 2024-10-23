@@ -5,13 +5,13 @@ import Image from 'next/image';
 export default function TitleBlocks() {
   return (
     <div className="font-koho flex h-[960px] w-[200px] flex-col items-center border-l border-l-black bg-white p-4">
-      <div className="mb-4 h-[15%] w-full border border-black">
+      <div className="flex mb-4 h-[15%] w-full justify-center items-center border border-black">
         <Image
-          src="/"
+          src="/avatar-5.jpg"
           width={100}
-          height={50}
+          height={100}
           alt="logo studio"
-          className="w-full border-4 border-blue-50"
+          className="filter grayscale hover:grayscale-0 transition-all duration-300"
         />
       </div>
 

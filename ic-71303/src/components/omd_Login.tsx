@@ -1,9 +1,14 @@
-// import Image from "next/image";
 'use client';
+
+// import Image from "next/image";
 import { useState } from 'react';
+import { login } from '../utils/auth';
 
 export default function LoginForm() {
-  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
 
   const togglePasswordVisibility = () => {
     setIsPasswordVisible(!isPasswordVisible);
@@ -60,6 +65,24 @@ export default function LoginForm() {
     event.currentTarget.setCustomValidity('');
   };
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // Ngăn chặn hành vi mặc định của form
+
+    // Gọi hàm login với email và mật khẩu
+    const result = await login(email, password);
+
+    // Kiểm tra kết quả trả về
+    if (result.success) {
+        // Đăng nhập thành công
+        console.log(result.data); // Có thể chứa thông tin người dùng hoặc token
+        // Ở đây có thể chuyển hướng người dùng đến trang khác
+        // Ví dụ: router.push('/dashboard'); (Nếu sử dụng Next.js Router)
+    } else {
+        // Đăng nhập không thành công
+        setError(result.message || 'Đăng nhập thất bại'); // Cập nhật thông báo lỗi
+    }
+};
+
   return (
     <div
       className="flex h-[500px] w-[500px] flex-col border border-black"
@@ -79,8 +102,7 @@ export default function LoginForm() {
             designed and developed by dcviet
           </p>
 
-          <form
-            action="#"
+          <form onSubmit={handleSubmit}
             className="mb-0 mt-6 space-y-4 rounded-lg p-4 sm:p-6 lg:p-8"
           >
             <div className="relative flex flex-col">

@@ -55,7 +55,7 @@ export default function ViewBlogs() {
 `;
   return (
     <div className="flex justify-center py-[20px]">
-      <div className="relative flex min-h-[2120px] w-[960px] flex-row items-start justify-center gap-[10px] border border-red-500">
+      <div className="relative flex min-h-[2120px] w-[960px] flex-row items-start justify-center gap-[10px] border">
         <div className="relative flex h-auto w-[24%] flex-col items-center justify-center gap-[20px] py-[20px]">
           <div className="flex h-[240px] w-full flex-col items-center justify-center gap-[10px] pl-[20px] pr-[10px]">
             <div className="h-[168px] w-[173px] items-center justify-center rounded-[100%]">
