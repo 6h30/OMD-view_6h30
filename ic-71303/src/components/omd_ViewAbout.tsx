@@ -48,8 +48,8 @@ export default function ViewAbout() {
               fill="none"
               stroke="currentColor"
               strokeWidth="1"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <polyline points="23 7 23 1 17 1" />
               <line x1="16" y1="8" x2="23" y2="1" />

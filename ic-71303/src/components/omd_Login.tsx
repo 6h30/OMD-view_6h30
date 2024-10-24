@@ -2,16 +2,19 @@
 
 // import Image from "next/image";
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { login } from '../utils/auth';
 
 export default function LoginForm() {
-  // const [email, setEmail] = useState<string>('');
-  // const [password, setPassword] = useState<string>('');
+  const router = useRouter();
+  
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
   // const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
   // const [error, setError] = useState<string | null>(null);
 
-  const [email] = useState<string>('');
-  const [password ] = useState<string>('');
+  // const [email] = useState<string>('');
+  // const [password ] = useState<string>('');
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
 
 
@@ -75,7 +78,7 @@ export default function LoginForm() {
     e.preventDefault(); // Ngăn chặn hành vi mặc định của form
 
     // Gọi hàm login với email và mật khẩu
-    const result = await login(email, password);
+    const result = await login(email, password);   
 
     // Kiểm tra kết quả trả về
     if (result.success) {
@@ -83,6 +86,7 @@ export default function LoginForm() {
         console.log(result.data); // Có thể chứa thông tin người dùng hoặc token
         // Ở đây có thể chuyển hướng người dùng đến trang khác
         // Ví dụ: router.push('/dashboard'); (Nếu sử dụng Next.js Router)
+        router.push('/blogs');
     } else {
         // Đăng nhập không thành công
     
@@ -122,8 +126,10 @@ export default function LoginForm() {
                   className="w-full rounded-sm border-gray-200 p-4 pe-12 focus:outline-none focus:ring-0 focus:ring-gray-500 focus:border-gray-500"
                   placeholder="Nhập email"
                   required
+                  onChange={(e) => setEmail(e.target.value)}
                   onInvalid={handleEmailInvalid}
                   onInput={handleEmailInput}
+                  autoComplete="username"
                 />
 
                 <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
@@ -135,8 +141,8 @@ export default function LoginForm() {
                     stroke="currentColor"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       strokeWidth="2"
                       d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
                     />
@@ -155,8 +161,10 @@ export default function LoginForm() {
                   className="w-full rounded-sm border-gray-200 p-4 pe-12 focus:outline-none focus:ring-0 focus:ring-gray-500 focus:border-gray-500"
                   placeholder="Nhập mật khẩu"
                   required
+                  onChange={(e) => setPassword(e.target.value)}
                   onInvalid={handlePasswordInvalid}
                   onInput={handlePasswordInput}
+                  autoComplete="current-password"
                 />
                 <span
                   className="absolute inset-y-0 right-0 grid place-content-center px-4"
@@ -169,8 +177,8 @@ export default function LoginForm() {
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
                       <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
                       <circle cx="12" cy="12" r="3" />
@@ -183,8 +191,8 @@ export default function LoginForm() {
                       stroke="currentColor"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         strokeWidth="2"
                         d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"
                       />

@@ -53,7 +53,7 @@ interface LoginResponse {
     message?: string;
 }
 
-const API_URL = 'http://w3cyber.dev';
+const API_URL = 'https://ic71303-hide.onrender.com/api/user';
 
 const handleResponse = async (response: Response): Promise<LoginResponse> => {
     if (response.ok) {

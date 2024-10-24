@@ -10,8 +10,8 @@ export default function TitleBlocks() {
           src="/avatar-5.jpg"
           width={100}
           height={100}
-          alt="logo studio"
-          className="filter grayscale hover:grayscale-0 transition-all duration-300"
+          alt="logo studio"    
+          className="object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
         />
       </div>
 

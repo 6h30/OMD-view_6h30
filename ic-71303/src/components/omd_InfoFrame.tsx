@@ -86,8 +86,8 @@ export default function InfoFrame() {
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
                 <polyline points="10 17 15 12 10 7" />
@@ -111,8 +111,8 @@ export default function InfoFrame() {
               strokeWidth="1"
               stroke="currentColor"
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <path stroke="none" d="M0 0h24v24H0z" />
               <line x1="3" y1="21" x2="21" y2="21" />

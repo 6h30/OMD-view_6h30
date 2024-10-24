@@ -37,8 +37,6 @@
 // };
 
 
-// src/middleware.ts
-
 
 // src/middleware.ts
 
@@ -48,39 +46,44 @@ export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   try {
-    // Danh sách các đường dẫn hợp lệ trong /homeM
+    // Danh sách các đường dẫn hợp lệ
     const validPaths = [
-      '/homeM', // Trang chính
+      '/',
+      '/homeM',
       '/homeM/blogs',
       '/homeM/blogsDetail',
       '/homeM/login',
       '/homeM/viewAbout',
       '/homeM/viewContact',
       '/homeM/viewProjects',
-      '/homeM/viewServices'
+      '/homeM/viewServices',
     ];
 
-    // Kiểm tra xem đường dẫn có nằm trong danh sách hợp lệ không
+    // Kiểm tra đường dẫn hợp lệ
     if (validPaths.includes(pathname)) {
-      return NextResponse.next(); // Tiếp tục cho các đường dẫn hợp lệ
+      return NextResponse.next();
     }
 
     // Cho phép truy cập vào các tệp trong thư mục /public
-    if (pathname.startsWith('/_next/') || pathname.startsWith('/favicon.ico') || pathname.endsWith('.jpg') || pathname.endsWith('.png')) {
-      return NextResponse.next(); // Cho phép truy cập vào tệp hình ảnh
+    if (
+      pathname.startsWith('/_next/') ||
+      pathname.startsWith('/favicon.ico') ||
+      pathname.endsWith('.jpg') ||
+      pathname.endsWith('.png')
+    ) {
+      return NextResponse.next();
     }
 
-    // Nếu không phải là một trong các đường dẫn hợp lệ, chuyển hướng đến trang 404
-    return NextResponse.rewrite(new URL('/404', req.url));
-    
+    // Chuyển hướng đến trang 400 nếu đường dẫn không hợp lệ
+    return NextResponse.rewrite(new URL('/400', req.url));
   } catch (error) {
     console.error('Middleware error:', error);
-    // Nếu có lỗi xảy ra, chuyển hướng đến trang 500
+    // Chuyển hướng đến trang 500 khi có lỗi xảy ra
     return NextResponse.rewrite(new URL('/500', req.url));
   }
 }
 
-// Xác định các đường dẫn mà middleware sẽ được áp dụng
+// Cấu hình matcher cho middleware
 export const config = {
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 };

@@ -539,8 +539,8 @@ export default function ViewBlogs() {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <path d="m15 18-6-6 6-6"></path>
                   </svg>
@@ -581,8 +581,8 @@ export default function ViewBlogs() {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <path d="m9 18 6-6-6-6"></path>
                   </svg>

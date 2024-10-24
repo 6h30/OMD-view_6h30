@@ -282,8 +282,8 @@ export default function DetailBlogs() {
                           strokeWidth="2"
                           stroke="currentColor"
                           fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         >
                           <path stroke="none" d="M0 0h24v24H0z" />
                           <circle cx="12" cy="12" r="9" />
@@ -304,8 +304,8 @@ export default function DetailBlogs() {
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       >
                         <circle cx="12" cy="12" r="1" />
                         <circle cx="19" cy="12" r="1" />
@@ -332,8 +332,8 @@ export default function DetailBlogs() {
                           stroke="currentColor"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             strokeWidth="2"
                             d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                           />
@@ -370,8 +370,8 @@ export default function DetailBlogs() {
                           strokeWidth="2"
                           stroke="currentColor"
                           fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         >
                           <path stroke="none" d="M0 0h24v24H0z" />
                           <circle cx="12" cy="12" r="9" />
@@ -392,8 +392,8 @@ export default function DetailBlogs() {
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       >
                         <circle cx="12" cy="12" r="1" />
                         <circle cx="19" cy="12" r="1" />
@@ -421,8 +421,8 @@ export default function DetailBlogs() {
                           stroke="currentColor"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             strokeWidth="2"
                             d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                           />
@@ -459,8 +459,8 @@ export default function DetailBlogs() {
                           strokeWidth="2"
                           stroke="currentColor"
                           fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         >
                           <path stroke="none" d="M0 0h24v24H0z" />
                           <circle cx="12" cy="12" r="9" />
@@ -481,8 +481,8 @@ export default function DetailBlogs() {
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       >
                         <circle cx="12" cy="12" r="1" />
                         <circle cx="19" cy="12" r="1" />
@@ -510,8 +510,8 @@ export default function DetailBlogs() {
                           stroke="currentColor"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             strokeWidth="2"
                             d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                           />
@@ -549,8 +549,8 @@ export default function DetailBlogs() {
                             strokeWidth="2"
                             stroke="currentColor"
                             fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           >
                             <path stroke="none" d="M0 0h24v24H0z" />
                             <circle cx="12" cy="12" r="9" />
@@ -571,8 +571,8 @@ export default function DetailBlogs() {
                           fill="none"
                           stroke="currentColor"
                           strokeWidth="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         >
                           <circle cx="12" cy="12" r="1" />
                           <circle cx="19" cy="12" r="1" />
@@ -600,8 +600,8 @@ export default function DetailBlogs() {
                             stroke="currentColor"
                           >
                             <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                               strokeWidth="2"
                               d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                             />
@@ -638,8 +638,8 @@ export default function DetailBlogs() {
                             strokeWidth="2"
                             stroke="currentColor"
                             fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           >
                             <path stroke="none" d="M0 0h24v24H0z" />
                             <circle cx="12" cy="12" r="9" />
@@ -660,8 +660,8 @@ export default function DetailBlogs() {
                           fill="none"
                           stroke="currentColor"
                           strokeWidth="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         >
                           <circle cx="12" cy="12" r="1" />
                           <circle cx="19" cy="12" r="1" />
@@ -689,8 +689,8 @@ export default function DetailBlogs() {
                             stroke="currentColor"
                           >
                             <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                               strokeWidth="2"
                               d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                             />
@@ -726,8 +726,8 @@ export default function DetailBlogs() {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <line x1="22" y1="2" x2="11" y2="13" />
                     <polygon points="22 2 15 22 11 13 2 9 22 2" />

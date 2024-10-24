@@ -36,8 +36,8 @@ export default function OmdCms() {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
                   rounded-sm
@@ -61,8 +61,8 @@ export default function OmdCms() {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   rounded-sm
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
@@ -99,8 +99,8 @@ export default function OmdCms() {
                               fill="none"
                               stroke="currentColor"
                               strokeWidth="1"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             >
                               rounded-sm
                               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -136,8 +136,8 @@ export default function OmdCms() {
                               fill="none"
                               stroke="currentColor"
                               strokeWidth="1"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             >
                               rounded-sm
                               <rect
@@ -177,8 +177,8 @@ export default function OmdCms() {
                               fill="none"
                               stroke="currentColor"
                               strokeWidth="1"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             >
                               rounded-sm
                               <rect
@@ -217,8 +217,8 @@ export default function OmdCms() {
                               fill="none"
                               stroke="currentColor"
                               strokeWidth="1"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             >
                               rounded-sm
                               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -254,8 +254,8 @@ export default function OmdCms() {
                               fill="none"
                               stroke="currentColor"
                               strokeWidth="1"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             >
                               rounded-sm
                               <rect
