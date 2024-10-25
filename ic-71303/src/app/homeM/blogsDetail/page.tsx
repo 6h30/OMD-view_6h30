@@ -30,7 +30,7 @@
 import DetailBlogs from '@/components/omd_DetailBlog';
 import { useRef, useEffect } from 'react';
 
-export default function Main() {
+export default function BlogsDetail() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = (event: React.WheelEvent<HTMLDivElement>) => {

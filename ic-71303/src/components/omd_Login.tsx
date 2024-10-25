@@ -86,7 +86,7 @@ export default function LoginForm() {
         console.log(result.data); // Có thể chứa thông tin người dùng hoặc token
         // Ở đây có thể chuyển hướng người dùng đến trang khác
         // Ví dụ: router.push('/dashboard'); (Nếu sử dụng Next.js Router)
-        router.push('/blogs');
+        router.push('/userSetting');
     } else {
         // Đăng nhập không thành công
     
