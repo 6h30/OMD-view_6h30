@@ -77,8 +77,12 @@ export const login = async (email: string, password: string): Promise<LoginRespo
         });
 
         return await handleResponse(response);
-    } catch (error) {
-        console.error('Login error:', error);
+    } catch (error: unknown) {
+        if (error instanceof Error) {
+            console.error('Login error:', error.message);
+        } else {
+            console.error('Login error:', error);
+        }
         return { success: false, message: 'An error occurred during login' };
     }
 };
