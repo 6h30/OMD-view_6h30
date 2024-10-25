@@ -1,7 +1,6 @@
-// import Image from "next/image";
 import UserSetting from "@/components/omd_UserSetting";
 
-export default function OmdUserSetting() {
+export default function OmdUser() {
   return (
     <div className="flex h-full w-full items-start justify-center overflow-y-auto scroll-smooth border">
       <div className="flex w-[1024px] flex-col items-center">

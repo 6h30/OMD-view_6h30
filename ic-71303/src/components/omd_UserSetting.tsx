@@ -2,6 +2,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { logout } from '../utils/auth';
 
 interface Province {
   code: number;
@@ -143,6 +144,35 @@ export default function UserSetting() {
       setVerificationLink('');
     }
   };
+
+  const handleLogout = async () => {
+    try {
+        const response = await logout();
+        const text = await response.text(); // Đọc phản hồi dưới dạng text
+        console.log('Logout response:', text); // Ghi log nội dung phản hồi
+
+        if (!response.ok) {
+            // Nếu không phải là mã trạng thái 200
+            console.error('Logout failed:', text);
+            return;
+        }
+
+        const result = JSON.parse(text); // Thử phân tích JSON
+        console.log('Logout result:', result);
+
+        if (result.success) {
+            console.log('Logged out successfully');
+        } else {
+            console.error(result.message);
+        }
+    } catch (error) {
+        console.error('Logout error:', error);
+    }
+};
+
+
+
+
 
   return (
     <form>
@@ -471,8 +501,16 @@ export default function UserSetting() {
           type="submit"
           className="rounded-md bg-gray-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
         >
-          Save
+          Lưu
         </button>
+
+        <button
+                type="button" // Chọn type="button" để không gửi form
+                onClick={handleLogout} // Gọi hàm logout khi nhấn nút
+                className="ml-4 rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+            >
+                Đăng xuất
+            </button>
       </div>
     </form>
   );

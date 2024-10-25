@@ -52,6 +52,10 @@ interface LoginResponse {
     data?: { token?: string; user?: string };
     message?: string;
 }
+interface LogoutResponse {
+    success: boolean;
+    message?: string; 
+}
 
 const API_URL = 'https://ic71303-hide.onrender.com/api/user';
 
@@ -86,6 +90,21 @@ export const login = async (email: string, password: string): Promise<LoginRespo
         return { success: false, message: 'An error occurred during login' };
     }
 };
+
+export const logout = async (): Promise<Response> => {
+    try {
+        const response = await fetch(`${API_URL}/logout`, {
+            method: 'POST',
+            credentials: 'include',
+        });
+        return response; 
+    } catch (error) {
+        console.error('Logout error:', error);
+        throw error;
+    }
+};
+
+
 
 export const checkSession = async (): Promise<LoginResponse> => {
     try {
