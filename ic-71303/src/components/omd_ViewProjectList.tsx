@@ -1,147 +1,78 @@
 // src/components/omd_ViewProjectList.tsx
 'use client'
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 
 export default function ViewProjectList() {
-  const rotateStyle: React.CSSProperties = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    animation: 'rotate 15s linear infinite',
-  };
-
-  const keyframes = `
-  @keyframes rotate {
-      from {
-          transform: rotate(0deg);
-      }
-      to {
-          transform: rotate(360deg);
-      }
-  }
-`;
 
   return (
     <div className="flex justify-center py-[20px]">
-      <div className="gap-[10px] sm:h-[1400px] sm:w-[428px] sm:flex-col md:h-[1500px] md:w-[728px] md:flex-col lg:flex lg:min-h-[2048px] lg:w-[960px] lg:flex-row lg:items-start lg:justify-start ">
 
-        <div className="relative flex gap-[30px] border sm:h-[100px] sm:w-full sm:flex-col md:h-[350px] md:w-full md:flex-col lg:h-full lg:w-[40%] lg:flex-col lg:py-[20px]">
-          <div className="relative flex gap-[25px] sm:flex-row sm:items-center sm:justify-start md:flex-row md:items-center md:justify-start lg:flex-col lg:items-center lg:justify-center">
-            <div className="h-[168px] w-[173px] items-center justify-center rounded-[100%]">
-              <style>{keyframes}</style>
-              <div id="circle" style={rotateStyle}>
-                <svg
-                  className="h-full w-full"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlnsXlink="http://www.w3.org/1999/xlink"
-                  viewBox="0 0 200 200"
-                  xmlSpace="preserve"
-                >
-                  <defs>
-                    <path
-                      id="circlePath"
-                      d="M 100, 100 m -80, 0 a 80,80 0 0,1 160,0 a 80,80 0 0,1 -160,0 "
-                    />
-                  </defs>
+      <div className="flex flex-wrap justify-center p-5 min-h-fit w-[960px] border">
 
-                  <circle cx="100" cy="100" r="80" fill="none" />
-                  <g>
-                    <use href="#circlePath" fill="none" />
-                    <text className="text-lg tracking-[0.22em]">
-                      <textPath href="#circlePath">
-                        DESIGN YOUR HOUSE WITH OMD ARCHITECT
-                      </textPath>
-                    </text>
-                  </g>
-                </svg>
-              </div>
+        <a href="/homeM/viewProjects"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="box group relative w-full sm:w-[calc(50%-20px)] md:w-[calc(33.333%-20px)] lg:w-[calc(25%-20px)] xl:w-[calc(30%-20px)] m-2 flex items-center justify-center border-2 border-gray-300 rounded-sm hover:shadow-lg transition-all duration-300 h-36 text-sm text-gray-800"
+          // style={{ backgroundImage: "url('/pr-mv-1.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
+        >
+          {/* Lớp phủ nền */}
+          <div className="absolute inset-0 bg-gray-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-sm"></div>
+
+          <div className="grid p-2 rounded">
+            <div className="grid grid-cols-2 text-center">
+              <p>id: 01</p>
+              <p className='font-koho-bold'>Mvyn</p>
             </div>
 
-            <div className="h-fit w-[150px] border border-black text-center">
-              <p>Team</p>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-2 border-t border-gray-200 mt-2 pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 leading-4">
+              <p>Địa điểm:</p>
+              <p>Q. Tân Phú, Tp HCM</p>
+
+              <p>Chủ đầu tư:</p>
+              <p>Chi D</p>
+
+              <p>Năm:</p>
+              <p>2022</p>
+
+              <p>Diện tích:</p>
+              <p>200 m²</p>
             </div>
-
-            <div className='h-fit w-[200px]'>
-              <div className='flex justify-start items-end'>
-                <div className="relative ml-[20px] flex h-[230px] w-[1px] bg-gray-400">
-                  <br />
-                </div>
-                <div className="h-[150px] w-full flex bg-gray-300 m-[5px] mb-[40px]">
-                  <Image
-                    width={200}
-                    height={200}
-                    src="/avatar-1a.png"
-                    alt="omg image"
-                    layout="fixed"
-                    className="h-[220px] w-[200px] object-cover right-[80px] absolute bottom-[30px]"
-                  />  
-                </div>                
-              </div>
-
-              <div className=''>
-                <div className="absolute top-[450px] flex h-[1px] w-[200px] bg-gray-400">
-                  <br />
-                </div>
-             
-
-              </div>
-            </div>
-
           </div>
+        </a>
+
+
+
+        <div className="box w-full sm:w-[calc(50%-20px)] md:w-[calc(33.333%-20px)] lg:w-[calc(25%-20px)] xl:w-[calc(30%-20px)] m-2 flex items-center justify-center bg-white border-2 border-gray-300 rounded-sm  hover:bg-blue-50 hover:border-blue-500 hover:shadow-lg transition-all duration-300 h-36 text-lg text-gray-800">
+          Banana
         </div>
-
-        <div className="relative gap-[10px] border px-[20px] sm:h-[1340px] sm:w-[428px] md:h-[1440px] md:w-[728px] lg:h-[2000px] lg:w-[60%]">
-
-          <div className="relative flex w-full justify-center gap-[30px] pb-[20px] sm:h-[350px] md:h-[450px] lg:h-[660px] border">
-            <div className="relative flex h-[75%] w-[75%] border border-black">
-              <Image
-                src="/pr-mv-1.jpg"
-                alt="omg image"
-                layout="fill"
-                className="object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="relative border flex w-full flex-col justify-start gap-[20px] lg:h-[1224px]">
-
-            <div className="relative flex h-[50px] w-full flex-row items-center justify-between py-[10px]">
-              <div className="relative flex h-[25px] w-[30%] flex-col items-center justify-center border border-gray-500 px-[10px]">
-                <p>Nhiệm vụ thiết kế</p>
-              </div>
-
-              <div className="relative flex h-[1px] w-[70%] flex-col items-start justify-center bg-gray-400 px-[10px]">
-                <br />
-              </div>
-            </div>
-
-            <div className="relative flex h-[150px] w-full flex-row items-center justify-between py-[10px]">
-              {/* <p>
-                “Café-Cóc” – trong tiếng Việt, thuật ngữ này chỉ quán cà phê
-                bình dân với chỗ ngồi thấp, có thể dễ dàng gấp lại và bố trí khi
-                cần thiết. Đó là nơi mọi người có thể ghé qua một cách nhanh
-                chóng và thuận tiện, gọi đồ uống, nhâm nhi một mình hoặc với bạn
-                bè, sau đó tiếp tục công việc trong ngày của mình.
-              </p> */}
-              <p>Gắn kết mọi người với môi trường xung quanh. Kiến trúc Mediterranean, hay Địa Trung Hải cũng là câu chuyện được Mervyn muốn kể lại, thiết kế thân thiện với môi trường, bền vững tạo ra không gian thư giãn cho cộng đồng và thế hệ tương lai. </p>
-            </div>
-
-            <div className="relative flex h-[50px] w-full flex-row items-center justify-between py-[10px]">
-              <div className="relative flex h-[1px] w-[70%] flex-col items-start justify-center bg-gray-400 px-[10px]">
-                <br />
-              </div>
-
-              <div className="relative flex h-[25px] w-[30%] flex-col items-center justify-center border border-gray-500 px-[10px]">
-                <p>Bộ sưu tập</p>
-              </div>
-            </div>
-
-          </div>
+        <div className="box w-full sm:w-[calc(50%-20px)] md:w-[calc(33.333%-20px)] lg:w-[calc(25%-20px)] xl:w-[calc(30%-20px)] m-2 flex items-center justify-center bg-white border-2 border-gray-300 rounded-sm  hover:bg-blue-50 hover:border-blue-500 hover:shadow-lg transition-all duration-300 h-36 text-lg text-gray-800">
+          Cherry
         </div>
-
+        <div className="box w-full sm:w-[calc(50%-20px)] md:w-[calc(33.333%-20px)] lg:w-[calc(25%-20px)] xl:w-[calc(30%-20px)] m-2 flex items-center justify-center bg-white border-2 border-gray-300 rounded-sm  hover:bg-blue-50 hover:border-blue-500 hover:shadow-lg transition-all duration-300 h-36 text-lg text-gray-800">
+          Date
+        </div>
+        <div className="box w-full sm:w-[calc(50%-20px)] md:w-[calc(33.333%-20px)] lg:w-[calc(25%-20px)] xl:w-[calc(30%-20px)] m-2 flex items-center justify-center bg-white border-2 border-gray-300 rounded-sm  hover:bg-blue-50 hover:border-blue-500 hover:shadow-lg transition-all duration-300 h-36 text-lg text-gray-800">
+          Elderberry
+        </div>
+        <div className="box w-full sm:w-[calc(50%-20px)] md:w-[calc(33.333%-20px)] lg:w-[calc(25%-20px)] xl:w-[calc(30%-20px)] m-2 flex items-center justify-center bg-white border-2 border-gray-300 rounded-sm  hover:bg-blue-50 hover:border-blue-500 hover:shadow-lg transition-all duration-300 h-36 text-lg text-gray-800">
+          Fig
+        </div>
+        <div className="box w-full sm:w-[calc(50%-20px)] md:w-[calc(33.333%-20px)] lg:w-[calc(25%-20px)] xl:w-[calc(30%-20px)] m-2 flex items-center justify-center bg-white border-2 border-gray-300 rounded-sm  hover:bg-blue-50 hover:border-blue-500 hover:shadow-lg transition-all duration-300 h-36 text-lg text-gray-800">
+          Grape
+        </div>
+        <div className="box w-full sm:w-[calc(50%-20px)] md:w-[calc(33.333%-20px)] lg:w-[calc(25%-20px)] xl:w-[calc(30%-20px)] m-2 flex items-center justify-center bg-white border-2 border-gray-300 rounded-sm  hover:bg-blue-50 hover:border-blue-500 hover:shadow-lg transition-all duration-300 h-36 text-lg text-gray-800">
+          Honeydew
+        </div>
+        <div className="box w-full sm:w-[calc(50%-20px)] md:w-[calc(33.333%-20px)] lg:w-[calc(25%-20px)] xl:w-[calc(30%-20px)] m-2 flex items-center justify-center bg-white border-2 border-gray-300 rounded-sm  hover:bg-blue-50 hover:border-blue-500 hover:shadow-lg transition-all duration-300 h-36 text-lg text-gray-800">
+          Kiwi
+        </div>
+        <div className="box w-full sm:w-[calc(50%-20px)] md:w-[calc(33.333%-20px)] lg:w-[calc(25%-20px)] xl:w-[calc(30%-20px)] m-2 flex items-center justify-center bg-white border-2 border-gray-300 rounded-sm  hover:bg-blue-50 hover:border-blue-500 hover:shadow-lg transition-all duration-300 h-36 text-lg text-gray-800">
+          Lemon
+        </div>
       </div>
+
     </div>
+
   );
 }
