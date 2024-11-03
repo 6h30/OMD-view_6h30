@@ -57,7 +57,8 @@ export function middleware(req: NextRequest) {
       '/homeM/viewContact',
       '/homeM/viewProjects',
       '/homeM/viewServices',
-      '/homeM/viewUser'
+      '/homeM/viewUser',
+      '/homeM/viewProjectList',
     ];
 
     // Kiểm tra đường dẫn hợp lệ

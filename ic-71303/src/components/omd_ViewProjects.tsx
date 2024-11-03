@@ -1,5 +1,6 @@
 // src/components/omd_ViewProject.tsx
 'use client'
+import React, { useState } from 'react';
 import Image from 'next/image';
 // import CarouselComponent from './omd_carouselBlog';
 
@@ -30,6 +31,15 @@ export default function ViewProjects() {
   //   { src: '/image10.jpg', alt: 'Image 3' },
   // ];
 
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const journeys = [
+    { month: '02/2023', info: 'Trình phương án đầu tiên' },
+    { month: '03/2023', info: 'Thảo luận và chốt phương án' },
+    { month: '04/2023', info: 'Hoàn thành phần thô' },
+    { month: '05/2023', info: 'Hoàn thiện' },
+    { month: '06/2023', info: 'Bàn giao dự án' },
+  ];
 
   return (
     <div className="flex justify-center py-[20px]">
@@ -68,22 +78,31 @@ export default function ViewProjects() {
             </div>
 
             <div className="h-fit w-[150px] border border-black text-center">
-              <p className="font-koho-bold">LAPH cafe</p>
+              <p className="font-koho-bold">MERVYN cafe</p>
             </div>
 
             <div className="h-fit w-[150px] border border-black text-center">
-              <p>OMD</p>
+              <p>OMD Studio</p>
             </div>
           </div>
 
           <div className="relative gap-[20px] sm:hidden md:flex md:flex-col lg:flex lg:flex-row lg:items-start lg:justify-center">
-            <div className="pl-[20px] sm:flex sm:flex-row md:flex md:flex-row lg:flex lg:flex-col lg:border-l lg:border-l-black">
-              <p>timeline</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
+            <div className="pl-[20px] sm:flex sm:flex-row md:flex md:flex-row lg:flex lg:flex-col lg:border-l lg:border-l-black gap-[80px]">
+              {journeys.map((journey, index) => (
+                <div
+                  key={index}
+                  className="relative"
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <p className="cursor-pointer">{journey.month}</p>
+                  {hoveredIndex === index && (
+                    <div className="absolute border border-gray-300 p-2 rounded shadow-md mt-1 w-32">
+                      {journey.info}
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -97,12 +116,12 @@ export default function ViewProjects() {
 
             <div className="relative flex w-[318px] flex-row items-start gap-[10px] border-l border-black pl-[10px]">
               <p>Kts:</p>
-              <span>Trương Đức Nam</span>
+              <span>Trương Khâm Thành</span>
             </div>
 
             <div className="relative flex w-[169px] flex-row items-start justify-center gap-[10px] border-l border-black pl-[10px]">
               <p>Năm</p>
-              <span>2024</span>
+              <span>2023</span>
             </div>
           </div>
 
@@ -110,7 +129,7 @@ export default function ViewProjects() {
 
             <div className="relative flex h-[100%] w-[75%] flex-col items-center justify-center border border-black">
               <Image
-                src="/image8.jpg"
+                src="/pr-mv-1.jpg"
                 alt="omg image"
                 layout="fill"
                 className="object-cover"
@@ -170,7 +189,7 @@ export default function ViewProjects() {
 
           <div className="relative flex w-full flex-col items-start justify-start gap-[20px] lg:h-[1224px]">
             <div className="relative flex h-[150px] w-full flex-row items-center justify-between px-[20px]">
-             
+
               <div className="relative flex flex-col items-end justify-end gap-[20px]">
                 <div>
                   <p className="font-italiana text-center leading-[53px] tracking-[5px] sm:text-[33px] md:text-[53px] lg:text-[73px]">
@@ -190,7 +209,7 @@ export default function ViewProjects() {
 
                 <div>
                   <p className="font-italiana text-center tracking-[5px] sm:text-[33px] sm:leading-[33px] md:text-[53px] lg:text-[73px] lg:leading-[53px]">
-                    LAPH cafe
+                    MERVYN
                   </p>
                 </div>
               </div>
@@ -207,13 +226,14 @@ export default function ViewProjects() {
             </div>
 
             <div className="relative flex h-[150px] w-full flex-row items-center justify-between py-[10px]">
-              <p>
+              {/* <p>
                 “Café-Cóc” – trong tiếng Việt, thuật ngữ này chỉ quán cà phê
                 bình dân với chỗ ngồi thấp, có thể dễ dàng gấp lại và bố trí khi
                 cần thiết. Đó là nơi mọi người có thể ghé qua một cách nhanh
                 chóng và thuận tiện, gọi đồ uống, nhâm nhi một mình hoặc với bạn
                 bè, sau đó tiếp tục công việc trong ngày của mình.
-              </p>
+              </p> */}
+              <p>Gắn kết mọi người với môi trường xung quanh. Kiến trúc Mediterranean, hay Địa Trung Hải cũng là câu chuyện được Mervyn muốn kể lại, thiết kế thân thiện với môi trường, bền vững tạo ra không gian thư giãn cho cộng đồng và thế hệ tương lai. </p>
             </div>
 
             <div className="relative flex h-[50px] w-full flex-row items-center justify-between py-[10px]">

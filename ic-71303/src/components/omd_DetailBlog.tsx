@@ -12,23 +12,26 @@ export default function DetailBlogs() {
 
   return (
     <div className="flex h-[800px] min-w-[3520px] items-center justify-center overflow-hidden border">
-      <div className="flex- flex h-full w-full flex-row justify-start">
+      <div className="flex- flex h-full w-full flex-row justify-start gap-[10px]">
+
+
         <div className="flex h-full w-[150px] flex-col items-center justify-center">
-          <div className="flex h-[95%] w-[80%] flex-col justify-between border border-black">
-            <div className="flex justify-center border">
-              <p>user</p>
-            </div>
-            <div className="flex flex-col items-center gap-[20px]">
-              <div className="flex border">
-                <p>search</p>
-              </div>
-              <div className="flex border">
-                <p>file</p>
-              </div>
-              <div className="flex border">
-                <p>setup</p>
+          <div className="flex h-[95%] w-[80%] flex-col justify-end">
+
+             <div className="flex flex-col items-center gap-[20px]">
+              <div className="flex">
+                <svg className="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
               </div>
             </div>
+
+            <div className="flex justify-center">
+              <p>Quay lại</p>
+            </div>
+
+           
+
           </div>
         </div>
 
@@ -253,7 +256,7 @@ export default function DetailBlogs() {
           </div>
         </div>
 
-        <div className="flex h-full w-[430px] flex-col">
+        <div className="flex h-full w-[430px] flex-col border">
           <div className="flex justify-center border-b font-koho-bold">
             <p>Bình luận</p>
           </div>
@@ -738,6 +741,33 @@ export default function DetailBlogs() {
             </div>
           </div>
         </div>
+
+        {/* <div className="flex h-full w-[350px] flex-col font-koho border">
+
+          <div className="flex justify-center border-b font-koho-bold">
+            <p>Bài viết nổi bật</p>
+          </div>
+
+          <div className="flex text-[14px] flex-col items-start gap-[10px] p-3">
+            <div className="flex">
+              <p>1.Thiết kế mô-đun: Liệu đây có phải là lời giải cho bài toán cách mạng hóa …</p>
+            </div>
+            <div className="flex">
+              <p>2.NOM HOUSE - Tổ ấm bình yên mang đậm dấu ấn cá nhân.</p>
+            </div>
+            <div className="flex">
+              <p>3.PTH: Lựa chọn không gian sống tinh giản, gọn gàng.</p>
+            </div>
+            <div className="flex">
+              <p>4.Mật ngọt Library - Thư viện cho trẻ em vùng núi.</p>
+            </div>
+            <div className="flex">
+              <p>5.Mi Mây house - Biến nhà ở trở thành nơi nghỉ dưỡng lý tưởng.</p>
+            </div>
+          </div>
+
+        </div> */}
+
       </div>
     </div>
   );

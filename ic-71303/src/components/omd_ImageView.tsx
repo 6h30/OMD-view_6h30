@@ -116,18 +116,18 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-const ImageGrid: React.FC = () => {
+const ImageView: React.FC = () => {
   const images: string[] = [
-    '/image1.jpg',
-    '/image2.jpg',
-    '/image3.jpg',
-    '/image4.jpg',
-    '/image5.jpg',
-    '/image6.jpg',
-    '/image7.jpg',
-    '/image8.jpg',
-    '/image9.jpg',
-    '/image10.jpg',
+    '/pr-mv-1.jpg',
+    '/pr-mv-2.jpg',
+    '/pr-mv-3.jpg',
+    '/pr-mv-4.jpg',
+    '/pr-mv-5.jpg',
+    '/pr-mv-6.jpg',
+    '/pr-mv-7.jpg',
+    '/pr-mv-8.jpg',
+    '/pr-mv-9.jpg',
+    '/pr-mv-10.jpg',
   ];
 
   const [currentImage, setCurrentImage] = useState<string>(images[0]);
@@ -185,5 +185,5 @@ const ImageGrid: React.FC = () => {
   );
 };
 
-export default ImageGrid;
+export default ImageView;
 
