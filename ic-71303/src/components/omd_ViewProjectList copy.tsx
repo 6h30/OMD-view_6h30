@@ -138,6 +138,29 @@ export default function ViewProjectList() {
             </div>
           </div>
         </div>
+
+        <button className="relative flex items-center justify-center w-40 h-12 bg-transparent text-black font-medium transition-all duration-200 hover:cursor-pointer group">
+          {/* Các viền */}
+          <div className="absolute top-0 left-0 w-full h-full">
+            {/* Viền trên */}
+            <div className="absolute inset-x-0 top-1 flex justify-start">
+              <div className="h-0.5 bg-black transition-all duration-500 group-hover:w-full w-0 origin-left"></div>
+            </div>
+            {/* Viền dưới */}
+            <div className="absolute inset-x-0 bottom-1 flex justify-end">
+              <div className="h-0.5 bg-black transition-all duration-500 group-hover:w-full w-0 origin-right"></div>
+            </div>
+            {/* Viền trái */}
+            <div className="absolute left-1 top-0 flex items-end h-full">
+              <div className="w-0.5 bg-black h-0 transition-all duration-500 group-hover:h-full origin-top"></div>
+            </div>
+            {/* Viền phải */}
+            <div className="absolute right-1 top-0 flex items-start h-full">
+              <div className="w-0.5 bg-black h-0 transition-all duration-500 group-hover:h-full origin-bottom"></div>
+            </div>
+          </div>
+          <p className="relative z-10">Hover Me!</p>
+        </button>
       </div>
     </div>
   );

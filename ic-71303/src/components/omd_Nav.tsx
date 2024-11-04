@@ -16,7 +16,7 @@ export default function Nav() {
       </div>
       <div className="flex h-[32px] w-[132px] flex-row items-center justify-center gap-[10px] border border-black">
         <Link
-          href="/homeM/viewProjects"
+          href="/homeM/viewProjectList"
           className="flex h-full w-full items-center justify-center"
         >
           Dự án
