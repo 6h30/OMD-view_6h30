@@ -25,7 +25,6 @@
 //   );
 // }
 
-
 'use client';
 import DetailBlogs from '@/components/omd_DetailBlog';
 import { useRef, useEffect } from 'react';

@@ -95,7 +95,7 @@ export default function ViewBlogs() {
               </div>
             </div>
           </div>
-     
+
           <div className="flex h-full w-full flex-col items-center justify-center gap-[10px] pl-[20px] pr-[10px] pt-[5px]">
             <div className="flex h-[24%] w-full cursor-pointer flex-col">
               <div className="flex flex-col items-start justify-center gap-[10px] border-b border-black pb-[10px]">
@@ -210,7 +210,9 @@ export default function ViewBlogs() {
                 </div>
 
                 <div className="font-koho-bold w-full text-[14px] leading-[18px]">
-                  <p>Mi Mây house - Biến nhà ở trở thành nơi nghỉ dưỡng lý tưởng</p>
+                  <p>
+                    Mi Mây house - Biến nhà ở trở thành nơi nghỉ dưỡng lý tưởng
+                  </p>
                 </div>
 
                 <div className="flex w-full flex-row text-[12px]">
@@ -221,7 +223,7 @@ export default function ViewBlogs() {
             </div>
 
             <div className="flex h-[4%] w-[80%] flex-col items-center justify-center border p-[10px]">
-              <div className="h-full w-full justify-center flex">
+              <div className="flex h-full w-full justify-center">
                 <p> xem thêm </p>
               </div>
             </div>
@@ -230,10 +232,10 @@ export default function ViewBlogs() {
 
         <div className="relative mt-[280px] flex h-[2120px] w-[1px] bg-gray-400">
           <br />
-          <svg className="absolute top-[400px] border animate-bounce w-6 h-6 ..."></svg>
+          <svg className="... absolute top-[400px] h-6 w-6 animate-bounce border"></svg>
         </div>
 
-        <div className="relative flex h-auto w-[75%] flex-col gap-[10px] py-[20px]">       
+        <div className="relative flex h-auto w-[75%] flex-col gap-[10px] py-[20px]">
           <div className="flex pr-[20px]">
             <div className="relative flex h-[60px] w-full flex-row items-center justify-center border border-black pr-[20px]">
               <div className="relative flex w-[200px] flex-col items-center gap-[10px]">
@@ -324,7 +326,7 @@ export default function ViewBlogs() {
               </div>
             </div>
           </div>
-          
+
           <div className="relative flex h-[180px] w-full flex-col items-start justify-start pr-[20px]">
             <div className="relative flex h-[35px] w-full flex-row items-center justify-between gap-[20px]">
               <div className="group relative flex h-[25px] w-[190px] items-center justify-start border border-black pl-[10px] transition-colors duration-300 hover:cursor-pointer">
@@ -437,7 +439,10 @@ export default function ViewBlogs() {
               <div className="relative flex h-[33%] w-full cursor-pointer flex-col items-start gap-[10px]">
                 <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
                   <Link href="/homeM/blogsDetail">
-                    <p>Chung cư nhỏ sở hữu ban công đặc biệt ngập tràn ánh nắng và cây xanh - TAH</p>
+                    <p>
+                      Chung cư nhỏ sở hữu ban công đặc biệt ngập tràn ánh nắng
+                      và cây xanh - TAH
+                    </p>
                   </Link>
                 </div>
                 <div className="relative flex h-[60%] w-full flex-col items-start overflow-hidden border">
@@ -455,7 +460,10 @@ export default function ViewBlogs() {
 
                 <div className="relative flex h-[25%] w-full flex-col items-start border-b border-b-black">
                   <p>
-                  TAH - Căn chung cư 62m2 sở hữu ban công ngập tràn cây xanh và ánh sáng, tạo nên không gian ấm áp, dễ chịu và bình yên, là chốn trở về lý tưởng cho gia chủ sau một ngày làm việc mệt mỏi bên ngoài.
+                    TAH - Căn chung cư 62m2 sở hữu ban công ngập tràn cây xanh
+                    và ánh sáng, tạo nên không gian ấm áp, dễ chịu và bình yên,
+                    là chốn trở về lý tưởng cho gia chủ sau một ngày làm việc
+                    mệt mỏi bên ngoài.
                   </p>
                 </div>
               </div>
@@ -486,7 +494,9 @@ export default function ViewBlogs() {
 
               <div className="relative flex h-[33%] w-full flex-col items-start gap-[10px]">
                 <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
-                  <p>Mi Mây house - Biến nhà ở trở thành nơi nghỉ dưỡng lý tưởng</p>
+                  <p>
+                    Mi Mây house - Biến nhà ở trở thành nơi nghỉ dưỡng lý tưởng
+                  </p>
                 </div>
                 <div className="relative flex h-[60%] w-full flex-col items-start overflow-hidden border">
                   <Image
@@ -501,7 +511,10 @@ export default function ViewBlogs() {
 
                 <div className="items-star relative flex h-[25%] w-full flex-col">
                   <p>
-                  Mi Mây House - Ngôi nhà tọa lạc tại trung tâm thành phố Buôn Ma Thuột với không gian tràn ngập những mảng xanh, đáp ứng đầy đủ nhu cầu nghỉ dưỡng gần gũi thiên nhiên của chủ nhà ...
+                    Mi Mây House - Ngôi nhà tọa lạc tại trung tâm thành phố Buôn
+                    Ma Thuột với không gian tràn ngập những mảng xanh, đáp ứng
+                    đầy đủ nhu cầu nghỉ dưỡng gần gũi thiên nhiên của chủ nhà
+                    ...
                   </p>
                 </div>
               </div>
@@ -629,7 +642,7 @@ export default function ViewBlogs() {
 }
 const renderMarqueeItem = (text: string): JSX.Element => (
   <span className="px-4">
-    <span className="rounded-full bg-gray-700 mr-2"></span>
+    <span className="mr-2 rounded-full bg-gray-700"></span>
     {text}
   </span>
 );

@@ -7,7 +7,7 @@ import { login } from '../utils/auth';
 
 export default function LoginForm() {
   const router = useRouter();
-  
+
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   // const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
@@ -16,8 +16,6 @@ export default function LoginForm() {
   // const [email] = useState<string>('');
   // const [password ] = useState<string>('');
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
-
-
 
   const togglePasswordVisibility = () => {
     setIsPasswordVisible(!isPasswordVisible);
@@ -78,20 +76,19 @@ export default function LoginForm() {
     e.preventDefault(); // Ngăn chặn hành vi mặc định của form
 
     // Gọi hàm login với email và mật khẩu
-    const result = await login(email, password);   
+    const result = await login(email, password);
 
     // Kiểm tra kết quả trả về
     if (result.success) {
-        // Đăng nhập thành công
-        console.log(result.data); // Có thể chứa thông tin người dùng hoặc token
-        // Ở đây có thể chuyển hướng người dùng đến trang khác
-        // Ví dụ: router.push('/dashboard'); (Nếu sử dụng Next.js Router)
-        router.push('/homeM/viewUser');
+      // Đăng nhập thành công
+      console.log(result.data); // Có thể chứa thông tin người dùng hoặc token
+      // Ở đây có thể chuyển hướng người dùng đến trang khác
+      // Ví dụ: router.push('/dashboard'); (Nếu sử dụng Next.js Router)
+      router.push('/homeM/viewUser');
     } else {
-        // Đăng nhập không thành công
-    
+      // Đăng nhập không thành công
     }
-};
+  };
 
   return (
     <div
@@ -112,7 +109,8 @@ export default function LoginForm() {
             designed and developed by dcviet
           </p>
 
-          <form onSubmit={handleSubmit}
+          <form
+            onSubmit={handleSubmit}
             className="mb-0 mt-6 space-y-4 rounded-lg p-4 sm:p-6 lg:p-8"
           >
             <div className="relative flex flex-col">
@@ -120,10 +118,10 @@ export default function LoginForm() {
                 Email
               </p>
 
-              <div className="relative flex rounded-sm border-1">
+              <div className="border-1 relative flex rounded-sm">
                 <input
                   type="email"
-                  className="w-full rounded-sm border-gray-200 p-4 pe-12 focus:outline-none focus:ring-0 focus:ring-gray-500 focus:border-gray-500"
+                  className="w-full rounded-sm border-gray-200 p-4 pe-12 focus:border-gray-500 focus:outline-none focus:ring-0 focus:ring-gray-500"
                   placeholder="Nhập email"
                   required
                   onChange={(e) => setEmail(e.target.value)}
@@ -155,10 +153,10 @@ export default function LoginForm() {
               <p className="absolute left-4 top-3 z-10 origin-top-left -translate-y-5 scale-75 transform border bg-white px-2 text-gray-400">
                 Mật khẩu
               </p>
-              <div className="relative flex rounded-sm border-1">
+              <div className="border-1 relative flex rounded-sm">
                 <input
                   type={isPasswordVisible ? 'text' : 'password'}
-                  className="w-full rounded-sm border-gray-200 p-4 pe-12 focus:outline-none focus:ring-0 focus:ring-gray-500 focus:border-gray-500"
+                  className="w-full rounded-sm border-gray-200 p-4 pe-12 focus:border-gray-500 focus:outline-none focus:ring-0 focus:ring-gray-500"
                   placeholder="Nhập mật khẩu"
                   required
                   onChange={(e) => setPassword(e.target.value)}
@@ -204,7 +202,7 @@ export default function LoginForm() {
 
             <button
               type="submit"
-              className="block w-full rounded-sm border px-5 py-3 bg-white text-slate-600 hover:border-black focus:bg-gray-200 hover:text-black"
+              className="block w-full rounded-sm border bg-white px-5 py-3 text-slate-600 hover:border-black hover:text-black focus:bg-gray-200"
             >
               Đăng nhập
             </button>

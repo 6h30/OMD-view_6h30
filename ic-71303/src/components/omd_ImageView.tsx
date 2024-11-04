@@ -42,7 +42,7 @@
 //               width={600}
 //               height={400}
 //               className="rounded-lg scale-100 transition-transform duration-300 transform"
-//             //   style={{ maxHeight: '80%', maxWidth: '80%' }} 
+//             //   style={{ maxHeight: '80%', maxWidth: '80%' }}
 //             />
 //           </div>
 //         </div>
@@ -52,9 +52,6 @@
 // };
 
 // export default ImageGrid;
-
-
-
 
 // import React, { useState } from 'react';
 
@@ -111,8 +108,6 @@
 
 // export default ImageGrid;
 
-
-
 import React, { useState } from 'react';
 import Image from 'next/image';
 
@@ -141,16 +136,16 @@ const ImageView: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center h-full w-full">
-      <div className="mb-4 relative w-[550px] h-[450px] border">
+    <div className="flex h-full w-full flex-col items-center">
+      <div className="relative mb-4 h-[450px] w-[550px] border">
         <Image
           src={currentImage}
           alt="Current Image"
-          layout='fill'
+          layout="fill"
           className="object-cover transition-transform duration-300"
         />
       </div>
-      <ul className="overflow-scroll gallery grid grid-cols-5 gap-2 w-full max-w-[550px] scroll-smooth">
+      <ul className="gallery grid w-full max-w-[550px] grid-cols-5 gap-2 overflow-scroll scroll-smooth">
         {images.map((src, index) => (
           // <li
           //   key={index}
@@ -169,7 +164,7 @@ const ImageView: React.FC = () => {
 
           <li
             key={index}
-            className="item w-[100px] h-[110px] relative cursor-pointer transition-transform duration-200 ease-in-out hover:border hover:border-gray-500 hover:scale-95"
+            className="item relative h-[110px] w-[100px] cursor-pointer transition-transform duration-200 ease-in-out hover:scale-95 hover:border hover:border-gray-500"
             onClick={() => handleClick(src)}
           >
             <Image
@@ -186,4 +181,3 @@ const ImageView: React.FC = () => {
 };
 
 export default ImageView;
-

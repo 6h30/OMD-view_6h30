@@ -36,8 +36,6 @@
 //   matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 // };
 
-
-
 // src/middleware.ts
 
 import { NextResponse, NextRequest } from 'next/server';

@@ -13,15 +13,22 @@ export default function DetailBlogs() {
   return (
     <div className="flex h-[800px] min-w-[3520px] items-center justify-center overflow-hidden border">
       <div className="flex- flex h-full w-full flex-row justify-start gap-[10px]">
-
-
         <div className="flex h-full w-[150px] flex-col items-center justify-center">
           <div className="flex h-[95%] w-[80%] flex-col justify-end">
-
-             <div className="flex flex-col items-center gap-[20px]">
+            <div className="flex flex-col items-center gap-[20px]">
               <div className="flex">
-                <svg className="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                <svg
+                  className="h-8 w-8 text-gray-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                  />
                 </svg>
               </div>
             </div>
@@ -29,9 +36,6 @@ export default function DetailBlogs() {
             <div className="flex justify-center">
               <p>Quay lại</p>
             </div>
-
-           
-
           </div>
         </div>
 
@@ -125,7 +129,7 @@ export default function DetailBlogs() {
           </div>
 
           <div className="flex h-full flex-col justify-start">
-            <div className="relative flex h-full w-full" >
+            <div className="relative flex h-full w-full">
               <div className="clip-path-trapezoid-flip absolute inset-[0px] bg-gray-200"></div>
               <div className="clip-path-trapezoid-flip absolute inset-[3px] bg-white"></div>
 
@@ -136,10 +140,7 @@ export default function DetailBlogs() {
           <div className="flex h-full flex-col justify-start">
             <div className="relative flex h-full w-full">
               <div className="z-[1] h-full w-full pb-[25px]">
-                <div
-                  className="font-koho text-md grid h-full w-full grid-cols-[25%_25%_25%_25%] flex-row p-[20px]"
-
-                >
+                <div className="font-koho text-md grid h-full w-full grid-cols-[25%_25%_25%_25%] flex-row p-[20px]">
                   <div className="flex w-[90%]">
                     <div className="flex h-full flex-col justify-between">
                       <div className="flex">
@@ -257,20 +258,19 @@ export default function DetailBlogs() {
         </div>
 
         <div className="flex h-full w-[430px] flex-col border">
-          <div className="flex justify-center border-b font-koho-bold">
+          <div className="font-koho-bold flex justify-center border-b">
             <p>Bình luận</p>
           </div>
-          <div className="flex w-full flex-col overflow-hidden font-koho">
-            <div className="p-3 mt-3 h-auto overflow-y-scroll">
-
+          <div className="font-koho flex w-full flex-col overflow-hidden">
+            <div className="mt-3 h-auto overflow-y-scroll p-3">
               <div className="mb-3 flex flex-col gap-[10px] border-b pb-3">
                 <div className="flex flex-row items-center gap-3">
                   <div className="group relative">
-                    <div className='relative size-12 rounded-full border'>
+                    <div className="relative size-12 rounded-full border">
                       <Image
-                        className="object-cover rounded-full duration-200 group-hover:scale-105 overflow-hidden"
+                        className="overflow-hidden rounded-full object-cover duration-200 group-hover:scale-105"
                         src="/avatar-1.jpg"
-                        layout='fill'
+                        layout="fill"
                         alt="avatar"
                       />
                     </div>
@@ -355,11 +355,11 @@ export default function DetailBlogs() {
               <div className="mb-3 flex flex-col gap-[10px] border-b pb-3">
                 <div className="flex flex-row items-center gap-3">
                   <div className="group relative">
-                    <div className='relative size-12 rounded-full border'>
+                    <div className="relative size-12 rounded-full border">
                       <Image
-                        className="object-cover rounded-full duration-200 group-hover:scale-105 overflow-hidden"
+                        className="overflow-hidden rounded-full object-cover duration-200 group-hover:scale-105"
                         src="/avatar-1.jpg"
-                        layout='fill'
+                        layout="fill"
                         alt="avatar"
                       />
                     </div>
@@ -444,11 +444,11 @@ export default function DetailBlogs() {
               <div className="mb-3 flex flex-col gap-[10px] border-b pb-3">
                 <div className="flex flex-row items-center gap-3">
                   <div className="group relative">
-                    <div className='relative size-12 rounded-full border'>
+                    <div className="relative size-12 rounded-full border">
                       <Image
-                        className="object-cover rounded-full duration-200 group-hover:scale-105 overflow-hidden"
+                        className="overflow-hidden rounded-full object-cover duration-200 group-hover:scale-105"
                         src="/avatar-1.jpg"
-                        layout='fill'
+                        layout="fill"
                         alt="avatar"
                       />
                     </div>
@@ -534,11 +534,11 @@ export default function DetailBlogs() {
                 <div className="flex flex-col">
                   <div className="flex flex-row items-center gap-3">
                     <div className="group relative">
-                      <div className='relative size-12 rounded-full border'>
+                      <div className="relative size-12 rounded-full border">
                         <Image
-                          className="object-cover rounded-full duration-200 group-hover:scale-105 overflow-hidden"
+                          className="overflow-hidden rounded-full object-cover duration-200 group-hover:scale-105"
                           src="/avatar-1.jpg"
-                          layout='fill'
+                          layout="fill"
                           alt="avatar"
                         />
                       </div>
@@ -623,11 +623,11 @@ export default function DetailBlogs() {
                 <div className="flex flex-col pl-5">
                   <div className="flex flex-row items-center gap-3">
                     <div className="group relative">
-                      <div className='relative size-12 rounded-full border'>
+                      <div className="relative size-12 rounded-full border">
                         <Image
-                          className="object-cover rounded-full duration-200 group-hover:scale-105 overflow-hidden"
+                          className="overflow-hidden rounded-full object-cover duration-200 group-hover:scale-105"
                           src="/avatar-1.jpg"
-                          layout='fill'
+                          layout="fill"
                           alt="avatar"
                         />
                       </div>
@@ -767,7 +767,6 @@ export default function DetailBlogs() {
           </div>
 
         </div> */}
-
       </div>
     </div>
   );

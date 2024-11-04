@@ -14,7 +14,7 @@
 //                 'Content-Type': 'application/json',
 //             },
 //             credentials: 'include', // Để gửi cookie - quan trọng
-//             body: JSON.stringify({ email, password }), 
+//             body: JSON.stringify({ email, password }),
 //         });
 
 //         if (response.ok) {
@@ -44,78 +44,84 @@
 //     }
 // };
 
-
 // utils/auth.ts
 
 interface LoginResponse {
-    success: boolean;
-    data?: { token?: string; user?: string };
-    message?: string;
+  success: boolean;
+  data?: { token?: string; user?: string };
+  message?: string;
 }
 interface LogoutResponse {
-    success: boolean;
-    message?: string; 
+  success: boolean;
+  message?: string;
 }
 
 const API_URL = 'https://ic71303-hide.onrender.com/api/user';
 
 const handleResponse = async (response: Response): Promise<LoginResponse> => {
-    if (response.ok) {
-        const data = await response.json();
-        return { success: true, data };
-    } else {
-        const errorData = await response.json();
-        return { success: false, message: errorData.message || 'An error occurred' };
-    }
+  if (response.ok) {
+    const data = await response.json();
+    return { success: true, data };
+  } else {
+    const errorData = await response.json();
+    return {
+      success: false,
+      message: errorData.message || 'An error occurred',
+    };
+  }
 };
 
-export const login = async (email: string, password: string): Promise<LoginResponse> => {
-    try {
-        const response = await fetch(`${API_URL}/login`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            credentials: 'include',
-            body: JSON.stringify({ email, password }),
-        });
+export const login = async (
+  email: string,
+  password: string
+): Promise<LoginResponse> => {
+  try {
+    const response = await fetch(`${API_URL}/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      credentials: 'include',
+      body: JSON.stringify({ email, password }),
+    });
 
-        return await handleResponse(response);
-    } catch (error: unknown) {
-        if (error instanceof Error) {
-            console.error('Login error:', error.message);
-        } else {
-            console.error('Login error:', error);
-        }
-        return { success: false, message: 'An error occurred during login' };
+    return await handleResponse(response);
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error('Login error:', error.message);
+    } else {
+      console.error('Login error:', error);
     }
+    return { success: false, message: 'An error occurred during login' };
+  }
 };
 
 export const logout = async (): Promise<Response> => {
-    try {
-        const response = await fetch(`${API_URL}/logout`, {
-            method: 'POST',
-            credentials: 'include',
-        });
-        return response; 
-    } catch (error) {
-        console.error('Logout error:', error);
-        throw error;
-    }
+  try {
+    const response = await fetch(`${API_URL}/logout`, {
+      method: 'POST',
+      credentials: 'include',
+    });
+    return response;
+  } catch (error) {
+    console.error('Logout error:', error);
+    throw error;
+  }
 };
 
-
-
 export const checkSession = async (): Promise<LoginResponse> => {
-    try {
-        const response = await fetch(`${API_URL}/check-session`, {
-            method: 'GET',
-            credentials: 'include',
-        });
+  try {
+    const response = await fetch(`${API_URL}/check-session`, {
+      method: 'GET',
+      credentials: 'include',
+    });
 
-        return await handleResponse(response);
-    } catch (error) {
-        console.error('Session check error:', error);
-        return { success: false, message: 'An error occurred while checking session' };
-    }
+    return await handleResponse(response);
+  } catch (error) {
+    console.error('Session check error:', error);
+    return {
+      success: false,
+      message: 'An error occurred while checking session',
+    };
+  }
 };

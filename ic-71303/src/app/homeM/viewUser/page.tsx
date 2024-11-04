@@ -1,4 +1,4 @@
-import UserSetting from "@/components/omd_UserSetting";
+import UserSetting from '@/components/omd_UserSetting';
 
 export default function OmdUser() {
   return (

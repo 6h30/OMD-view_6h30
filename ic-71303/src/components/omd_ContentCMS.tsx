@@ -83,7 +83,6 @@ export default function OmdCms() {
         </div>
 
         <div className="relative flex h-[1660px] w-full flex-col gap-[20px] py-[10px]">
-
           <div className="relative flex h-[110px] w-full flex-col gap-[10px]">
             <div className="flex flex-col border border-red-300">
               <div className="flex flex-col">
@@ -279,16 +278,14 @@ export default function OmdCms() {
                 <div className="absolute bottom-1 flex h-[40px] w-full flex-col items-center justify-start">
                   <div className="flex w-full flex-row items-end justify-start">
                     <div className="flex h-[40px] w-full">
-                      <div className="relative flex w-full h-[200px] flex-col">
+                      <div className="relative flex h-[200px] w-full flex-col">
                         <p className="absolute left-4 top-2 z-10 w-[120px] origin-top-left -translate-y-5 scale-75 transform border bg-white px-2 text-gray-400">
                           Ảnh đặc trưng
                         </p>
-                        <div className="relative w-[30%] h-full flex rounded-sm border border-black">
-                          <div className="rounded-sm w-full h-full border-gray-200 p-2 pe-12 text-wrap text-sm text-gray-400">
+                        <div className="relative flex h-full w-[30%] rounded-sm border border-black">
+                          <div className="h-full w-full text-wrap rounded-sm border-gray-200 p-2 pe-12 text-sm text-gray-400">
                             https://www.omdarchitect.com/blog/gieng-troi-hoi-tho-thien-nhien-trong-moi-cong-trinh.html
                           </div>
-
-                      
                         </div>
                       </div>
                     </div>
@@ -297,8 +294,6 @@ export default function OmdCms() {
               </div>
             </div>
           </div>
-
-      
         </div>
       </div>
     </div>

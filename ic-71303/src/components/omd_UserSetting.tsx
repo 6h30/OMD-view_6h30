@@ -49,7 +49,9 @@ export default function UserSetting() {
     const fetchDistricts = async () => {
       if (selectedProvince) {
         try {
-          const response = await axios.get<{ districts: District[] }>(`${apiBaseUrl}/api/p/${selectedProvince}?depth=2`);
+          const response = await axios.get<{ districts: District[] }>(
+            `${apiBaseUrl}/api/p/${selectedProvince}?depth=2`
+          );
           setDistricts(response.data.districts);
         } catch (error) {
           console.error('Error fetching districts:', error);
@@ -68,7 +70,9 @@ export default function UserSetting() {
     const fetchWards = async () => {
       if (selectedDistrict) {
         try {
-          const response = await axios.get<{ wards: Ward[] }>(`${apiBaseUrl}/api/d/${selectedDistrict}?depth=2`);
+          const response = await axios.get<{ wards: Ward[] }>(
+            `${apiBaseUrl}/api/d/${selectedDistrict}?depth=2`
+          );
           setWards(response.data.wards);
         } catch (error) {
           console.error('Error fetching wards:', error);
@@ -86,7 +90,9 @@ export default function UserSetting() {
     const fetchWardDetail = async () => {
       if (selectedWard) {
         try {
-          const response = await axios.get<Ward>(`${apiBaseUrl}/api/w/${selectedWard}`);
+          const response = await axios.get<Ward>(
+            `${apiBaseUrl}/api/w/${selectedWard}`
+          );
           setWardDetail(response.data);
         } catch (error) {
           console.error('Error fetching ward details:', error);
@@ -122,7 +128,9 @@ export default function UserSetting() {
         if (response.ok) {
           setIsVerified(data.verified); // Giả sử server trả về { verified: true/false }
           if (!data.verified) {
-            setConfirmationMessage('Vui lòng kiểm tra email của bạn để xác nhận.');
+            setConfirmationMessage(
+              'Vui lòng kiểm tra email của bạn để xác nhận.'
+            );
             setVerificationLink(data.verificationLink); // Giả sử server trả về đường dẫn xác thực
           } else {
             setConfirmationMessage('');
@@ -147,50 +155,54 @@ export default function UserSetting() {
 
   const handleLogout = async () => {
     try {
-        const response = await logout();
-        const text = await response.text(); // Đọc phản hồi dưới dạng text
-        console.log('Logout response:', text); // Ghi log nội dung phản hồi
+      const response = await logout();
+      const text = await response.text(); // Đọc phản hồi dưới dạng text
+      console.log('Logout response:', text); // Ghi log nội dung phản hồi
 
-        if (!response.ok) {
-            // Nếu không phải là mã trạng thái 200
-            console.error('Logout failed:', text);
-            return;
-        }
+      if (!response.ok) {
+        // Nếu không phải là mã trạng thái 200
+        console.error('Logout failed:', text);
+        return;
+      }
 
-        const result = JSON.parse(text); // Thử phân tích JSON
-        console.log('Logout result:', result);
+      const result = JSON.parse(text); // Thử phân tích JSON
+      console.log('Logout result:', result);
 
-        if (result.success) {
-            console.log('Logged out successfully');
-        } else {
-            console.error(result.message);
-        }
+      if (result.success) {
+        console.log('Logged out successfully');
+      } else {
+        console.error(result.message);
+      }
     } catch (error) {
-        console.error('Logout error:', error);
+      console.error('Logout error:', error);
     }
-};
-
-
-
-
+  };
 
   return (
     <form>
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
-          <h2 className="text-base font-semibold leading-7 text-gray-900">Hồ sơ cá nhân</h2>
+          <h2 className="text-base font-semibold leading-7 text-gray-900">
+            Hồ sơ cá nhân
+          </h2>
           <p className="mt-1 text-sm leading-6 text-gray-600">
-            Thông tin này sẽ được hiển thị công khai nên hãy cẩn thận khi chia sẻ.
+            Thông tin này sẽ được hiển thị công khai nên hãy cẩn thận khi chia
+            sẻ.
           </p>
 
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div className="sm:col-span-4">
-              <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900">
+              <label
+                htmlFor="username"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
                 Tên hiển thị
               </label>
               <div className="mt-2">
                 <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-gray-600 sm:max-w-md">
-                  <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">omdstudio.art/</span>
+                  <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">
+                    omdstudio.art/
+                  </span>
                   <input
                     id="username"
                     name="username"
@@ -204,7 +216,10 @@ export default function UserSetting() {
             </div>
 
             <div className="col-span-full">
-              <label htmlFor="about" className="block text-sm font-medium leading-6 text-gray-900">
+              <label
+                htmlFor="about"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
                 Giới thiệu
               </label>
               <div className="mt-2">
@@ -216,11 +231,16 @@ export default function UserSetting() {
                   defaultValue={''}
                 />
               </div>
-              <p className="mt-3 text-sm leading-6 text-gray-600">Viết một vài câu về bản thân bạn.</p>
+              <p className="mt-3 text-sm leading-6 text-gray-600">
+                Viết một vài câu về bản thân bạn.
+              </p>
             </div>
 
             <div className="col-span-full">
-              <label htmlFor="photo" className="block text-sm font-medium leading-6 text-gray-900">
+              <label
+                htmlFor="photo"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
                 Ảnh
               </label>
               <div className="mt-2 flex items-center gap-x-3">
@@ -235,7 +255,10 @@ export default function UserSetting() {
             </div>
 
             <div className="col-span-full">
-              <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">
+              <label
+                htmlFor="cover-photo"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
                 Ảnh bìa
               </label>
               <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
@@ -247,11 +270,18 @@ export default function UserSetting() {
                       className="relative cursor-pointer rounded-md bg-white font-semibold text-gray-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-gray-600 focus-within:ring-offset-2 hover:text-gray-500"
                     >
                       <span>Tải lên một tập tin</span>
-                      <input id="file-upload" name="file-upload" type="file" className="sr-only" />
+                      <input
+                        id="file-upload"
+                        name="file-upload"
+                        type="file"
+                        className="sr-only"
+                      />
                     </label>
                     <p className="pl-1">hoặc kéo và thả</p>
                   </div>
-                  <p className="text-xs leading-5 text-gray-600">PNG, JPG, GIF up to 10MB</p>
+                  <p className="text-xs leading-5 text-gray-600">
+                    PNG, JPG, GIF up to 10MB
+                  </p>
                 </div>
               </div>
             </div>
@@ -259,12 +289,19 @@ export default function UserSetting() {
         </div>
 
         <div className="border-b border-gray-900/10 pb-12">
-          <h2 className="text-base font-semibold leading-7 text-gray-900">Thông tin cá nhân</h2>
-          <p className="mt-1 text-sm leading-6 text-gray-600">Sử dụng địa chỉ cố định nơi bạn có thể nhận thư.</p>
+          <h2 className="text-base font-semibold leading-7 text-gray-900">
+            Thông tin cá nhân
+          </h2>
+          <p className="mt-1 text-sm leading-6 text-gray-600">
+            Sử dụng địa chỉ cố định nơi bạn có thể nhận thư.
+          </p>
 
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div className="sm:col-span-3">
-              <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">
+              <label
+                htmlFor="first-name"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
                 Họ - tên đệm
               </label>
               <div className="mt-2">
@@ -279,7 +316,10 @@ export default function UserSetting() {
             </div>
 
             <div className="sm:col-span-3">
-              <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900">
+              <label
+                htmlFor="last-name"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
                 Tên
               </label>
               <div className="mt-2">
@@ -309,7 +349,10 @@ export default function UserSetting() {
             </div> */}
 
             <div className="sm:col-span-3">
-              <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
                 Địa chỉ email
               </label>
               <div className="mt-2">
@@ -326,7 +369,7 @@ export default function UserSetting() {
               {isVerified && (
                 <div className="mt-2 flex items-center text-green-600">
                   <svg
-                    className="w-5 h-5 mr-1"
+                    className="mr-1 h-5 w-5"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
@@ -342,7 +385,10 @@ export default function UserSetting() {
                   {confirmationMessage}
                   {verificationLink && (
                     <div className="mt-1">
-                      <a href={verificationLink} className="text-blue-600 hover:underline">
+                      <a
+                        href={verificationLink}
+                        className="text-blue-600 hover:underline"
+                      >
                         Nhấp vào đây để xác thực email.
                       </a>
                     </div>
@@ -352,7 +398,10 @@ export default function UserSetting() {
             </div>
 
             <div className="sm:col-span-3">
-              <label htmlFor="number-phone" className="block text-sm font-medium leading-6 text-gray-900">
+              <label
+                htmlFor="number-phone"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
                 Số điện thoại
               </label>
               <div className="mt-2">
@@ -368,9 +417,11 @@ export default function UserSetting() {
               </div>
             </div>
 
-
             <div className="col-span-full">
-              <label htmlFor="street-address" className="block text-sm font-medium leading-6 text-gray-900">
+              <label
+                htmlFor="street-address"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
                 Địa chỉ
               </label>
               <div className="mt-2">
@@ -385,73 +436,99 @@ export default function UserSetting() {
             </div>
 
             <div className="sm:col-span-2 sm:col-start-1">
-              <label htmlFor="city" className="block text-sm font-medium leading-6 text-gray-900">
+              <label
+                htmlFor="city"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
                 Tỉnh/Thành phố
               </label>
               <div className="mt-2">
-                <select id="city"
+                <select
+                  id="city"
                   name="city"
-                  autoComplete="city-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:max-w-xs sm:text-sm sm:leading-6"
-
-                  onChange={(e) => setSelectedProvince(Number(e.target.value))} value={selectedProvince || ''}>
+                  autoComplete="city-name"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                  onChange={(e) => setSelectedProvince(Number(e.target.value))}
+                  value={selectedProvince || ''}
+                >
                   <option value="">Chọn tỉnh</option>
-                  {provinces.map(province => (
-                    <option key={province.code} value={province.code}>{province.name}</option>
+                  {provinces.map((province) => (
+                    <option key={province.code} value={province.code}>
+                      {province.name}
+                    </option>
                   ))}
                 </select>
               </div>
             </div>
 
-
-
             <div className="sm:col-span-2">
-              <label htmlFor="district" className="block text-sm font-medium leading-6 text-gray-900">
+              <label
+                htmlFor="district"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
                 Huyện/Quận
               </label>
               <div className="mt-2">
-                <select id="district"
+                <select
+                  id="district"
                   name="district"
                   autoComplete="district-name"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                  onChange={(e) => setSelectedDistrict(Number(e.target.value))} value={selectedDistrict || ''}>
+                  onChange={(e) => setSelectedDistrict(Number(e.target.value))}
+                  value={selectedDistrict || ''}
+                >
                   <option value="">Chọn quận</option>
-                  {districts.map(district => (
-                    <option key={district.code} value={district.code}>{district.name}</option>
+                  {districts.map((district) => (
+                    <option key={district.code} value={district.code}>
+                      {district.name}
+                    </option>
                   ))}
                 </select>
               </div>
             </div>
 
             <div className="sm:col-span-2">
-              <label htmlFor="ward" className="block text-sm font-medium leading-6 text-gray-900">
+              <label
+                htmlFor="ward"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
                 Xã/Phường
               </label>
               <div className="mt-2">
-                <select id="ward"
+                <select
+                  id="ward"
                   name="ward"
                   autoComplete="ward-name"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                  onChange={(e) => setSelectedWard(Number(e.target.value))} value={selectedWard || ''}>
+                  onChange={(e) => setSelectedWard(Number(e.target.value))}
+                  value={selectedWard || ''}
+                >
                   <option value="">Chọn phường</option>
-                  {wards.map(ward => (
-                    <option key={ward.code} value={ward.code}>{ward.name}</option>
+                  {wards.map((ward) => (
+                    <option key={ward.code} value={ward.code}>
+                      {ward.name}
+                    </option>
                   ))}
                 </select>
               </div>
             </div>
-
           </div>
         </div>
 
         <div className="border-b border-gray-900/10 pb-12">
-          <h2 className="text-base font-semibold leading-7 text-gray-900">Thông báo</h2>
+          <h2 className="text-base font-semibold leading-7 text-gray-900">
+            Thông báo
+          </h2>
           <p className="mt-1 text-sm leading-6 text-gray-600">
-            Chúng tôi sẽ luôn thông báo cho bạn về những thay đổi quan trọng, nhưng bạn có thể chọn những thông tin khác mà bạn muốn biết.
+            Chúng tôi sẽ luôn thông báo cho bạn về những thay đổi quan trọng,
+            nhưng bạn có thể chọn những thông tin khác mà bạn muốn biết.
           </p>
 
           <div className="mt-10 space-y-10">
             <fieldset>
-              <legend className="text-sm font-semibold leading-6 text-gray-900">By Email</legend>
+              <legend className="text-sm font-semibold leading-6 text-gray-900">
+                By Email
+              </legend>
               <div className="mt-6 space-y-6">
                 <div className="relative flex gap-x-3">
                   <div className="flex h-6 items-center">
@@ -463,10 +540,15 @@ export default function UserSetting() {
                     />
                   </div>
                   <div className="text-sm leading-6">
-                    <label htmlFor="comments" className="font-medium text-gray-900">
+                    <label
+                      htmlFor="comments"
+                      className="font-medium text-gray-900"
+                    >
                       Bình luận
                     </label>
-                    <p className="text-gray-500">Nhận thông báo khi có người đăng bình luận trên bài đăng.</p>
+                    <p className="text-gray-500">
+                      Nhận thông báo khi có người đăng bình luận trên bài đăng.
+                    </p>
                   </div>
                 </div>
 
@@ -480,21 +562,28 @@ export default function UserSetting() {
                     />
                   </div>
                   <div className="text-sm leading-6">
-                    <label htmlFor="offers" className="font-medium text-gray-900">
+                    <label
+                      htmlFor="offers"
+                      className="font-medium text-gray-900"
+                    >
                       Gắn thẻ
                     </label>
-                    <p className="text-gray-500">Nhận thông báo khi có người nhắc đến tên bạn.</p>
+                    <p className="text-gray-500">
+                      Nhận thông báo khi có người nhắc đến tên bạn.
+                    </p>
                   </div>
                 </div>
               </div>
             </fieldset>
-
           </div>
         </div>
       </div>
 
       <div className="mt-6 flex items-center justify-end gap-x-6">
-        <button type="button" className="text-sm font-semibold leading-6 text-gray-900">
+        <button
+          type="button"
+          className="text-sm font-semibold leading-6 text-gray-900"
+        >
           Cancel
         </button>
         <button
@@ -505,12 +594,12 @@ export default function UserSetting() {
         </button>
 
         <button
-                type="button" // Chọn type="button" để không gửi form
-                onClick={handleLogout} // Gọi hàm logout khi nhấn nút
-                className="ml-4 rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-            >
-                Đăng xuất
-            </button>
+          type="button" // Chọn type="button" để không gửi form
+          onClick={handleLogout} // Gọi hàm logout khi nhấn nút
+          className="ml-4 rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+        >
+          Đăng xuất
+        </button>
       </div>
     </form>
   );

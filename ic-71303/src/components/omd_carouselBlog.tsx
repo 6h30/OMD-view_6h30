@@ -9,7 +9,9 @@ const CarouselComponent: React.FC<CarouselComponentProps> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
   };
 
   const handleNext = () => {
@@ -18,7 +20,7 @@ const CarouselComponent: React.FC<CarouselComponentProps> = ({ images }) => {
 
   return (
     <div className="relative w-full">
-      <div className="relative h-56 md:h-96 overflow-hidden">
+      <div className="relative h-56 overflow-hidden md:h-96">
         {images.map((image, index) => (
           <div
             key={index}
@@ -46,14 +48,14 @@ const CarouselComponent: React.FC<CarouselComponentProps> = ({ images }) => {
       </div>
 
       <button
-        className="absolute top-1/2 left-0 z-30 p-2 -translate-y-1/2 bg-gray-800 text-white rounded-r-lg"
+        className="absolute left-0 top-1/2 z-30 -translate-y-1/2 rounded-r-lg bg-gray-800 p-2 text-white"
         onClick={handlePrev}
         aria-label="Previous Slide"
       >
         ‹
       </button>
       <button
-        className="absolute top-1/2 right-0 z-30 p-2 -translate-y-1/2 bg-gray-800 text-white rounded-l-lg"
+        className="absolute right-0 top-1/2 z-30 -translate-y-1/2 rounded-l-lg bg-gray-800 p-2 text-white"
         onClick={handleNext}
         aria-label="Next Slide"
       >

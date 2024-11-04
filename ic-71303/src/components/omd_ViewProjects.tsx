@@ -1,5 +1,5 @@
 // src/components/omd_ViewProject.tsx
-'use client'
+'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
 // import CarouselComponent from './omd_carouselBlog';
@@ -43,7 +43,7 @@ export default function ViewProjects() {
 
   return (
     <div className="flex justify-center py-[20px]">
-      <div className="gap-[10px] sm:h-[1400px] sm:w-[428px] sm:flex-col md:h-[1500px] md:w-[728px] md:flex-col lg:flex lg:min-h-[2048px] lg:w-[960px] lg:flex-row lg:items-start lg:justify-start ">
+      <div className="gap-[10px] sm:h-[1400px] sm:w-[428px] sm:flex-col md:h-[1500px] md:w-[728px] md:flex-col lg:flex lg:min-h-[2048px] lg:w-[960px] lg:flex-row lg:items-start lg:justify-start">
         <div className="relative flex gap-[30px] border sm:h-[100px] sm:w-full sm:flex-col md:h-[350px] md:w-full md:flex-col lg:h-full lg:w-[25%] lg:flex-col lg:py-[20px]">
           <div className="relative flex gap-[25px] sm:flex-row sm:items-center sm:justify-start md:flex-row md:items-center md:justify-start lg:flex-col lg:items-center lg:justify-center">
             <div className="h-[168px] w-[173px] items-center justify-center rounded-[100%]">
@@ -87,7 +87,7 @@ export default function ViewProjects() {
           </div>
 
           <div className="relative gap-[20px] sm:hidden md:flex md:flex-col lg:flex lg:flex-row lg:items-start lg:justify-center">
-            <div className="pl-[20px] sm:flex sm:flex-row md:flex md:flex-row lg:flex lg:flex-col lg:border-l lg:border-l-black gap-[80px]">
+            <div className="gap-[80px] pl-[20px] sm:flex sm:flex-row md:flex md:flex-row lg:flex lg:flex-col lg:border-l lg:border-l-black">
               {journeys.map((journey, index) => (
                 <div
                   key={index}
@@ -97,7 +97,7 @@ export default function ViewProjects() {
                 >
                   <p className="cursor-pointer">{journey.month}</p>
                   {hoveredIndex === index && (
-                    <div className="absolute border border-gray-300 p-2 rounded shadow-md mt-1 w-32">
+                    <div className="absolute mt-1 w-32 rounded border border-gray-300 p-2 shadow-md">
                       {journey.info}
                     </div>
                   )}
@@ -126,7 +126,6 @@ export default function ViewProjects() {
           </div>
 
           <div className="relative flex w-full flex-row items-end gap-[30px] pb-[20px] pt-[20px] sm:h-[350px] md:h-[450px] lg:h-[660px]">
-
             <div className="relative flex h-[100%] w-[75%] flex-col items-center justify-center border border-black">
               <Image
                 src="/pr-mv-1.jpg"
@@ -146,7 +145,7 @@ export default function ViewProjects() {
               </div>
 
               <div className="relative flex w-full flex-col items-center justify-center border border-black sm:h-[70px] md:h-[150px] lg:h-[150px]">
-                <div className="absolute right-[80px] bottom-[80px]">
+                <div className="absolute bottom-[80px] right-[80px]">
                   <div className="h-[168px] w-[173px] items-center justify-center rounded-[100%]">
                     <style>{keyframes}</style>
                     <div id="circle" style={rotateStyle}>
@@ -184,12 +183,10 @@ export default function ViewProjects() {
                 </p>
               </div>
             </div>
-
           </div>
 
           <div className="relative flex w-full flex-col items-start justify-start gap-[20px] lg:h-[1224px]">
             <div className="relative flex h-[150px] w-full flex-row items-center justify-between px-[20px]">
-
               <div className="relative flex flex-col items-end justify-end gap-[20px]">
                 <div>
                   <p className="font-italiana text-center leading-[53px] tracking-[5px] sm:text-[33px] md:text-[53px] lg:text-[73px]">
@@ -198,13 +195,17 @@ export default function ViewProjects() {
                 </div>
 
                 <div>
-                  <p className='text-[16px] tracking-[1.2px] leading-3'>kiến tạo dự án</p>
+                  <p className="text-[16px] leading-3 tracking-[1.2px]">
+                    kiến tạo dự án
+                  </p>
                 </div>
               </div>
 
               <div className="relative flex flex-col items-end justify-end gap-[20px]">
                 <div>
-                  <p className='text-[16px] tracking-[1.2px] leading-3'>được đồng hành cùng chị D trong hành trình</p>
+                  <p className="text-[16px] leading-3 tracking-[1.2px]">
+                    được đồng hành cùng chị D trong hành trình
+                  </p>
                 </div>
 
                 <div>
@@ -233,7 +234,12 @@ export default function ViewProjects() {
                 chóng và thuận tiện, gọi đồ uống, nhâm nhi một mình hoặc với bạn
                 bè, sau đó tiếp tục công việc trong ngày của mình.
               </p> */}
-              <p>Gắn kết mọi người với môi trường xung quanh. Kiến trúc Mediterranean, hay Địa Trung Hải cũng là câu chuyện được Mervyn muốn kể lại, thiết kế thân thiện với môi trường, bền vững tạo ra không gian thư giãn cho cộng đồng và thế hệ tương lai. </p>
+              <p>
+                Gắn kết mọi người với môi trường xung quanh. Kiến trúc
+                Mediterranean, hay Địa Trung Hải cũng là câu chuyện được Mervyn
+                muốn kể lại, thiết kế thân thiện với môi trường, bền vững tạo ra
+                không gian thư giãn cho cộng đồng và thế hệ tương lai.{' '}
+              </p>
             </div>
 
             <div className="relative flex h-[50px] w-full flex-row items-center justify-between py-[10px]">
@@ -248,7 +254,6 @@ export default function ViewProjects() {
 
             <div className="relative flex h-[820px] w-full flex-col items-center justify-center">
               <div className="relative flex h-[720px] w-full flex-col items-center justify-start">
-
                 {/* <div className="relative flex h-[90%] w-[90%] flex-col items-center justify-center">
                   <CarouselComponent images={images} />
                 </div> */}
@@ -256,7 +261,6 @@ export default function ViewProjects() {
                 <ImageGrid />
               </div>
             </div>
-
           </div>
         </div>
       </div>
