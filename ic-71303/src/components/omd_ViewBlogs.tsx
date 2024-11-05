@@ -3,17 +3,33 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-// import styles from './omd_ViewBlogs.module.css';
-
 import { Post } from '@/types/api_post';
-interface ViewBlogsProps {
-  data: Post[];
-}
 
-export default function ViewBlogs({ data }: ViewBlogsProps) {
- 
 
+export default function ViewBlogs() {
+  const [data, setData] = useState<Post[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
   const [time, setTime] = useState<string>('');
+
+
+  // Hàm lấy dữ liệu bài viết từ API
+  const fetchPosts = async () => {
+    try {
+      const response = await fetch('https://ic71303-hide.onrender.com/api/posts');
+      if (!response.ok) {
+        throw new Error('Failed to fetch posts');
+      }
+      const result = await response.json();
+      setData(result.data || []); // Cập nhật dữ liệu
+    } catch (error) {
+      console.error('Error fetching posts:', error);
+      setError('Failed to load posts.'); // Thiết lập thông báo lỗi
+    } finally {
+      setLoading(false); // Kết thúc quá trình tải
+    }
+  };
+
 
   const fetchTime = async () => {
     try {
@@ -37,11 +53,25 @@ export default function ViewBlogs({ data }: ViewBlogsProps) {
   };
 
   useEffect(() => {
+    fetchPosts();
     fetchTime();
     const intervalId = setInterval(fetchTime, 60000);
 
     return () => clearInterval(intervalId);
   }, []);
+
+
+  if (loading) {
+    return <p>Loading...</p>; 
+  }
+
+  if (error) {
+    return <p>{error}</p>; 
+  }
+
+  if (!Array.isArray(data) || data.length === 0) {
+    return <p>No posts available.</p>; 
+  }
 
   const rotateStyle: React.CSSProperties = {
     display: 'flex',
@@ -426,8 +456,8 @@ export default function ViewBlogs({ data }: ViewBlogsProps) {
                       <Image
                         width={200}
                         height={200}
-                        src={post.image || '/image7.jpg'} // Sử dụng hình ảnh từ post nếu có
-                        alt={post.title} // Sử dụng title làm alt
+                        src= '/image7.jpg'
+                        alt={post.title} 
                         layout="responsive"
                         className="h-full w-full object-cover"
                       />

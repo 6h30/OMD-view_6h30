@@ -18,27 +18,38 @@
 
 
 
-import { GetStaticProps } from 'next';
-import ViewBlogs from '../omd_ViewBlogs';
-import { Post } from '@/types/api_post';
+// import { GetStaticProps } from 'next';
+// import ViewBlogs from '../omd_ViewBlogs';
+// import { Post } from '@/types/api_post';
 
-interface DataViewBlogsProps {
-    data: Post[]; // Định nghĩa kiểu dữ liệu của props
-}
 
-export const getStaticProps: GetStaticProps = async () => {
-    const res = await fetch('https://ic71303-hide.onrender.com/api/posts');
-    const result = await res.json();
-    
-    // Kiểm tra dữ liệu trước khi trả về
-    const data: Post[] = result.data || []; // Đảm bảo rằng data không bị undefined
-
-    return {
-        props: { data }, // Truyền data vào props
-        revalidate: 60, // Thời gian revalidate (60 giây)
-    };
-};
-
-export default function DataViewBlogs({ data }: DataViewBlogsProps) {
-    return <ViewBlogs data={data} />; // Truyền dữ liệu vào component ViewBlogs
-}
+// interface DataViewBlogsProps {
+//     data: Post[];
+//   }
+  
+  
+// export const getStaticProps: GetStaticProps = async () => {
+//     console.log('Fetching data from API...');
+  
+//     try {
+//       const res = await fetch('https://ic71303-hide.onrender.com/api/posts');
+//       const result = await res.json();
+  
+//       console.log('Data fetched:', result); // Kiểm tra dữ liệu đã lấy về
+  
+//       // Lấy dữ liệu từ result.data
+//       return {
+//         props: { data: result.data || [] }, // Chỉ lấy data từ kết quả API
+//         revalidate: 60, // Revalidate sau 60 giây
+//       };
+//     } catch (error) {
+//       console.error('Error fetching data:', error);
+//       return {
+//         props: { data: [] },
+//       };
+//     }
+//   };
+  
+//   export default function DataViewBlogs({ data }: DataViewBlogsProps) {
+//     return <ViewBlogs data={data} />;
+//   }
