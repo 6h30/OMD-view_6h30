@@ -11,17 +11,40 @@ export default function ViewBlogs() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [time, setTime] = useState<string>('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const pageSize = 3;
 
 
   // Hàm lấy dữ liệu bài viết từ API
-  const fetchPosts = async () => {
+  // const fetchPosts = async () => {
+  //   try {
+  //     const response = await fetch('https://ic71303-hide.onrender.com/api/posts');
+  //     if (!response.ok) {
+  //       throw new Error('Failed to fetch posts');
+  //     }
+  //     const result = await response.json();
+  //     setData(result.data || []); // Cập nhật dữ liệu
+  //   } catch (error) {
+  //     console.error('Error fetching posts:', error);
+  //     setError('Failed to load posts.'); // Thiết lập thông báo lỗi
+  //   } finally {
+  //     setLoading(false); // Kết thúc quá trình tải
+  //   }
+  // };
+
+  // Hàm lấy dữ liệu bài viết từ API với phân trang
+  const fetchPosts = async (page = 1, pageSize = 3) => {
+    setLoading(true); // Đặt trạng thái loading
     try {
-      const response = await fetch('https://ic71303-hide.onrender.com/api/posts');
+      const response = await fetch(`https://ic71303-hide.onrender.com/api/posts?page=${page}&pageSize=${pageSize}`);
       if (!response.ok) {
         throw new Error('Failed to fetch posts');
       }
       const result = await response.json();
-      setData(result.data || []); // Cập nhật dữ liệu
+      setData(result.data || []); // Cập nhật dữ liệu bài viết
+      setTotalPages(result.meta.pagination.pageCount); // Cập nhật tổng số trang từ API
+      setCurrentPage(result.meta.pagination.page); // Cập nhật trang hiện tại
     } catch (error) {
       console.error('Error fetching posts:', error);
       setError('Failed to load posts.'); // Thiết lập thông báo lỗi
@@ -31,11 +54,10 @@ export default function ViewBlogs() {
   };
 
 
+  // Hàm lấy dữ liệu time từ API
   const fetchTime = async () => {
     try {
-      const response = await fetch(
-        'http://worldtimeapi.org/api/timezone/Asia/Ho_Chi_Minh'
-      );
+      const response = await fetch('http://worldtimeapi.org/api/timezone/Asia/Ho_Chi_Minh');
       const data = await response.json();
       const datetime = new Date(data.datetime);
 
@@ -53,24 +75,29 @@ export default function ViewBlogs() {
   };
 
   useEffect(() => {
-    fetchPosts();
+    fetchPosts(currentPage, pageSize);
+  }, [currentPage]);
+
+  useEffect(() => {
     fetchTime();
     const intervalId = setInterval(fetchTime, 60000);
-
     return () => clearInterval(intervalId);
   }, []);
 
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page); // Cập nhật trang hiện tại
+  };
 
   if (loading) {
-    return <p>Loading...</p>; 
+    return <p>Loading...</p>;
   }
 
   if (error) {
-    return <p>{error}</p>; 
+    return <p>{error}</p>;
   }
 
   if (!Array.isArray(data) || data.length === 0) {
-    return <p>No posts available.</p>; 
+    return <p>No posts available.</p>;
   }
 
   const rotateStyle: React.CSSProperties = {
@@ -456,8 +483,8 @@ export default function ViewBlogs() {
                       <Image
                         width={200}
                         height={200}
-                        src= '/image7.jpg'
-                        alt={post.title} 
+                        src='/image7.jpg'
+                        alt={post.title}
                         layout="responsive"
                         className="h-full w-full object-cover"
                       />
@@ -467,7 +494,7 @@ export default function ViewBlogs() {
                     <p>{post.description}</p>
                   </div>
                 </div>
-              ))}      
+              ))}
 
             </div>
 
@@ -489,7 +516,8 @@ export default function ViewBlogs() {
               <br />
             </div>
             <div className="flex h-[50%] w-[50%] flex-col items-end border pr-[10px]">
-              <div className="flex items-center gap-x-1">
+
+              {/* <div className="flex items-center gap-x-1">
                 <button
                   type="button"
                   className="inline-flex min-h-[28px] min-w-[28px] items-center justify-center gap-x-1.5 rounded-sm focus:bg-gray-100"
@@ -531,6 +559,7 @@ export default function ViewBlogs() {
                     3
                   </button>
                 </div>
+
                 <button
                   type="button"
                   className="inline-flex min-h-[28px] min-w-[28px] items-center justify-center gap-x-1.5 focus:bg-gray-100"
@@ -550,6 +579,24 @@ export default function ViewBlogs() {
                   >
                     <path d="m9 18 6-6-6-6"></path>
                   </svg>
+                </button>
+              </div> */}
+              <div className="pagination flex items-center gap-x-1">
+                <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} className='inline-flex min-h-[28px] min-w-[28px] items-center justify-center gap-x-1.5 rounded-sm focus:bg-gray-100'>
+                  Trước
+                </button>
+                {[...Array(totalPages)].map((_, index) => (
+                  <button
+                  key={index + 1}
+                  onClick={() => handlePageChange(index + 1)}
+                  className={`flex min-h-[28px] min-w-[28px] items-center justify-center rounded-sm border focus:bg-gray-100 ${
+                    currentPage === index + 1 ? 'active' : ''}`}
+                >
+                  {index + 1}
+                </button>
+                ))}
+                <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
+                  Sau
                 </button>
               </div>
             </div>
