@@ -1,41 +1,44 @@
 // app/home/layout.tsx
-import { ReactNode } from 'react';
-import CopyrightFrame from '@/components/omd_CopyrightFrame';
-import NameFrame from '@/components/omd_TitleBLocks';
 // import Image from "next/image";
-import Nav from '@/components/omd_Nav';
-import InfoFrame from '@/components/omd_InfoFrame';
+import { ReactNode } from 'react';
+import NavFrame from '@/components/omd_NavFrame';
+import NameFrame from '@/components/omd_TitleBlocks';
+import MenuFrame from '@/components/omd_MenuFrame';
+import CopyrightFrame from '@/components/omd_CopyrightFrame';
 interface OmdLayoutProps {
   children: ReactNode;
 }
 
 export default function OmdLayout({ children }: OmdLayoutProps) {
   return (
-    <div className="w-inherit h-[962px] w-auto border border-black">
-      <div className="flex h-full w-auto flex-row items-center justify-center gap-[20px] bg-white text-black">
-        <div className="flex h-full w-full flex-col items-center justify-center gap-[2px]">
+    <div className="w-full md:h-[960px] border border-black">
+      <div className="flex h-full flex-row items-center justify-center gap-5 bg-white text-black">
+        <div className="flex h-full w-full flex-col items-center justify-center gap-1">
           <div className="flex h-[90%] w-full justify-center">
-            <div className="flex w-full flex-col items-center justify-start gap-[10px] pb-[8px] pt-[10px]">
-              <div>
-                <Nav />
-              </div>
-              {children}
+            <div className="flex w-full flex-col justify-start gap-2.5 pb-2 pt-2.5">
+              <header>
+                <NavFrame />
+              </header>
+              <main>
+                {children}
+              </main>
             </div>
           </div>
 
           <div className="h-[5%] w-full border">
-            <InfoFrame />
+            <MenuFrame />
           </div>
 
-          <div className="h-auto w-full">
+          <footer className="h-auto w-full">
             <CopyrightFrame />
-          </div>
+          </footer>
         </div>
 
-        <div className="flex h-full">
+        <aside className="hidden lg:flex h-full">
           <NameFrame />
-        </div>
+        </aside>
       </div>
     </div>
+
   );
 }

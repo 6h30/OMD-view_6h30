@@ -46,7 +46,7 @@ const SvgNormal: React.FC = () => (
   </svg>
 );
 
-export default function InfoFrame() {
+export default function MenuFrame() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleMode = () => {

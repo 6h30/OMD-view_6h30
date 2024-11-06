@@ -4,7 +4,7 @@
 
 export default function ViewAbout() {
   return (
-    <div className="font-koho flex h-full w-[550px] flex-col items-center justify-center gap-[100px] pt-[120px]">
+    <div className="font-koho flex h-full md:w-[550px] sm:w-[420px] flex-col items-center justify-center gap-[100px] pt-[120px]">
       <div className="flex h-[80%] w-full flex-col items-center justify-center gap-[20px]">
         <div>
           <p className="font-italiana text-center text-[93px] leading-[90px]">
@@ -16,7 +16,7 @@ export default function ViewAbout() {
             Tại OMD, mỗi công trình là một hành trình. Chúng tôi không chỉ thiết
             kế, mà đồng hành cùng khách hàng trong việc tạo ra những không gian
             sống phản ánh giá trị và cá tính riêng biệt. Mỗi dự án là một câu
-            chuyện đậm chất nghệ thuật, ý nghĩa, nơi cuộc sống và cái đẹp hòa
+            chuyện ý nghĩa, nghệ thuật nơi cuộc sống và cái đẹp hòa
             quyện.
           </p>
         </div>
