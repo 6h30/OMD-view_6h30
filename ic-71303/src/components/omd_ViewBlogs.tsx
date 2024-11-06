@@ -3,10 +3,33 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-// import styles from './omd_ViewBlogs.module.css';
+import { Post } from '@/types/api_post';
+
 
 export default function ViewBlogs() {
+  const [data, setData] = useState<Post[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
   const [time, setTime] = useState<string>('');
+
+
+  // Hàm lấy dữ liệu bài viết từ API
+  const fetchPosts = async () => {
+    try {
+      const response = await fetch('https://ic71303-hide.onrender.com/api/posts');
+      if (!response.ok) {
+        throw new Error('Failed to fetch posts');
+      }
+      const result = await response.json();
+      setData(result.data || []); // Cập nhật dữ liệu
+    } catch (error) {
+      console.error('Error fetching posts:', error);
+      setError('Failed to load posts.'); // Thiết lập thông báo lỗi
+    } finally {
+      setLoading(false); // Kết thúc quá trình tải
+    }
+  };
+
 
   const fetchTime = async () => {
     try {
@@ -30,11 +53,25 @@ export default function ViewBlogs() {
   };
 
   useEffect(() => {
+    fetchPosts();
     fetchTime();
     const intervalId = setInterval(fetchTime, 60000);
 
     return () => clearInterval(intervalId);
   }, []);
+
+
+  if (loading) {
+    return <p>Loading...</p>; 
+  }
+
+  if (error) {
+    return <p>{error}</p>; 
+  }
+
+  if (!Array.isArray(data) || data.length === 0) {
+    return <p>No posts available.</p>; 
+  }
 
   const rotateStyle: React.CSSProperties = {
     display: 'flex',
@@ -406,118 +443,32 @@ export default function ViewBlogs() {
 
           <div className="relative flex h-[2120px] w-full flex-row items-end gap-[10px] pr-[20px]">
             <div className="flex h-full w-[75%] flex-col items-start gap-[20px] px-[10px]">
-              <div className="relative flex h-[33%] w-full cursor-pointer flex-col items-start gap-[10px]">
-                <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
-                  <Link href="/homeM/blogsDetail">
-                    <p>Giếng trời – Hơi thở thiên nhiên trong mỗi công trình</p>
-                  </Link>
-                </div>
-                <div className="relative flex h-[60%] w-full flex-col items-start overflow-hidden border">
-                  <Link href="/homeM/blogsDetail">
-                    <Image
-                      width={200}
-                      height={200}
-                      src="/image5.jpg"
-                      alt="omg image"
-                      layout="responsive"
-                      className="h-full w-full object-cover"
-                    />
-                  </Link>
-                </div>
 
-                <div className="relative flex h-[25%] w-full flex-col items-start border-b border-b-black">
-                  <p>
-                    Không đơn thuần là một hình thức của cảnh quan sân vườn,
-                    việc đưa thiên nhiên vào bên trong công trình đã trở thành
-                    một xu hướng trong thiết kế kiến trúc hiện đại. Các nhà
-                    thiết kế luôn tìm cách kết hợp giữa công trình và mảng xanh
-                    một cách tự nhiên ...
-                  </p>
+              {data.map((post) => (
+                <div key={post.post_id} className="relative flex h-[33%] w-full cursor-pointer flex-col items-start gap-[10px]">
+                  <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
+                    <Link href={`/homeM/blogsDetail/${post.slug}`}> {/* Sử dụng slug cho link chi tiết */}
+                      <p>{post.title}</p>
+                    </Link>
+                  </div>
+                  <div className="relative flex h-[60%] w-full flex-col items-start overflow-hidden border">
+                    <Link href={`/homeM/blogsDetail/${post.slug}`}> {/* Sử dụng slug cho link chi tiết */}
+                      <Image
+                        width={200}
+                        height={200}
+                        src= '/image7.jpg'
+                        alt={post.title} 
+                        layout="responsive"
+                        className="h-full w-full object-cover"
+                      />
+                    </Link>
+                  </div>
+                  <div className="relative flex h-[25%] w-full flex-col items-start border-b border-b-black">
+                    <p>{post.description}</p>
+                  </div>
                 </div>
-              </div>
+              ))}      
 
-              <div className="relative flex h-[33%] w-full cursor-pointer flex-col items-start gap-[10px]">
-                <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
-                  <Link href="/homeM/blogsDetail">
-                    <p>
-                      Chung cư nhỏ sở hữu ban công đặc biệt ngập tràn ánh nắng
-                      và cây xanh - TAH
-                    </p>
-                  </Link>
-                </div>
-                <div className="relative flex h-[60%] w-full flex-col items-start overflow-hidden border">
-                  <Link href="/homeM/blogsDetail">
-                    <Image
-                      width={200}
-                      height={200}
-                      src="/image7.jpg"
-                      alt="omg image"
-                      layout="responsive"
-                      className="h-full w-full object-cover"
-                    />
-                  </Link>
-                </div>
-
-                <div className="relative flex h-[25%] w-full flex-col items-start border-b border-b-black">
-                  <p>
-                    TAH - Căn chung cư 62m2 sở hữu ban công ngập tràn cây xanh
-                    và ánh sáng, tạo nên không gian ấm áp, dễ chịu và bình yên,
-                    là chốn trở về lý tưởng cho gia chủ sau một ngày làm việc
-                    mệt mỏi bên ngoài.
-                  </p>
-                </div>
-              </div>
-
-              <div className="relative flex h-[33%] w-full flex-col items-start gap-[10px]">
-                <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
-                  <p>Mật ngọt Library - Thư viện cho trẻ em vùng núi</p>
-                </div>
-
-                <div className="relative flex h-[60%] w-full flex-col items-start overflow-hidden border">
-                  <Image
-                    width={200}
-                    height={200}
-                    src="/image4.jpg"
-                    alt="omg image"
-                    layout="responsive"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="relative flex h-[25%] w-full flex-col items-start border-b border-b-black">
-                  <p>
-                    Với bối cảnh cơ sở vật chất tại điểm Đá Trắng còn nghèo nàn,
-                    chỉ có 5 phòng học kiên cố, văn hoá đọc ở trẻ em miền núi
-                    nơi đây vẫn còn “đói sách”. Vì thế, ngôi trường này cần …
-                  </p>
-                </div>
-              </div>
-
-              <div className="relative flex h-[33%] w-full flex-col items-start gap-[10px]">
-                <div className="font-koho-bold relative flex h-[15%] w-full flex-col items-start text-2xl">
-                  <p>
-                    Mi Mây house - Biến nhà ở trở thành nơi nghỉ dưỡng lý tưởng
-                  </p>
-                </div>
-                <div className="relative flex h-[60%] w-full flex-col items-start overflow-hidden border">
-                  <Image
-                    width={200}
-                    height={200}
-                    src="/image6.jpg"
-                    alt="omg image"
-                    layout="responsive"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-
-                <div className="items-star relative flex h-[25%] w-full flex-col">
-                  <p>
-                    Mi Mây House - Ngôi nhà tọa lạc tại trung tâm thành phố Buôn
-                    Ma Thuột với không gian tràn ngập những mảng xanh, đáp ứng
-                    đầy đủ nhu cầu nghỉ dưỡng gần gũi thiên nhiên của chủ nhà
-                    ...
-                  </p>
-                </div>
-              </div>
             </div>
 
             <div className="flex h-full w-[30%] flex-col items-start gap-[10px]">
@@ -603,6 +554,7 @@ export default function ViewBlogs() {
               </div>
             </div>
           </div>
+
           <div className="flex h-[30px] items-center justify-center pr-[20px]">
             <div className="overflow-hidden whitespace-nowrap">
               <div
