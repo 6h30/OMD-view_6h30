@@ -16,7 +16,7 @@ export default function ViewAbout() {
             Tại OMD, mỗi công trình là một hành trình. Chúng tôi không chỉ thiết
             kế, mà đồng hành cùng khách hàng trong việc tạo ra những không gian
             sống phản ánh giá trị và cá tính riêng biệt. Mỗi dự án là một câu
-            chuyện ý nghĩa, nghệ thuật nơi cuộc sống và cái đẹp hòa
+            chuyện ý nghĩa, giàu tính nghệ thuật nơi cuộc sống và cái đẹp hòa
             quyện.
           </p>
         </div>
