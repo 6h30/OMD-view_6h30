@@ -55,7 +55,7 @@ export default function MenuFrame() {
 
   return (
     <div className="font-koho flex h-full w-full flex-row items-center justify-center gap-[10px]">
-      <div className="flex w-[40%] items-center justify-center gap-[10px] border-r-2 px-[12px]">
+      <div className="flex w-[40%] items-center justify-center gap-[10px] border-r-2 px-[12px] border">
         <svg
           className="h-7 w-7 hover:fill-gray-300"
           fill="none"
@@ -76,7 +76,7 @@ export default function MenuFrame() {
           name="search"
         />
       </div>
-      <div className="flex w-[60%] flex-row items-center justify-between">
+      <div className="flex w-[60%] flex-row items-center justify-between border">
         <div className="group/item flex w-[20%] cursor-pointer flex-row items-center justify-start">
           <span className="flex w-[30%]">
             <Link href="/homeM/login">
@@ -124,10 +124,7 @@ export default function MenuFrame() {
             <p>Đăng kí</p>
           </div>
         </div>
-        <div
-          className="flex w-[20%] cursor-pointer items-center justify-end p-4 transition-all duration-300"
-          onClick={toggleMode}
-        >
+        <div className="flex w-[20%] cursor-pointer items-center justify-end p-4 transition-all duration-300" onClick={toggleMode}>
           {isDarkMode ? <SvgDark /> : <SvgNormal />}
         </div>
       </div>

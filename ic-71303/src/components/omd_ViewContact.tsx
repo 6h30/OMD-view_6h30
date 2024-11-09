@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function viewContact() {
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section className="bg-white dark:bg-gray-900 ">
       <div className="mx-auto max-w-screen-md px-4 py-8 lg:py-16">
         <h2 className="font-koho mb-4 text-center text-3xl tracking-tight text-gray-900 dark:text-white">
           Liên hệ OMD

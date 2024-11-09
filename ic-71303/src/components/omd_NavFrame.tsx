@@ -26,7 +26,7 @@ export default function NavFrame() {
   return (
     <>
       <div className='flex justify-center'>
-        <div className="hidden font-koho lg:flex h-[34px] w-[830px] flex-row items-start justify-center gap-[48px] whitespace-nowrap border">
+        <div className="hidden font-koho lg:flex h-[34px] w-[830px] flex-row items-start justify-center gap-[48px] whitespace-nowrap+">
           {/* Mục Dịch vụ */}
           <div className="group relative h-[32px] w-[132px] border border-black transition-colors duration-300 hover:cursor-pointer">
             <span

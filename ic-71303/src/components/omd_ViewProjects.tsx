@@ -253,7 +253,7 @@ export default function ViewProjects() {
             </div>
 
             <div className="relative flex h-[820px] w-full flex-col items-center justify-center">
-              <div className="relative flex h-[80%] w-full flex-col items-center justify-start border">
+              <div className="relative flex h-[80%] w-full flex-col items-center justify-start">
                 {/* <div className="relative flex h-[90%] w-[90%] flex-col items-center justify-center">
                   <CarouselComponent images={images} />
                 </div> */}
