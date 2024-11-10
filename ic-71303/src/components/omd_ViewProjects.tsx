@@ -45,9 +45,9 @@ export default function ViewProjects() {
     <div className="flex justify-center py-[20px]">
       <div className="gap-3 sm:h-[1400px] sm:w-[420px] sm:flex-col md:w-[728px] md:flex-col lg:flex lg:w-[960px] lg:flex-row lg:items-start">
 
-        <div className="relative flex gap-[30px] border sm:h-[100px] sm:w-full sm:flex-col md:h-[160px] md:w-full md:flex-col lg:h-[2000px] lg:w-[25%] lg:py-[20px] md:items-center">
+        <div className="relative flex gap-[30px] lg:border sm:h-[50px] sm:w-full sm:flex-col md:h-[160px] md:w-full md:flex-col lg:h-[2000px] lg:w-[25%] lg:py-[20px] md:items-center">
           
-          <div className="relative flex gap-[25px] sm:flex-row sm:items-center justify-center lg:flex-col lg:items-center ">
+          <div className="relative flex gap-[25px] sm:flex-row sm:items-center sm:justify-around lg:justify-center lg:flex-col lg:items-center ">
             
             <div className="hidden lg:flex lg:h-[168px] lg:w-[173px] rounded-[100%]">
               <style>{keyframes}</style>
@@ -112,7 +112,7 @@ export default function ViewProjects() {
           </div>
         </div>
 
-        <div className="relative gap-[10px] border px-[20px] py-[20px] sm:h-[1750px] sm:w-[428px] md:w-[728px] md:h-[2000px] lg:w-[75%]">
+        <div className="relative gap-[10px] lg:border px-[20px] py-[20px] sm:h-[1750px] sm:w-[428px] md:w-[728px] md:h-[2000px] lg:w-[75%]">
 
           <div className="relative flex h-[60px] sm:h-[40px] w-full flex-row items-center justify-center border border-black">
             <div className="relative flex w-[210px] sm:flex-wrap sm:text-[12px] md:text-[16px] flex-row items-start gap-1 justify-center">

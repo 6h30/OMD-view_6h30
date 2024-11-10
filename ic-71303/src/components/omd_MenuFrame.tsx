@@ -1,12 +1,11 @@
 // import Image from "next/image";
-
 'use client';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
 const SvgDark: React.FC = () => (
   <svg
-    className="h-7 w-7"
+    className="md:h-7 md:w-7 sm:h-6 sm:w-6"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -27,7 +26,7 @@ const SvgDark: React.FC = () => (
 
 const SvgNormal: React.FC = () => (
   <svg
-    className="h-7 w-7"
+    className="md:h-7 md:w-7 sm:h-6 sm:w-6"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -55,7 +54,7 @@ export default function MenuFrame() {
 
   return (
     <div className="font-koho flex h-full w-full flex-row items-center justify-center gap-[10px]">
-      <div className="flex w-[40%] items-center justify-center gap-[10px] border-r-2 px-[12px] border">
+      <div className="flex w-[40%] items-center justify-center gap-[10px] border-r-2 px-[12px]">
         <svg
           className="h-7 w-7 hover:fill-gray-300"
           fill="none"
@@ -76,12 +75,12 @@ export default function MenuFrame() {
           name="search"
         />
       </div>
-      <div className="flex w-[60%] flex-row items-center justify-between border">
-        <div className="group/item flex w-[20%] cursor-pointer flex-row items-center justify-start">
+      <div className="flex w-[60%] flex-row items-center justify-between">
+        <div className="group/item flex lg:w-[20%] cursor-pointer flex-row items-center justify-start">
           <span className="flex w-[30%]">
             <Link href="/homeM/login">
               <svg
-                className="h-7 w-7"
+                className="md:h-7 md:w-7 sm:h-6 sm:w-6"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -101,10 +100,10 @@ export default function MenuFrame() {
             </div>
           </Link>
         </div>
-        <div className="group/item flex w-[20%] cursor-not-allowed items-center justify-end">
+        <div className="group/item flex lg:w-[20%] cursor-not-allowed items-center justify-end">
           <span className="flex w-[30%]">
             <svg
-              className="h-7 w-7"
+              className="md:h-7 md:w-7 sm:h-6 sm:w-6"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -124,7 +123,7 @@ export default function MenuFrame() {
             <p>Đăng kí</p>
           </div>
         </div>
-        <div className="flex w-[20%] cursor-pointer items-center justify-end p-4 transition-all duration-300" onClick={toggleMode}>
+        <div className="flex lg:w-[20%] cursor-pointer items-center justify-end p-4 transition-all duration-300" onClick={toggleMode}>
           {isDarkMode ? <SvgDark /> : <SvgNormal />}
         </div>
       </div>
