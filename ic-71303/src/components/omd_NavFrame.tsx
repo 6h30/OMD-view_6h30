@@ -110,7 +110,7 @@ export default function NavFrame() {
       <div
         className={`fixed inset-0 z-50 transition-transform transform ${isModalOpen ? 'translate-x-[70%]' : 'translate-x-full'} bg-black bg-opacity-50 lg:hidden`} onClick={toggleModal}>
         <div
-          className="w-[30%] bg-white h-[30%] p-4 shadow-lg transition-transform transform"
+          className="w-[30%] bg-white h-fit p-4 shadow-lg transition-transform transform"
           onClick={(e) => e.stopPropagation()} // Ngừng sự kiện click cho drawer
         >
           <button
