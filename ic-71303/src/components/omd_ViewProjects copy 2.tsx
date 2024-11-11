@@ -1,24 +1,17 @@
 // src/components/omd_ViewProject.tsx
 'use client';
 import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
 import Image from 'next/image';
 import ImageGrid from './omd_ImageView';
 import { Project } from '@/types/api_project';
 
-interface ProjectProps {
-  projectId: string | string[] | undefined; // Định nghĩa kiểu của projectId
-}
-
-export default function ViewProjects({ projectId }: ProjectProps) {
-  const router = useRouter();
-  const { id } = router.query;  // Lấy id từ URL query
-
+export default function ViewProjects() {
+  const projectId = 1;
   const [data, setData] = useState<Project | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchProject = async (projectId: string) => {
+  const fetchProject = async () => {
     try {
       const response = await fetch(`https://ic71303-hide.onrender.com/api/project/${projectId}`);
       if (!response.ok) {
@@ -27,6 +20,7 @@ export default function ViewProjects({ projectId }: ProjectProps) {
       const result = await response.json();
       console.log("API Response: ", result); // Kiểm tra dữ liệu nhận được từ API
   
+      // Thử gán trực tiếp result vào data, thay vì result.data
       setData(result); // Gán toàn bộ dữ liệu vào `data`
     } catch (err) {
       console.error('Error fetching project:', err);
@@ -36,11 +30,15 @@ export default function ViewProjects({ projectId }: ProjectProps) {
     }
   };
   
+
   useEffect(() => {
-    if (id && typeof id === 'string') { // Kiểm tra `id` trước khi gọi API
-      fetchProject(id);
-    }
-  }, [id]);
+    fetchProject();
+  }, []);
+
+  // Kiểm tra data trong console.log sau khi đã tải xong
+  useEffect(() => {
+    console.log("Data after fetch: ", data);
+  }, [data]);
 
   if (loading) {
     return <p>Loading...</p>;
@@ -53,7 +51,6 @@ export default function ViewProjects({ projectId }: ProjectProps) {
   if (!data) {
     return <p>No project found.</p>;
   }
-
 
   const rotateStyle: React.CSSProperties = {
     display: 'flex',
