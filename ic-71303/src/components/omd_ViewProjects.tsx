@@ -43,10 +43,13 @@ export default function ViewProjects() {
 
   return (
     <div className="flex justify-center py-[20px]">
-      <div className="gap-[10px] sm:h-[1400px] sm:w-[428px] sm:flex-col md:h-[1500px] md:w-[728px] md:flex-col lg:flex lg:min-h-[2048px] lg:w-[960px] lg:flex-row lg:items-start lg:justify-start">
-        <div className="relative flex gap-[30px] border sm:h-[100px] sm:w-full sm:flex-col md:h-[350px] md:w-full md:flex-col lg:h-full lg:w-[25%] lg:flex-col lg:py-[20px]">
-          <div className="relative flex gap-[25px] sm:flex-row sm:items-center sm:justify-start md:flex-row md:items-center md:justify-start lg:flex-col lg:items-center lg:justify-center">
-            <div className="h-[168px] w-[173px] items-center justify-center rounded-[100%]">
+      <div className="gap-3 sm:h-[1400px] sm:w-[420px] sm:flex-col md:w-[728px] md:flex-col lg:flex lg:w-[960px] lg:flex-row lg:items-start">
+
+        <div className="relative flex gap-[30px] lg:border sm:h-[50px] sm:w-full sm:flex-col md:h-[160px] md:w-full md:flex-col lg:h-[2000px] lg:w-[25%] lg:py-[20px] md:items-center">
+          
+          <div className="relative flex gap-[25px] sm:flex-row sm:items-center sm:justify-around lg:justify-center lg:flex-col lg:items-center ">
+            
+            <div className="hidden lg:flex lg:h-[168px] lg:w-[173px] rounded-[100%]">
               <style>{keyframes}</style>
               <div id="circle" style={rotateStyle}>
                 <svg
@@ -86,8 +89,9 @@ export default function ViewProjects() {
             </div>
           </div>
 
-          <div className="relative gap-[20px] sm:hidden md:flex md:flex-col lg:flex lg:flex-row lg:items-start lg:justify-center">
-            <div className="gap-[80px] pl-[20px] sm:flex sm:flex-row md:flex md:flex-row lg:flex lg:flex-col lg:border-l lg:border-l-black">
+          <div className="relative gap-[20px] hidden md:flex md:flex-col md:items-center lg:flex-row lg:items-start lg:justify-center">
+
+            <div className="gap-[80px] lg:pl-[20px] flex sm:flex-row md:flex-row lg:flex-col lg:border-l lg:border-l-black">
               {journeys.map((journey, index) => (
                 <div
                   key={index}
@@ -104,28 +108,31 @@ export default function ViewProjects() {
                 </div>
               ))}
             </div>
+
           </div>
         </div>
 
-        <div className="relative gap-[10px] border px-[20px] py-[20px] sm:h-[1340px] sm:w-[428px] md:h-[1440px] md:w-[728px] lg:h-[2000px] lg:w-[75%]">
-          <div className="relative flex h-[60px] w-full flex-row items-center justify-center border border-black pl-[10px]">
-            <div className="relative flex w-[200px] flex-row items-start gap-[10px]">
+        <div className="relative gap-[10px] lg:border px-[20px] py-[20px] sm:h-[1750px] sm:w-[428px] md:w-[728px] md:h-[2000px] lg:w-[75%]">
+
+          <div className="relative flex h-[60px] sm:h-[40px] w-full flex-row items-center justify-center border border-black">
+            <div className="relative flex w-[210px] sm:flex-wrap sm:text-[12px] md:text-[16px] flex-row items-start gap-1 justify-center">
               <p>Diện tích:</p>
-              <span>208m2</span>
+              <span>200m2</span>
             </div>
 
-            <div className="relative flex w-[318px] flex-row items-start gap-[10px] border-l border-black pl-[10px]">
+            <div className="relative flex w-[315px] sm:flex-wrap sm:text-[12px] md:text-[16px] flex-row items-start justify-center gap-1 border-l border-black">
               <p>Kts:</p>
               <span>Trương Khâm Thành</span>
             </div>
 
-            <div className="relative flex w-[169px] flex-row items-start justify-center gap-[10px] border-l border-black pl-[10px]">
+            <div className="relative flex w-[169px] sm:flex-wrap sm:text-[12px] md:text-[16px] flex-row items-start justify-center gap-1 border-l border-black">
               <p>Năm</p>
-              <span>2023</span>
+              <span>2022</span>
             </div>
           </div>
 
-          <div className="relative flex w-full flex-row items-end gap-[30px] pb-[20px] pt-[20px] sm:h-[350px] md:h-[450px] lg:h-[660px]">
+          <div className="relative flex w-full flex-row items-end gap-[30px] pb-[20px] pt-[20px] sm:h-[420px] md:h-[660px]">
+
             <div className="relative flex h-[100%] w-[75%] flex-col items-center justify-center border border-black">
               <Image
                 src="/pr-mv-1.jpg"
@@ -135,18 +142,18 @@ export default function ViewProjects() {
               />
             </div>
 
-            <div className="relative flex w-[25%] flex-col items-start justify-between sm:h-[70px] md:h-[150px] lg:h-full">
-              <div className="relative ml-[20px] flex h-[450px] w-[1px] bg-gray-400">
+            <div className="relative flex w-[25%] flex-col items-start justify-between h-full ">
+              <div className="relative ml-[20px] flex lg:h-[450px] sm:h-[73%] w-[1px] bg-gray-400">
                 <br />
               </div>
 
-              <div className="absolute top-[420px] flex h-[1px] w-full bg-gray-400">
+              <div className="absolute lg:top-[420px] sm:top-[68%] flex h-[1px] w-full bg-gray-400">
                 <br />
               </div>
 
-              <div className="relative flex w-full flex-col items-center justify-center border border-black sm:h-[70px] md:h-[150px] lg:h-[150px]">
-                <div className="absolute bottom-[80px] right-[80px]">
-                  <div className="h-[168px] w-[173px] items-center justify-center rounded-[100%]">
+              <div className="relative flex w-full flex-col items-center justify-center border border-black sm:h-[80px] md:h-[150px]">
+                <div className="absolute md:right-[80px] md:bottom-[80px] sm:right-[40px] sm:bottom-[40px] ">
+                  <div className="md:h-[168px] md:w-[173px] sm:h-[120px] sm:w-[120px] items-center justify-center rounded-[100%]">
                     <style>{keyframes}</style>
                     <div id="circle" style={rotateStyle}>
                       <svg
@@ -187,29 +194,29 @@ export default function ViewProjects() {
 
           <div className="relative flex w-full flex-col items-start justify-start gap-[20px] lg:h-[1224px]">
             <div className="relative flex h-[150px] w-full flex-row items-center justify-between px-[20px]">
-              <div className="relative flex flex-col items-end justify-end gap-[20px]">
+              <div className="relative flex flex-col items-end justify-end lg:gap-[30px] md:gap-[40px] sm:gap-[10px]">
                 <div>
-                  <p className="font-italiana text-center leading-[53px] tracking-[5px] sm:text-[33px] md:text-[53px] lg:text-[73px]">
+                  <p className="font-italiana text-center leading-[53px] tracking-[5px] sm:text-[43px] md:text-[63px] lg:text-[73px]">
                     OMD
                   </p>
                 </div>
 
                 <div>
-                  <p className="text-[16px] leading-3 tracking-[1.2px]">
+                  <p className="md:text-[16px] sm:text-[12px] leading-3 tracking-[1.2px]">
                     kiến tạo dự án
                   </p>
                 </div>
               </div>
 
-              <div className="relative flex flex-col items-end justify-end gap-[20px]">
+              <div className="relative flex flex-col items-end justify-end lg:gap-[30px] md:gap-[40px] sm:gap-[10px]">
                 <div>
-                  <p className="text-[16px] leading-3 tracking-[1.2px]">
+                  <p className="md:text-[16px] sm:text-[12px] sm:text-end sm:leading-4 leading-3 tracking-[1.2px]">
                     được đồng hành cùng chị D trong hành trình
                   </p>
                 </div>
 
                 <div>
-                  <p className="font-italiana text-center tracking-[5px] sm:text-[33px] sm:leading-[33px] md:text-[53px] lg:text-[73px] lg:leading-[53px]">
+                  <p className="font-italiana text-center tracking-[5px] sm:text-[43px] sm:leading-[33px] md:text-[63px] lg:text-[73px] lg:leading-[53px]">
                     MERVYN
                   </p>
                 </div>
@@ -217,7 +224,7 @@ export default function ViewProjects() {
             </div>
 
             <div className="relative flex h-[50px] w-full flex-row items-center justify-between py-[10px]">
-              <div className="relative flex h-[25px] w-[30%] flex-col items-center justify-center border border-gray-500 px-[10px]">
+              <div className="relative flex h-[25px] w-[40%] sm:text-[12px] md:text-[16px] flex-col items-center justify-center border border-gray-500 px-[10px]">
                 <p>Nhiệm vụ thiết kế</p>
               </div>
 
@@ -226,19 +233,12 @@ export default function ViewProjects() {
               </div>
             </div>
 
-            <div className="relative flex h-[150px] w-full flex-row items-center justify-between py-[10px]">
-              {/* <p>
-                “Café-Cóc” – trong tiếng Việt, thuật ngữ này chỉ quán cà phê
-                bình dân với chỗ ngồi thấp, có thể dễ dàng gấp lại và bố trí khi
-                cần thiết. Đó là nơi mọi người có thể ghé qua một cách nhanh
-                chóng và thuận tiện, gọi đồ uống, nhâm nhi một mình hoặc với bạn
-                bè, sau đó tiếp tục công việc trong ngày của mình.
-              </p> */}
+            <div className="relative flex md:h-[150px] sm:text-[12px] md:text-[16px] w-full flex-row items-center justify-between py-[10px]">
               <p>
                 Gắn kết mọi người với môi trường xung quanh. Kiến trúc
                 Mediterranean, hay Địa Trung Hải cũng là câu chuyện được Mervyn
                 muốn kể lại, thiết kế thân thiện với môi trường, bền vững tạo ra
-                không gian thư giãn cho cộng đồng và thế hệ tương lai.{' '}
+                không gian thư giãn cho cộng đồng và thế hệ tương lai.
               </p>
             </div>
 
@@ -247,13 +247,13 @@ export default function ViewProjects() {
                 <br />
               </div>
 
-              <div className="relative flex h-[25px] w-[30%] flex-col items-center justify-center border border-gray-500 px-[10px]">
+              <div className="relative flex h-[25px] w-[40%] sm:text-[12px] md:text-[16px] flex-col items-center justify-center border border-gray-500 px-[10px]">
                 <p>Bộ sưu tập</p>
               </div>
             </div>
 
             <div className="relative flex h-[820px] w-full flex-col items-center justify-center">
-              <div className="relative flex h-[720px] w-full flex-col items-center justify-start">
+              <div className="relative flex h-[80%] w-full flex-col items-center justify-start">
                 {/* <div className="relative flex h-[90%] w-[90%] flex-col items-center justify-center">
                   <CarouselComponent images={images} />
                 </div> */}
@@ -263,6 +263,7 @@ export default function ViewProjects() {
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );

@@ -62,15 +62,15 @@ export default function ViewBlogs() {
 
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <p>Loading...</p>; 
   }
 
   if (error) {
-    return <p>{error}</p>;
+    return <p>{error}</p>; 
   }
 
   if (!Array.isArray(data) || data.length === 0) {
-    return <p>No posts available.</p>;
+    return <p>No posts available.</p>; 
   }
 
   const rotateStyle: React.CSSProperties = {
@@ -92,8 +92,8 @@ export default function ViewBlogs() {
 `;
   return (
     <div className="flex justify-center py-[20px]">
-      <div className="relative flex sm:h-fit lg:w-[960px] md:w-[728px] sm:w-[420px] flex-row items-start justify-center gap-[10px] md:border md:border-sky-500 md:text-[16px] sm:text-sm ">
-        <div className="hidden relative md:flex h-auto md:w-[24%] flex-col items-center justify-center gap-[20px] py-[20px]">
+      <div className="relative flex min-h-[2120px] w-[960px] flex-row items-start justify-center gap-[10px] border">
+        <div className="relative flex h-auto w-[24%] flex-col items-center justify-center gap-[20px] py-[20px]">
           <div className="flex h-[240px] w-full flex-col items-center justify-center gap-[10px] pl-[20px] pr-[10px]">
             <div className="h-[168px] w-[173px] items-center justify-center rounded-[100%]">
               <style>{keyframes}</style>
@@ -267,23 +267,23 @@ export default function ViewBlogs() {
           </div>
         </div>
 
-        <div className="hidden relative mt-[280px] lg:flex h-[2120px] w-[1px] bg-gray-400">
+        <div className="relative mt-[280px] flex h-[2120px] w-[1px] bg-gray-400">
           <br />
           <svg className="... absolute top-[400px] h-6 w-6 animate-bounce border"></svg>
         </div>
 
-        <div className="relative flex h-auto sm:w-full md:w-[75%] flex-col gap-[10px] md:py-[20px]">
-          <div className="flex md:pr-[20px]">
-            <div className="relative flex md:h-[60px] sm:h-[40px] sm:w-full flex-row items-center justify-center border border-black">
-              <div className="relative flex md:w-[200px] sm:w-[20%] flex-col items-center gap-[10px]">
+        <div className="relative flex h-auto w-[75%] flex-col gap-[10px] py-[20px]">
+          <div className="flex pr-[20px]">
+            <div className="relative flex h-[60px] w-full flex-row items-center justify-center border border-black pr-[20px]">
+              <div className="relative flex w-[200px] flex-col items-center gap-[10px]">
                 <p>OMD Blog</p>
               </div>
 
-              <div className="relative flex sm:w-[50%] md:w-[60%] flex-row items-center justify-center gap-[10px] border-x border-black pl-[0px]">
-                <p className='hidden lg:flex'>Mạng xã hội:</p>
+              <div className="relative flex w-[60%] flex-row items-center justify-center gap-[10px] border-x border-black pl-[0px]">
+                <p>Mạng xã hội:</p>
                 <span>
                   <svg
-                    className="md:h-7 md:w-7 sm:h-6 sm:w-6 hover:fill-sky-600"
+                    className="h-7 w-7 hover:fill-sky-600"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -297,7 +297,7 @@ export default function ViewBlogs() {
 
                 <span>
                   <svg
-                    className="md:h-7 md:w-7 sm:h-6 sm:w-6 hover:fill-sky-400"
+                    className="h-7 w-7 hover:fill-sky-400"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -314,7 +314,7 @@ export default function ViewBlogs() {
                 </span>
                 <span>
                   <svg
-                    className="md:h-7 md:w-7 sm:h-6 sm:w-6 hover:fill-orange-300"
+                    className="h-7 w-7 hover:fill-orange-300"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -330,7 +330,7 @@ export default function ViewBlogs() {
 
                 <span>
                   <svg
-                    className="md:h-7 md:w-7 sm:h-6 sm:w-6 hover:fill-red-400"
+                    className="h-7 w-7 hover:fill-red-400"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -344,7 +344,7 @@ export default function ViewBlogs() {
                 </span>
                 <span>
                   <svg
-                    className="md:h-7 md:w-7 sm:h-6 sm:w-6 hover:fill-pink-300"
+                    className="h-7 w-7 hover:fill-pink-300"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -358,91 +358,91 @@ export default function ViewBlogs() {
                 </span>
               </div>
 
-              <div className="relative flex md:w-[30%] md:px-[20px] sm:w-[30%] justify-center gap-[10px] pl-[0px]">
+              <div className="relative flex w-[30%] justify-center gap-[10px] pl-[0px]">
                 <p className="text-center">{time}</p>
               </div>
             </div>
           </div>
 
-          <div className="relative flex h-[180px] sm:w-full flex-col items-start justify-start md:pr-[20px]">
+          <div className="relative flex h-[180px] w-full flex-col items-start justify-start pr-[20px]">
             <div className="relative flex h-[35px] w-full flex-row items-center justify-between gap-[20px]">
-              <div className="group relative flex h-[25px] sm:w-[50%] md:w-[40%] lg:w-[190px] items-center justify-start border border-black pl-[10px] transition-colors duration-300 hover:cursor-pointer">
+              <div className="group relative flex h-[25px] w-[190px] items-center justify-start border border-black pl-[10px] transition-colors duration-300 hover:cursor-pointer">
                 <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
                 <p>Giải pháp thiết kế</p>
               </div>
 
-              <div className="relative flex h-[1px] sm:w-[25%] lg:w-[40%] flex-col items-center justify-start bg-gray-400">
+              <div className="relative flex h-[1px] w-[40%] flex-col items-center justify-start bg-gray-400">
                 <br />
               </div>
-              <div className="relative flex h-[25px] sm:w-[25%] lg:w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
+              <div className="relative flex h-[25px] w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
                 <p>12</p>
                 <span>bài viết</span>
               </div>
             </div>
 
             <div className="relative flex h-[35px] w-full flex-row items-center justify-between gap-[20px]">
-              <div className="group relative flex h-[25px] sm:w-[50%] md:w-[40%] lg:w-[190px] items-center justify-start border border-black pl-[10px] transition-colors duration-300 hover:cursor-pointer">
+              <div className="group relative flex h-[25px] w-[190px] items-center justify-start border border-black pl-[10px] transition-colors duration-300 hover:cursor-pointer">
                 <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
                 <p>Công trình công cộng</p>
               </div>
 
-              <div className="relative flex h-[1px] sm:w-[25%] lg:w-[40%] flex-col items-center justify-start bg-gray-400">
+              <div className="relative flex h-[1px] w-[40%] flex-col items-center justify-start bg-gray-400">
                 <br />
               </div>
-              <div className="relative flex h-[25px] sm:w-[25%] lg:w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
+              <div className="relative flex h-[25px] w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
                 <p>07</p>
                 <span>bài viết</span>
               </div>
             </div>
 
             <div className="relative flex h-[35px] w-full flex-row items-center justify-between gap-[20px]">
-              <div className="group relative flex h-[25px] sm:w-[50%] md:w-[40%] lg:w-[190px] items-center justify-start border border-black pl-[10px] transition-colors duration-300 hover:cursor-pointer">
+              <div className="group relative flex h-[25px] w-[190px] items-center justify-start border border-black pl-[10px] transition-colors duration-300 hover:cursor-pointer">
                 <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
                 <p>Nhà ở</p>
               </div>
 
-              <div className="relative flex h-[1px] sm:w-[25%] lg:w-[40%] flex-col items-center justify-start bg-gray-400">
+              <div className="relative flex h-[1px] w-[40%] flex-col items-center justify-start bg-gray-400">
                 <br />
               </div>
-              <div className="relative flex h-[25px] sm:w-[25%] lg:w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
+              <div className="relative flex h-[25px] w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
                 <p>10</p>
                 <span>bài viết</span>
               </div>
             </div>
 
             <div className="relative flex h-[35px] w-full flex-row items-center justify-between gap-[20px]">
-              <div className="group relative flex h-[25px] sm:w-[50%] md:w-[40%] lg:w-[190px] items-center justify-start border border-black pl-[10px] transition-colors duration-300 hover:cursor-pointer">
+              <div className="group relative flex h-[25px] w-[190px] items-center justify-start border border-black pl-[10px] transition-colors duration-300 hover:cursor-pointer">
                 <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-pink-400 transition-all duration-300 group-hover:w-full"></span>
                 <p>Nội thất</p>
               </div>
 
-              <div className="relative flex h-[1px] sm:w-[25%] lg:w-[40%] flex-col items-center justify-start bg-gray-400">
+              <div className="relative flex h-[1px] w-[40%] flex-col items-center justify-start bg-gray-400">
                 <br />
               </div>
-              <div className="relative flex h-[25px] sm:w-[25%] lg:w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
+              <div className="relative flex h-[25px] w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
                 <p>10</p>
                 <span>bài viết</span>
               </div>
             </div>
 
             <div className="relative flex h-[35px] w-full flex-row items-center justify-between gap-[20px]">
-              <div className="group relative flex h-[25px] sm:w-[50%] md:w-[40%] lg:w-[190px] items-center justify-start border border-black pl-[10px] transition-colors duration-300 hover:cursor-pointer">
+              <div className="group relative flex h-[25px] w-[190px] items-center justify-start border border-black pl-[10px] transition-colors duration-300 hover:cursor-pointer">
                 <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-lime-400 transition-all duration-300 group-hover:w-full"></span>
                 <p>Tin tức</p>
               </div>
 
-              <div className="relative flex h-[1px] sm:w-[25%] lg:w-[40%] flex-col items-center justify-start bg-gray-400">
+              <div className="relative flex h-[1px] w-[40%] flex-col items-center justify-start bg-gray-400">
                 <br />
               </div>
-              <div className="relative flex h-[25px] sm:w-[25%] lg:w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
+              <div className="relative flex h-[25px] w-[190px] flex-row items-end justify-end border border-black pr-[10px]">
                 <p>10</p>
                 <span>bài viết</span>
               </div>
             </div>
           </div>
 
-          <div className="relative flex lg:h-[2120px] md:h-[1800px] sm:h-fit md:w-full sm:flex-col md:flex-row items-end gap-[10px] md:pr-[20px]">
-            <div className="flex md:h-full md:w-[75%] flex-col items-start gap-[20px] md:px-[10px] sm:w-full sm:h-fit">
+          <div className="relative flex h-[2120px] w-full flex-row items-end gap-[10px] pr-[20px]">
+            <div className="flex h-full w-[75%] flex-col items-start gap-[20px] px-[10px]">
 
               {data.map((post) => (
                 <div key={post.post_id} className="relative flex h-[33%] w-full cursor-pointer flex-col items-start gap-[10px]">
@@ -456,8 +456,8 @@ export default function ViewBlogs() {
                       <Image
                         width={200}
                         height={200}
-                        src='/image7.jpg'
-                        alt={post.title}
+                        src= '/image7.jpg'
+                        alt={post.title} 
                         layout="responsive"
                         className="h-full w-full object-cover"
                       />
@@ -467,12 +467,11 @@ export default function ViewBlogs() {
                     <p>{post.description}</p>
                   </div>
                 </div>
-              ))}
+              ))}      
 
             </div>
 
-            {/* ads */}
-            <div className="flex md:h-full md:w-[30%] flex-col items-start gap-[10px] sm:w-full sm:h-[500px] sm:border sm:border-red-500">
+            <div className="flex h-full w-[30%] flex-col items-start gap-[10px]">
               <div className="relative h-[40%] w-full border border-gray-300">
                 ads
               </div>
@@ -485,7 +484,7 @@ export default function ViewBlogs() {
             </div>
           </div>
 
-          <div className="flex h-auto w-full flex-row items-center gap-[10px] md:pr-[20px]">
+          <div className="flex h-auto w-full flex-row items-center gap-[10px] pr-[20px]">
             <div className="relative flex h-[1px] w-[50%] flex-col items-center bg-gray-400">
               <br />
             </div>
@@ -556,7 +555,7 @@ export default function ViewBlogs() {
             </div>
           </div>
 
-          <div className="flex h-[30px] items-center justify-center md:pr-[20px]">
+          <div className="flex h-[30px] items-center justify-center pr-[20px]">
             <div className="overflow-hidden whitespace-nowrap">
               <div
                 className="inline-block"

@@ -92,14 +92,14 @@ export default function LoginForm() {
 
   return (
     <div
-      className="flex h-[500px] w-[500px] flex-col border border-black"
+      className="flex sm:h-[740px] md:h-[500px] md:w-[500px] sm:w-[425px] border border-black"
       style={{
         backgroundColor: '#ffffff',
         backgroundImage:
           "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23cacaca' fill-opacity='0.1'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E\")",
       }}
     >
-      <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="flex mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-lg">
           <h1 className="text-center text-2xl font-bold sm:text-3xl">
             OMD Website

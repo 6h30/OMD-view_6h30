@@ -137,7 +137,7 @@ const ImageView: React.FC = () => {
 
   return (
     <div className="flex h-full w-full flex-col items-center">
-      <div className="relative mb-4 h-[450px] w-[550px] border">
+      <div className="relative mb-4 md:h-[650px] lg:h-[750px] sm:h-[450px] lg:w-[550px] md:w-[450px] sm:w-[350px] border">
         <Image
           src={currentImage}
           alt="Current Image"
@@ -145,7 +145,7 @@ const ImageView: React.FC = () => {
           className="object-cover transition-transform duration-300"
         />
       </div>
-      <ul className="gallery grid w-full max-w-[550px] grid-cols-5 gap-2 overflow-scroll scroll-smooth">
+      <ul className="gallery grid lg:h-[400px] md:h-[280px] sm:h-[160px] lg:w-[550px] md:w-[450px] sm:w-[350px] grid-cols-5 gap-2 overflow-x-scroll scroll-smooth">
         {images.map((src, index) => (
           // <li
           //   key={index}
@@ -164,7 +164,7 @@ const ImageView: React.FC = () => {
 
           <li
             key={index}
-            className="item relative h-[110px] w-[100px] cursor-pointer transition-transform duration-200 ease-in-out hover:scale-95 hover:border hover:border-gray-500"
+            className="item relative lg:h-[110px] md:h-[90px] sm:h-[75px] flex-wrap lg:w-[100px] md:w-[80px] sm:w-[65px] cursor-pointer transition-transform duration-200 ease-in-out hover:scale-95 hover:border hover:border-gray-500"
             onClick={() => handleClick(src)}
           >
             <Image

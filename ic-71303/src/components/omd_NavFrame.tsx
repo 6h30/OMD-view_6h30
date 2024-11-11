@@ -26,7 +26,7 @@ export default function NavFrame() {
   return (
     <>
       <div className='flex justify-center'>
-        <div className="hidden font-koho lg:flex h-[34px] w-[830px] flex-row items-start justify-center gap-[48px] whitespace-nowrap border">
+        <div className="hidden font-koho lg:flex h-[34px] w-[830px] flex-row items-start justify-center gap-[48px] whitespace-nowrap+">
           {/* Mục Dịch vụ */}
           <div className="group relative h-[32px] w-[132px] border border-black transition-colors duration-300 hover:cursor-pointer">
             <span
@@ -96,9 +96,9 @@ export default function NavFrame() {
             viewBox="0 0 24 24"
             stroke="currentColor">
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
@@ -110,7 +110,7 @@ export default function NavFrame() {
       <div
         className={`fixed inset-0 z-50 transition-transform transform ${isModalOpen ? 'translate-x-[70%]' : 'translate-x-full'} bg-black bg-opacity-50 lg:hidden`} onClick={toggleModal}>
         <div
-          className="w-[30%] bg-white h-[30%] p-4 shadow-lg transition-transform transform"
+          className="w-[30%] bg-white h-fit p-4 shadow-lg transition-transform transform"
           onClick={(e) => e.stopPropagation()} // Ngừng sự kiện click cho drawer
         >
           <button
