@@ -2,43 +2,38 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import ImageGrid from './omd_ImageView';
 import { Project } from '@/types/api_project';
+// import CarouselComponent from './omd_carouselBlog';
+
+import ImageGrid from './omd_ImageView';
+// import styles from './omd_NameFrame.module.css';
 
 export default function ViewProjects() {
-  const projectId = 1;
-  const [data, setData] = useState<Project | null>(null);
+  const [data, setData] = useState<Project[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchProject = async () => {
+  // Hàm lấy dữ liệu bài viết từ API
+  const fetchProjects = async () => {
     try {
-      const response = await fetch(`https://ic71303-hide.onrender.com/api/project/${projectId}`);
+      const response = await fetch('https://ic71303-hide.onrender.com/api/projects');
       if (!response.ok) {
-        throw new Error(`Failed to fetch project: ${response.statusText}`);
+        throw new Error('Failed to fetch projects');
       }
       const result = await response.json();
-      console.log("API Response: ", result); // Kiểm tra dữ liệu nhận được từ API
-  
-      // Thử gán trực tiếp result vào data, thay vì result.data
-      setData(result); // Gán toàn bộ dữ liệu vào `data`
-    } catch (err) {
-      console.error('Error fetching project:', err);
-      setError('Failed to load project.');
+      setData(result.data || []); // Cập nhật dữ liệu
+    } catch (error) {
+      console.error('Error fetching projects:', error);
+      setError('Failed to load projects.'); // Thiết lập thông báo lỗi
     } finally {
-      setLoading(false);
+      setLoading(false); // Kết thúc quá trình tải
     }
   };
-  
 
   useEffect(() => {
-    fetchProject();
-  }, []);
+    fetchProjects();
+  }, [fetchProjects]);
 
-  // Kiểm tra data trong console.log sau khi đã tải xong
-  useEffect(() => {
-    console.log("Data after fetch: ", data);
-  }, [data]);
 
   if (loading) {
     return <p>Loading...</p>;
@@ -48,8 +43,8 @@ export default function ViewProjects() {
     return <p>{error}</p>;
   }
 
-  if (!data) {
-    return <p>No project found.</p>;
+  if (!Array.isArray(data) || data.length === 0) {
+    return <p>No posts available.</p>;
   }
 
   const rotateStyle: React.CSSProperties = {
@@ -70,6 +65,15 @@ export default function ViewProjects() {
   }
 `;
 
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const journeys = [
+    { month: '02/2023', info: 'Trình phương án đầu tiên' },
+    { month: '03/2023', info: 'Thảo luận và chốt phương án' },
+    { month: '04/2023', info: 'Hoàn thành phần thô' },
+    { month: '05/2023', info: 'Hoàn thiện' },
+    { month: '06/2023', info: 'Bàn giao dự án' },
+  ];
 
   return (
     <div className="flex justify-center py-[20px]">
@@ -120,37 +124,46 @@ export default function ViewProjects() {
           </div>
 
           <div className="relative gap-[20px] hidden md:flex md:flex-col md:items-center lg:flex-row lg:items-start lg:justify-center">
-            <div className="gap-[80px] lg:pl-[20px] flex sm:flex-row md:flex-row lg:flex-col lg:border-l lg:border-l-black">
-              <div
 
-              // onMouseEnter={() => setHoveredIndex(data.project_id)}
-              // onMouseLeave={() => setHoveredIndex(null)}
-              >
-                <h3>{data.title}</h3>
-              </div>
+            <div className="gap-[80px] lg:pl-[20px] flex sm:flex-row md:flex-row lg:flex-col lg:border-l lg:border-l-black">
+              {journeys.map((journey, index) => (
+                <div
+                  key={index}
+                  className="relative"
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <p className="cursor-pointer">{journey.month}</p>
+                  {hoveredIndex === index && (
+                    <div className="absolute mt-1 w-32 rounded border border-gray-300 p-2 shadow-md">
+                      {journey.info}
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
 
           </div>
         </div>
 
+        {data.map((project) => (
+        <div key={project.project_id} className="relative gap-[10px] lg:border px-[20px] py-[20px] sm:h-[1750px] sm:w-[428px] md:w-[728px] md:h-[2000px] lg:w-[75%]">
 
-        <div className="relative gap-[10px] lg:border px-[20px] py-[20px] sm:h-[1750px] sm:w-[428px] md:w-[728px] md:h-[2000px] lg:w-[75%]">
-
-          {/* project 1 info */}
+          {/* project info */}
           <div className="relative flex h-[60px] sm:h-[40px] w-full flex-row items-center justify-center border border-black">
             <div className="relative flex w-[210px] sm:flex-wrap sm:text-[12px] md:text-[16px] flex-row items-start gap-1 justify-center">
               <p>Diện tích:</p>
-              <span>{data.title || 'N/A'}</span>
+              <span>{project.title}</span>
             </div>
 
             <div className="relative flex w-[315px] sm:flex-wrap sm:text-[12px] md:text-[16px] flex-row items-start justify-center gap-1 border-l border-black">
               <p>Kts:</p>
-              <span>{data.architect || 'N/A'}</span>
+              <span>{project.architect}</span>
             </div>
 
             <div className="relative flex w-[169px] sm:flex-wrap sm:text-[12px] md:text-[16px] flex-row items-start justify-center gap-1 border-l border-black">
               <p>Năm</p>
-              <span>{data.completion_year}</span>
+              <span>{project.completion_year}</span>
             </div>
           </div>
 
@@ -259,7 +272,7 @@ export default function ViewProjects() {
             {/* summary */}
             <div className="relative flex md:h-[150px] sm:text-[12px] md:text-[16px] w-full flex-row items-center justify-between py-[10px]">
               <p>
-                {data.summary}
+                {project.summary}
               </p>
             </div>
 
@@ -275,13 +288,16 @@ export default function ViewProjects() {
 
             <div className="relative flex h-[820px] w-full flex-col items-center justify-center">
               <div className="relative flex h-[80%] w-full flex-col items-center justify-start">
+                {/* <div className="relative flex h-[90%] w-[90%] flex-col items-center justify-center">
+                  <CarouselComponent images={images} />
+                </div> */}
 
                 <ImageGrid />
               </div>
             </div>
           </div>
         </div>
-
+   ))}
       </div>
     </div>
   );
